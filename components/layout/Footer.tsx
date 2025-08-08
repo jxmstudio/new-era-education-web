@@ -73,7 +73,7 @@ export default function Footer() {
                 { href: "/english-tutoring", label: "English Tutoring" },
                 { href: "/maths-tutoring", label: "Mathematics Tutoring" },
                 { href: "/one-on-one", label: "One-on-One Tutoring" },
-                { href: "/art-workshops", label: "Art Workshops" },
+                { href: "/workshops", label: "Workshops" },
                 { href: "/homeschooling-support", label: "Homeschooling Support" }
               ].map((item, index) => (
                 <motion.li
@@ -157,12 +157,24 @@ export default function Footer() {
                 transition={{ duration: 0.2 }}
               >
                 <Phone className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                <a 
-                  href="tel:+61384670773" 
-                  className="text-gray-300 hover:text-white transition-colors duration-300"
-                >
-                  (03) 8467 0773
-                </a>
+                <div className="space-y-1">
+                  <div>
+                    <a 
+                      href="tel:+61458498170" 
+                      className="text-gray-300 hover:text-white transition-colors duration-300"
+                    >
+                      0458 498 170
+                    </a>
+                  </div>
+                  <div>
+                    <a 
+                      href="tel:+61384670773" 
+                      className="text-gray-300 hover:text-white transition-colors duration-300"
+                    >
+                      (03) 8467 0773
+                    </a>
+                  </div>
+                </div>
               </motion.li>
               <motion.li 
                 className="flex items-start space-x-3"

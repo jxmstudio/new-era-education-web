@@ -75,8 +75,13 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
-                    <p className="text-gray-600">+61 XXX XXX XXX</p>
-                    <p className="text-gray-600">Available during business hours</p>
+                    <p className="text-gray-600">
+                      <a href="tel:+61458498170" className="hover:text-secondary transition-colors">0458 498 170</a>
+                    </p>
+                    <p className="text-gray-600">
+                      <a href="tel:+61384670773" className="hover:text-secondary transition-colors">(03) 8467 0773</a>
+                    </p>
+                    <p className="text-gray-600 text-sm">Available during business hours</p>
                   </div>
                 </div>
 

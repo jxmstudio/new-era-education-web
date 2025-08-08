@@ -76,7 +76,7 @@ export default function Header() {
                       { href: "/english-tutoring", label: "English Tutoring" },
                       { href: "/maths-tutoring", label: "Maths Tutoring" },
                       { href: "/one-on-one", label: "One-on-One" },
-                      { href: "/art-workshops", label: "Art Workshops" },
+                      { href: "/workshops", label: "Workshops" },
                       { href: "/homeschooling-support", label: "Homeschooling Support" }
                     ].map((item, index) => (
                       <motion.div
@@ -214,7 +214,7 @@ export default function Header() {
                         { href: "/english-tutoring", label: "English Tutoring" },
                         { href: "/maths-tutoring", label: "Maths Tutoring" },
                         { href: "/one-on-one", label: "One-on-One" },
-                        { href: "/art-workshops", label: "Art Workshops" },
+                        { href: "/workshops", label: "Workshops" },
                         { href: "/homeschooling-support", label: "Homeschooling Support" }
                       ].map((item, index) => (
                         <motion.div

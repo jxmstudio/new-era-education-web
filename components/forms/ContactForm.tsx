@@ -208,7 +208,7 @@ export default function ContactForm() {
                     <option value="english">English Tutoring</option>
                     <option value="maths">Mathematics Tutoring</option>
                     <option value="one-on-one">One-on-One Tutoring</option>
-                    <option value="art-workshops">Art Workshops</option>
+                                            <option value="workshops">Workshops</option>
                     <option value="homeschooling">Homeschooling Support</option>
                   </select>
                 </motion.div>

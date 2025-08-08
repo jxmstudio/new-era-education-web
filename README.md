@@ -12,7 +12,7 @@ New Era Education provides expert tutoring services with qualified teachers who 
 - **English Tutoring** - Comprehensive support from Foundation to Year 12
 - **Mathematics Tutoring** - Build strong mathematical foundations
 - **One-on-One Tutoring** - Personalized learning plans
-- **Art Workshops** - Creative learning experiences
+- **Workshops** - Creative learning experiences
 - **Homeschooling Support** - Curriculum guidance and resources
 
 ## Location

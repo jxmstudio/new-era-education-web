@@ -88,7 +88,7 @@ const services = [
     href: "/one-on-one"
   },
   {
-    title: "Art Workshops",
+    title: "Workshops",
     age: "All Ages",
     description: "Creative expression through art, fostering imagination and fine motor skills development.",
     icon: <Palette className="w-6 h-6" />,
@@ -302,7 +302,12 @@ const contactInfo = [
   {
     icon: <Phone className="w-5 h-5" />,
     title: "Phone",
-    content: <a href="tel:+61384670773" className="hover:text-primary transition-colors">(03) 8467 0773</a>
+    content: (
+      <div className="space-y-1">
+        <div><a href="tel:+61458498170" className="hover:text-primary transition-colors">0458 498 170</a></div>
+        <div><a href="tel:+61384670773" className="hover:text-primary transition-colors">(03) 8467 0773</a></div>
+      </div>
+    )
   },
   {
     icon: <Mail className="w-5 h-5" />,

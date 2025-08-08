@@ -43,25 +43,25 @@ const features = [
 
 const testimonials = [
   {
-    content: "The art workshops have boosted my daughter's confidence so much. She's always excited to show us her latest creations and has developed a real love for painting.",
+            content: "The workshops have boosted my daughter's confidence so much. She's always excited to show us her latest creations and has developed a real love for painting.",
     name: "Sarah M.",
     role: "Parent of 8-year-old",
     rating: 5,
-    service: "Art Workshops"
+            service: "Workshops"
   },
   {
-    content: "My son's fine motor skills have improved dramatically through the art workshops. The teachers are patient and encouraging with all the children.",
+            content: "My son's fine motor skills have improved dramatically through the workshops. The teachers are patient and encouraging with all the children.",
     name: "David K.",
     role: "Parent of 6-year-old",
     rating: 5,
-    service: "Art Workshops"
+            service: "Workshops"
   },
   {
-    content: "I love coming to art workshops! We get to try different materials and techniques, and I've learned so much about colors and shapes.",
+            content: "I love coming to workshops! We get to try different materials and techniques, and I've learned so much about colors and shapes.",
     name: "Emma",
     role: "Age 9",
     rating: 5,
-    service: "Art Workshops"
+            service: "Workshops"
   }
 ];
 
@@ -93,13 +93,13 @@ export default function ArtWorkshopsPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[500px]">
             <div className="space-y-8">
               <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-white">
-                Art Workshops
+                Workshops
               </h1>
               <p className="text-xl lg:text-2xl text-white/90 leading-relaxed">
                 Creative expression through art, fostering imagination and fine motor skills development
               </p>
               <p className="text-lg text-white/80 leading-relaxed max-w-lg">
-                Join our engaging art workshops where children explore creativity, develop essential skills, and discover the joy of artistic expression in a supportive environment.
+                Join our engaging workshops where children explore creativity, develop essential skills, and discover the joy of artistic expression in a supportive environment.
               </p>
               <div className="pt-4">
                 <Button 
@@ -107,7 +107,7 @@ export default function ArtWorkshopsPage() {
                   asChild
                   className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 rounded-lg"
                 >
-                  <a href="/book">Book Art Workshop</a>
+                  <a href="/book">Book Workshop</a>
                 </Button>
               </div>
             </div>
@@ -127,10 +127,10 @@ export default function ArtWorkshopsPage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              What Makes Our Art Workshops Special
+              What Makes Our Workshops Special
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our creative art workshops are designed to inspire imagination while developing essential skills that benefit children academically and personally.
+              Our creative workshops are designed to inspire imagination while developing essential skills that benefit children academically and personally.
             </p>
           </motion.div>
 
@@ -163,7 +163,7 @@ export default function ArtWorkshopsPage() {
               Workshop Schedule
             </h2>
             <p className="text-xl text-gray-600">
-              Regular art workshops throughout the week with special holiday programs
+              Regular workshops throughout the week with special holiday programs
             </p>
           </motion.div>
 
@@ -202,7 +202,7 @@ export default function ArtWorkshopsPage() {
                 Holiday Programs Available
               </h3>
               <p className="text-purple-700">
-                Join our themed art workshops during school holidays for intensive creative experiences.
+                Join our themed workshops during school holidays for intensive creative experiences.
               </p>
             </div>
           </motion.div>
@@ -256,7 +256,7 @@ export default function ArtWorkshopsPage() {
               Ready to Unleash Your Child's Creativity?
             </h2>
             <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
-              Join our art workshops and watch your child develop artistic skills, confidence, and a love for creative expression.
+              Join our workshops and watch your child develop artistic skills, confidence, and a love for creative expression.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.a
