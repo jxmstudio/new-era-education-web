@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Session - New Era Education</title>
+    <meta name="description" content="Book your tutoring session with New Era Education in Mickleham, Melbourne. Easy online booking for English, Maths, School Readiness, and Art workshops.">
+    <meta name="keywords" content="book tutoring, online booking, Mickleham tutoring, Melbourne tutoring, English tutoring, Maths tutoring, school readiness, art workshops, Craigieburn, Greenvale, Beveridge, Wallan, Epping">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://neweraeducation.com.au/book.html">
+    
+    <!-- Additional Meta Tags -->
+    <meta name="author" content="New Era Education">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="geo.region" content="AU-VIC">
+    <meta name="geo.placename" content="Mickleham, Melbourne">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Book Your Session - New Era Education">
+    <meta property="og:description" content="Book your tutoring session with New Era Education in Mickleham, Melbourne. Easy online booking for all our services.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://neweraeducation.com.au/book.html">
+    <meta property="og:image" content="https://neweraeducation.com.au/assets/hero-bg.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="New Era Education">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Book Your Session - New Era Education">
+    <meta name="twitter:description" content="Book your tutoring session with New Era Education in Mickleham, Melbourne. Easy online booking for all our services.">
+    <meta name="twitter:image" content="https://neweraeducation.com.au/assets/hero-bg.jpg">
+    <meta name="twitter:site" content="@neweraeducation">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Tutoring Booking Service",
+      "description": "Online booking service for New Era Education tutoring sessions",
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "New Era Education",
+        "url": "https://neweraeducation.com.au"
+      },
+      "serviceType": "Educational Booking",
+      "areaServed": {
+        "@type": "Place",
+        "name": "Mickleham, Melbourne",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Mickleham",
+          "addressRegion": "Victoria",
+          "addressCountry": "AU"
+        }
+      },
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "priceCurrency": "AUD"
+      }
+    }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+                            <div class="nav-logo">
+                    <a href="index.html" class="logo">
+                        <img src="assets/logo.jpg" alt="New Era Education Logo">
+                    </a>
+                </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html#home" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <div class="nav-dropdown">
+                    <a href="index.html#services" class="nav-link dropdown-toggle">
+                        Services ▾
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="school-readiness.html" class="dropdown-item">School Readiness</a>
+                        <a href="english-tutoring.html" class="dropdown-item">English Tutoring</a>
+                        <a href="maths-tutoring.html" class="dropdown-item">Maths Tutoring</a>
+                        <a href="one-on-one.html" class="dropdown-item">One-on-One</a>
+                        <a href="art-workshops.html" class="dropdown-item">Art Workshops</a>
+                        <a href="homeschooling-support.html" class="dropdown-item">Homeschooling Support</a>
+                    </div>
+                </div>
+                <a href="faq.html" class="nav-link">FAQ</a>
+                <a href="team.html" class="nav-link">Team</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-buttons">
+                <a href="index.html#contact" class="btn btn-secondary">Enquire Now</a>
+                <a href="book.html" class="btn btn-primary" id="book-now-btn">Book Now</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Booking Section -->
+    <section class="booking-section">
+        <div class="container">
+            <div class="section-header">
+                <h1>Book Your Session</h1>
+                <p>Ready to start your child's learning journey? Book a session with our qualified teachers.</p>
+            </div>
+            <div class="booking-content">
+                <div class="booking-form">
+                    <form id="booking-form">
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" name="fullName" required placeholder="Full Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="Phone Number">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Child's Year Level or Subject *</label>
+                            <input type="text" id="subject" name="subject" required placeholder="Child's Year Level or Subject">
+                        </div>
+                        <div class="form-group">
+                            <label for="dateTime">Preferred Date/Time *</label>
+                            <input type="text" id="dateTime" name="dateTime" required placeholder="Preferred Date/Time">
+                        </div>
+                        <div class="form-group">
+                            <label for="notes">Additional Notes (Optional)</label>
+                            <textarea id="notes" name="notes" rows="4" placeholder="Additional Notes (Optional)"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Submit Booking Request</button>
+                    </form>
+                </div>
+                <div class="booking-info">
+                    <div class="info-card">
+                        <h3>What to Expect</h3>
+                        <ul>
+                            <li>Initial consultation within 24 hours</li>
+                            <li>Personalized learning assessment</li>
+                            <li>Custom learning plan development</li>
+                            <li>Regular progress updates</li>
+                        </ul>
+                    </div>
+                    <div class="info-card">
+                        <h3>Our Commitment</h3>
+                        <ul>
+                            <li>Qualified teachers with 10+ years experience</li>
+                            <li>Evidence-based teaching methods</li>
+                            <li>Inclusive learning environment</li>
+                            <li>Safe and secure learning centre</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="assets/logo.jpg" alt="New Era Education Logo" class="logo">
+                        <span>New Era Education</span>
+                    </div>
+                    <p>Premium tutoring services in Mickleham, Melbourne. Qualified teachers with evidence-based methods.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=61577979322687" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/newera.education_/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="index.html#services">School Readiness Program</a></li>
+                        <li><a href="index.html#services">English Tutoring</a></li>
+                        <li><a href="index.html#services">Mathematics Tutoring</a></li>
+                        <li><a href="index.html#services">One-on-One Tutoring</a></li>
+                        <li><a href="index.html#services">Art Workshops</a></li>
+                        <li><a href="index.html#services">Homeschooling Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#testimonials">Testimonials</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                        <li><a href="index.html#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> <a href="https://maps.google.com/?q=Suite+4+Level+3%2F21+Cityside+Dr%2C+Mickleham+VIC+3064" target="_blank" rel="noopener">Suite 4 Level 3/21 Cityside Dr, Mickleham VIC 3064</a></li>
+                        <li><i class="fas fa-envelope"></i> info@neweraeducation.com.au</li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+61384670773">(03) 8467 0773</a></li>
+                        <li><i class="fas fa-clock"></i> Mon-Wed: 8AM-7:30PM, Sat: 9AM-5PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 New Era Education. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Animated Confirmation Popup -->
+    <div id="popup-overlay" style="display: none; position: fixed; inset: 0; background-color: rgba(0, 0, 0, 0.4); z-index: 9998;"></div>
+
+    <div id="thank-you-popup" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(0.95); background: #ffffff; padding: 30px 40px; border-radius: 12px; text-align: center; box-shadow: 0 8px 30px rgba(0,0,0,0.2); opacity: 0; transition: all 0.3s ease; z-index: 9999;">
+      <h2 style="margin-bottom: 10px; color: #0b4f6c;">🎉 Thank you!</h2>
+      <p style="font-size: 1rem;">Your booking request has been submitted successfully.</p>
+      <button id="close-popup" style="margin-top: 20px; background-color: #0b4f6c; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer;">Close</button>
+    </div>
+
+    <!-- Booking Form JavaScript -->
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.getElementById("booking-form");
+      const popup = document.getElementById("thank-you-popup");
+      const overlay = document.getElementById("popup-overlay");
+      const closeBtn = document.getElementById("close-popup");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        // Prevent multiple submissions
+        const submitBtn = form.querySelector('button[type="submit"]');
+        if (submitBtn.disabled) return;
+        
+        submitBtn.disabled = true;
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = 'Submitting...';
+
+        const formData = new FormData(form);
+        const data = {};
+        formData.forEach((value, key) => {
+          data[key] = value;
+        });
+
+        fetch("https://script.google.com/macros/s/AKfycbxKGshzFGUPzx2sCFkx7cvD9JorIpxlKuvGc79k270yjQY6neAUIwN_DUsA9iOlspIvYA/exec", {
+          method: "POST",
+          mode: "no-cors",
+          body: formData
+        }).then(() => {
+          form.reset();
+          overlay.style.display = "block";
+          popup.style.display = "block";
+          popup.style.opacity = 1;
+          popup.style.transform = "translate(-50%, -50%) scale(1)";
+          
+          // Re-enable submit button
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalText;
+        }).catch((err) => {
+          console.error("Submission failed:", err);
+          
+          // Re-enable submit button on error
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalText;
+        });
+      });
+
+      closeBtn.addEventListener("click", () => {
+        popup.style.opacity = 0;
+        popup.style.transform = "translate(-50%, -50%) scale(0.95)";
+        setTimeout(() => {
+          overlay.style.display = "none";
+          popup.style.display = "none";
+        }, 300);
+      });
+    });
+    </script>
+    
+    <!-- Basic Navigation JavaScript (without form handling) -->
+    <script>
+        // Mobile navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('nav-menu');
+            
+            if (hamburger && navMenu) {
+                hamburger.addEventListener('click', function() {
+                    hamburger.classList.toggle('active');
+                    navMenu.classList.toggle('active');
+                });
+            }
+            
+            // Close mobile menu when clicking on a link
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

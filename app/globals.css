@@ -1,0 +1,289 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 84% 4.9%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 84% 4.9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 84% 4.9%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 94.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-poppins), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+}
+
+@layer components {
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+  }
+  
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Focus styles */
+  button:focus,
+  input:focus,
+  textarea:focus,
+  select:focus {
+    outline: 2px solid hsl(var(--primary));
+    outline-offset: 2px;
+  }
+  
+  /* Custom animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+  }
+  
+  /* Custom button styles */
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground hover:bg-secondary/90;
+  }
+  
+  .btn-outline {
+    @apply border border-input bg-background hover:bg-accent hover:text-accent-foreground;
+  }
+  
+  /* Custom card styles */
+  .service-card {
+    @apply bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-200 relative overflow-hidden;
+  }
+  
+  .service-card::before {
+    content: '';
+    @apply absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -translate-y-16 translate-x-16;
+  }
+  
+  /* Custom form styles */
+  .form-input {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent;
+    font-family: var(--font-inter), Inter, sans-serif;
+  }
+  
+  .form-select {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent;
+    font-family: var(--font-inter), Inter, sans-serif;
+  }
+  
+  /* Ensure all select elements use Inter font */
+  select {
+    font-family: var(--font-inter), Inter, sans-serif;
+  }
+  
+  /* Ensure all option elements use Inter font */
+  option {
+    font-family: var(--font-inter), Inter, sans-serif;
+  }
+  
+  /* Custom navigation styles */
+  .nav-link {
+    @apply text-gray-700 hover:text-primary transition-colors;
+  }
+  
+  .nav-link.active {
+    @apply text-primary;
+  }
+  
+  /* Custom hero styles */
+  .hero-gradient {
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary)/0.8) 100%);
+  }
+  
+  /* Custom testimonial styles */
+  .testimonial-card {
+    @apply bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow;
+  }
+  
+  /* Custom contact styles */
+  .contact-item {
+    @apply flex items-start space-x-4;
+  }
+  
+  .contact-icon {
+    @apply w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0;
+  }
+  
+  /* Custom footer styles */
+  .footer-link {
+    @apply text-gray-300 hover:text-white transition-colors;
+  }
+  
+  .social-link {
+    @apply w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors;
+  }
+  
+  /* Custom table styles */
+  .timetable {
+    @apply w-full border-collapse border border-gray-300 rounded-lg overflow-hidden;
+  }
+  
+  .timetable th {
+    @apply border border-gray-300 px-4 py-3 text-left font-semibold bg-primary text-white;
+  }
+  
+  .timetable td {
+    @apply border border-gray-300 px-4 py-3;
+  }
+  
+  .session {
+    @apply bg-blue-100;
+  }
+  
+  .session.math-year9 {
+    @apply bg-blue-100;
+  }
+  
+  .session.english-year10 {
+    @apply bg-green-100;
+  }
+  
+  .session.primary-tutoring {
+    @apply bg-yellow-100;
+  }
+  
+  .closed {
+    @apply bg-gray-200 text-gray-500;
+  }
+  
+  /* Custom popup styles */
+  .popup-overlay {
+    @apply fixed inset-0 bg-black/40 z-50;
+  }
+  
+  .popup-content {
+    @apply fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-xl shadow-2xl p-8 text-center z-50 max-w-md w-full mx-4;
+  }
+  
+  /* Responsive utilities */
+  @media (max-width: 768px) {
+    .container {
+      @apply px-4;
+    }
+    
+    .hero-title {
+      @apply text-3xl lg:text-4xl;
+    }
+    
+    .section-title {
+      @apply text-2xl lg:text-3xl;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero-title {
+      @apply text-2xl lg:text-3xl;
+    }
+    
+    .section-title {
+      @apply text-xl lg:text-2xl;
+    }
+    
+    .btn-large {
+      @apply px-6 py-3 text-base;
+    }
+  }
+} 

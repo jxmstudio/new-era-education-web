@@ -1,0 +1,180 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary-color: #2563eb;
+    --primary-dark: #1d4ed8;
+    --secondary-color: #f59e0b;
+    --accent-color: #10b981;
+    --text-dark: #1f2937;
+    --text-light: #6b7280;
+    --text-white: #ffffff;
+    --bg-light: #f8fafc;
+    --bg-white: #ffffff;
+    --border-light: #e5e7eb;
+  }
+}
+
+@layer components {
+  /* Custom button styles */
+  .btn-modern {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  
+  .btn-primary-modern {
+    @apply bg-primary text-white hover:bg-primary-dark focus:ring-primary shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
+  }
+  
+  .btn-secondary-modern {
+    @apply bg-secondary text-white hover:bg-secondary/90 focus:ring-secondary shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
+  }
+  
+  .btn-outline-modern {
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-white focus:ring-primary;
+  }
+  
+  /* Card styles */
+  .card-modern {
+    @apply bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100;
+  }
+  
+  .card-modern:hover {
+    @apply transform -translate-y-1;
+  }
+  
+  /* Form styles */
+  .input-modern {
+    @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200;
+  }
+  
+  .input-modern:focus {
+    @apply outline-none shadow-lg;
+  }
+  
+  /* Navigation styles */
+  .nav-link-modern {
+    @apply text-gray-700 hover:text-primary transition-colors duration-200 font-medium;
+  }
+  
+  .nav-link-modern:hover {
+    @apply transform scale-105;
+  }
+  
+  /* Hero section */
+  .hero-modern {
+    @apply relative bg-gradient-to-br from-primary to-primary-dark text-white overflow-hidden;
+  }
+  
+  .hero-modern::before {
+    @apply absolute inset-0 bg-black/20;
+    content: '';
+  }
+  
+  /* Service cards */
+  .service-card-modern {
+    @apply bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100;
+  }
+  
+  .service-card-modern:hover {
+    @apply transform -translate-y-2 border-primary/20;
+  }
+  
+  /* Testimonial cards */
+  .testimonial-card-modern {
+    @apply bg-white rounded-xl p-6 shadow-lg border border-gray-100;
+  }
+  
+  .testimonial-card-modern:hover {
+    @apply shadow-xl transform -translate-y-1;
+  }
+  
+  /* Footer styles */
+  .footer-modern {
+    @apply bg-gray-900 text-white;
+  }
+  
+  .footer-link-modern {
+    @apply text-gray-400 hover:text-white transition-colors duration-200;
+  }
+  
+  /* Animation utilities */
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+  }
+  
+  /* Responsive utilities */
+  .container-modern {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  /* Typography */
+  .text-hero {
+    @apply text-4xl lg:text-6xl font-bold leading-tight;
+  }
+  
+  .text-section {
+    @apply text-3xl lg:text-4xl font-bold;
+  }
+  
+  .text-subtitle {
+    @apply text-xl lg:text-2xl;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles */
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+} 

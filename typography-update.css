@@ -1,0 +1,335 @@
+/* Typography Update for New Era Education Website */
+/* Add this to your existing styles.css file */
+
+/* Import modern fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* Updated Typography System */
+:root {
+    /* Updated Font Variables */
+    --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    --font-display: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    
+    /* Enhanced Font Weights */
+    --font-light: 300;
+    --font-normal: 400;
+    --font-medium: 500;
+    --font-semibold: 600;
+    --font-bold: 700;
+    --font-extrabold: 800;
+    
+    /* Improved Line Heights */
+    --line-height-tight: 1.1;
+    --line-height-normal: 1.4;
+    --line-height-relaxed: 1.6;
+    --line-height-loose: 1.8;
+}
+
+/* Global Typography Updates */
+body {
+    font-family: var(--font-primary);
+    font-weight: var(--font-normal);
+    line-height: var(--line-height-relaxed);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+/* Enhanced Heading Hierarchy */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: var(--font-semibold);
+    line-height: var(--line-height-tight);
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: var(--font-bold);
+    letter-spacing: -0.03em;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: var(--font-semibold);
+    letter-spacing: -0.02em;
+}
+
+h3 {
+    font-size: 1.875rem;
+    font-weight: var(--font-semibold);
+    letter-spacing: -0.01em;
+}
+
+h4 {
+    font-size: 1.5rem;
+    font-weight: var(--font-semibold);
+}
+
+h5 {
+    font-size: 1.25rem;
+    font-weight: var(--font-medium);
+}
+
+h6 {
+    font-size: 1.125rem;
+    font-weight: var(--font-medium);
+}
+
+/* Enhanced Paragraph Typography */
+p {
+    font-family: var(--font-primary);
+    font-weight: var(--font-normal);
+    line-height: var(--line-height-relaxed);
+    margin-bottom: 1rem;
+    color: var(--text-light);
+}
+
+/* Improved Button Typography */
+.btn {
+    font-family: var(--font-primary);
+    font-weight: var(--font-medium);
+    letter-spacing: 0.01em;
+    text-transform: none;
+}
+
+.btn-large {
+    font-size: 1.125rem;
+    font-weight: var(--font-semibold);
+}
+
+/* Enhanced Navigation Typography */
+.nav-link {
+    font-family: var(--font-primary);
+    font-weight: var(--font-medium);
+    letter-spacing: 0.01em;
+}
+
+.logo-text {
+    font-family: var(--font-display);
+    font-weight: var(--font-bold);
+    letter-spacing: -0.01em;
+}
+
+/* Improved Form Typography */
+.form-group label {
+    font-family: var(--font-primary);
+    font-weight: var(--font-medium);
+    letter-spacing: 0.01em;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    font-family: var(--font-primary);
+    font-weight: var(--font-normal);
+    line-height: var(--line-height-normal);
+}
+
+/* Enhanced Service Card Typography */
+.service-card h3 {
+    font-family: var(--font-display);
+    font-weight: var(--font-semibold);
+    letter-spacing: -0.01em;
+}
+
+.service-age {
+    font-family: var(--font-primary);
+    font-weight: var(--font-semibold);
+    letter-spacing: 0.02em;
+}
+
+/* Improved Testimonial Typography */
+.testimonial-content p {
+    font-family: var(--font-primary);
+    font-style: italic;
+    font-weight: var(--font-normal);
+    line-height: var(--line-height-loose);
+}
+
+.author-info h4 {
+    font-family: var(--font-display);
+    font-weight: var(--font-semibold);
+}
+
+.author-info p {
+    font-family: var(--font-primary);
+    font-weight: var(--font-normal);
+}
+
+/* Enhanced Hero Section Typography */
+.hero-title {
+    font-family: var(--font-display);
+    font-weight: var(--font-bold);
+    letter-spacing: -0.03em;
+    line-height: var(--line-height-tight);
+}
+
+.hero-subtitle {
+    font-family: var(--font-primary);
+    font-weight: var(--font-normal);
+    line-height: var(--line-height-relaxed);
+}
+
+/* Improved Feature Typography */
+.feature {
+    font-family: var(--font-primary);
+    font-weight: var(--font-medium);
+}
+
+.about-feature h4 {
+    font-family: var(--font-display);
+    font-weight: var(--font-semibold);
+    letter-spacing: -0.01em;
+}
+
+.about-feature p {
+    font-family: var(--font-primary);
+    font-weight: var(--font-normal);
+    line-height: var(--line-height-relaxed);
+}
+
+/* Enhanced Footer Typography */
+.footer-section h4 {
+    font-family: var(--font-display);
+    font-weight: var(--font-semibold);
+    letter-spacing: -0.01em;
+}
+
+.footer-section ul li a {
+    font-family: var(--font-primary);
+    font-weight: var(--font-normal);
+}
+
+/* Improved Section Headers */
+.section-header h2 {
+    font-family: var(--font-display);
+    font-weight: var(--font-bold);
+    letter-spacing: -0.02em;
+}
+
+.section-header p {
+    font-family: var(--font-primary);
+    font-weight: var(--font-normal);
+    line-height: var(--line-height-relaxed);
+}
+
+/* Enhanced Card Content Typography */
+.card-content h3 {
+    font-family: var(--font-display);
+    font-weight: var(--font-semibold);
+    letter-spacing: -0.01em;
+}
+
+.card-content li {
+    font-family: var(--font-primary);
+    font-weight: var(--font-normal);
+    line-height: var(--line-height-normal);
+}
+
+/* Improved Contact Form Typography */
+.contact-item h4 {
+    font-family: var(--font-display);
+    font-weight: var(--font-semibold);
+    letter-spacing: -0.01em;
+}
+
+.contact-item p {
+    font-family: var(--font-primary);
+    font-weight: var(--font-normal);
+    line-height: var(--line-height-normal);
+}
+
+
+
+/* Improved Mobile Typography */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+        letter-spacing: -0.02em;
+    }
+    
+    h2 {
+        font-size: 2rem;
+        letter-spacing: -0.01em;
+    }
+    
+    h3 {
+        font-size: 1.5rem;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+        letter-spacing: -0.02em;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+        line-height: var(--line-height-normal);
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+        letter-spacing: -0.01em;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+        letter-spacing: -0.01em;
+    }
+    
+    .btn-large {
+        font-size: 1rem;
+        font-weight: var(--font-semibold);
+    }
+}
+
+/* Font Loading Optimization */
+.fonts-loaded {
+    font-display: swap;
+}
+
+/* Enhanced Readability for Long Text */
+.service-features li,
+.about-lead,
+.testimonial-content p {
+    line-height: var(--line-height-loose);
+}
+
+/* Improved Button Text Rendering */
+.btn {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Enhanced Form Input Typography */
+input::placeholder,
+textarea::placeholder {
+    font-family: var(--font-primary);
+    font-weight: var(--font-normal);
+    color: #9ca3af;
+}
+
+/* Improved List Typography */
+ul, ol {
+    font-family: var(--font-primary);
+    font-weight: var(--font-normal);
+    line-height: var(--line-height-relaxed);
+}
+
+/* Enhanced Link Typography */
+a {
+    font-family: inherit;
+    font-weight: inherit;
+}
+
+/* Improved Small Text Typography */
+small, .text-sm {
+    font-family: var(--font-primary);
+    font-weight: var(--font-normal);
+    line-height: var(--line-height-normal);
+} 
