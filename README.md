@@ -22,8 +22,8 @@ Serving: Craigieburn, Greenvale, Beveridge, Wallan, and Epping
 
 ## Contact
 
-📧 Email: info@neweraeducation.com.au  
-🌐 Website: https://neweraeducation.com.au
+📧 Email: info@neweralearning.com.au
+🌐 Website: https://www.neweralearning.com.au
 
 ## Technology Stack
 

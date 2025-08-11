@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['neweraeducation.com.au'],
+    domains: ['www.neweralearning.com.au', 'neweralearning.com.au'],
   },
   async headers() {
     return [

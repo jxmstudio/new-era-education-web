@@ -25,6 +25,17 @@
       "source": "/index.html",
       "destination": "/",
       "permanent": true
-    }
+    },
+    { "source": "/school-readiness.html", "destination": "/school-readiness", "permanent": true },
+    { "source": "/english-tutoring.html", "destination": "/english-tutoring", "permanent": true },
+    { "source": "/maths-tutoring.html", "destination": "/maths-tutoring", "permanent": true },
+    { "source": "/one-on-one.html", "destination": "/one-on-one", "permanent": true },
+    { "source": "/art-workshops.html", "destination": "/workshops", "permanent": true },
+    { "source": "/homeschooling-support.html", "destination": "/homeschooling-support", "permanent": true },
+    { "source": "/team.html", "destination": "/team", "permanent": true },
+    { "source": "/faq.html", "destination": "/faq", "permanent": true },
+    { "source": "/contact.html", "destination": "/contact", "permanent": true },
+    { "source": "/book.html", "destination": "/book", "permanent": true },
+    { "source": "/comparison.html", "destination": "/comparison", "permanent": true }
   ]
 }

@@ -313,7 +313,7 @@ const contactInfo = [
   {
     icon: <Mail className="w-5 h-5" />,
     title: "Email",
-    content: "info@neweraeducation.com.au"
+    content: "info@neweralearning.com.au"
   },
   {
     icon: <Calendar className="w-5 h-5" />,
