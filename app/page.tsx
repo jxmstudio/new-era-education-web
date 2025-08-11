@@ -33,6 +33,7 @@ import Timetable from "@/components/ui/timetable"
 import type { TimetableRow } from "@/components/ui/timetable"
 import { MotionWrapper } from "@/components/ui/motion-wrapper"
 import GoogleMapEmbed from "@/components/GoogleMapEmbed"
+import { ComparisonChart } from "@/components/ui/comparison-chart"
 
 const services = [
   {
@@ -531,6 +532,20 @@ export default function HomePage() {
               </MotionWrapper>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Comparison Chart Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <MotionWrapper
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <ComparisonChart />
+          </MotionWrapper>
         </div>
       </section>
 
