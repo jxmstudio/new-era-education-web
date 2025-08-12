@@ -12,7 +12,7 @@ const features = [
   {
     icon: <User className="w-6 h-6" />,
     title: "Individual Attention",
-    description: "Dedicated one-on-one focus ensuring personalized learning and immediate feedback."
+    description: "Dedicated one-on-one focus ensuring personalised learning and immediate feedback."
   },
   {
     icon: <Target className="w-6 h-6" />,
@@ -108,7 +108,7 @@ export default function OneOnOnePage() {
                 One-on-One Tutoring
               </h1>
               <p className="text-xl lg:text-2xl text-white/90 leading-relaxed">
-                Personalized learning plans tailored to your child's unique needs and learning style
+                Personalised learning plans tailored to your child's unique needs and learning style
               </p>
               <p className="text-lg text-white/80 leading-relaxed max-w-lg">
                 Experience the power of individual attention with our expert tutors who create customized learning experiences designed to help your child reach their full potential.

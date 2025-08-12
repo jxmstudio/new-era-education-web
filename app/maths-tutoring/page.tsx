@@ -10,11 +10,7 @@ import FeatureCard from '@/components/ui/feature-card';
 import TestimonialCard from '@/components/ui/testimonial-card';
 
 const features = [
-  {
-    icon: <Calculator className="w-6 h-6" />,
-    title: "VCE Maths Methods",
-    description: "Comprehensive preparation for VCE Maths Methods Units 1-4, including functions, calculus, and probability."
-  },
+  // Removed explicit VCE Maths Methods feature per FAQ update
   {
     icon: <Target className="w-6 h-6" />,
     title: "Problem Solving",
@@ -110,7 +106,7 @@ export default function MathsTutoringPage() {
                 From Foundation to VCE - build confidence in mathematics with qualified teachers
               </p>
               <p className="text-lg text-white/80 leading-relaxed max-w-lg">
-                Make mathematics accessible and enjoyable with our expert tutors. From basic arithmetic to VCE Maths Methods, we provide personalized support to help students excel.
+                Make mathematics accessible and enjoyable with our expert tutors. We provide personalised support to help students excel.
               </p>
               <div className="pt-4">
                 <Button 

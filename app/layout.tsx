@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   robots: 'index, follow',
   openGraph: {
     title: 'New Era Learning - Premium Tutoring Services',
-    description: 'Qualified teachers with 10+ years experience. Evidence-based literacy & numeracy methods. Book your session today!',
+    description: 'Qualified teachers with 10+ years’ experience. Evidence-based literacy & numeracy methods. Book your session today!',
     url: '/',
     siteName: 'New Era Learning',
     images: [

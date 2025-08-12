@@ -124,7 +124,7 @@ export default function Timetable({ data, title, description }: TimetableProps) 
             {title || "Weekly Tutoring Timetable"}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            {description || "Explore our weekly tutoring schedule for primary and high school students across Melbourne. Sessions in Math, English, and Science are available throughout the week."}
+            {description || "Keep up to date with our weekly tutoring schedule across Melbourne. Sessions in English and Maths are available face-to-face and online. Book now for more details."}
           </p>
         </motion.div>
         
@@ -219,10 +219,7 @@ export default function Timetable({ data, title, description }: TimetableProps) 
                   <div className="w-4 h-4 bg-blue-500 rounded"></div>
                   <span className="text-sm text-gray-700">Group Sessions</span>
                 </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-4 h-4 bg-purple-500 rounded"></div>
-                                      <span className="text-sm text-gray-700">Workshops</span>
-                </div>
+                {/* Art workshops temporarily removed */}
                 <div className="flex items-center space-x-2">
                   <div className="w-4 h-4 bg-green-500 rounded"></div>
                   <span className="text-sm text-gray-700">Foundational English</span>

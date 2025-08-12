@@ -78,7 +78,7 @@ const services = [
   {
     title: "One-on-One Tutoring",
     age: "All Ages",
-    description: "Personalized learning plans tailored to your child's unique needs and learning style.",
+    description: "Personalised learning plans tailored to your child's unique needs and learning style.",
     icon: <Users className="w-6 h-6" />,
     features: [
       "Individual attention",
@@ -104,7 +104,7 @@ const services = [
   {
     title: "Homeschooling Support",
     age: "All Ages",
-    description: "Specialized support for homeschooling families in literacy and numeracy development.",
+    description: "Specialised support for homeschooling families in literacy and numeracy development.",
     icon: <Home className="w-6 h-6" />,
     features: [
       "Curriculum guidance",
@@ -119,18 +119,18 @@ const services = [
 const benefits = [
   {
     icon: <GraduationCap className="w-6 h-6" />,
-    title: "Qualified Tutors",
-    description: "All tutors are vetted professionals with real classroom experience and proven track records."
+    title: "Qualified teachers",
+    description: "All tutors are carefully selected educators with proven effective classroom experience and a deep understanding of how students learn best."
   },
   {
     icon: <TrendingUp className="w-6 h-6" />,
-    title: "Proven Results",
-    description: "We track progress and deliver outcomes that matter, with measurable improvements in student performance."
+    title: "Personalised for Success",
+    description: "Every lesson is designed to improve student outcomes and confidence. We track progress, celebrate milestones, and deliver measurable improvements you can see and your child can feel."
   },
   {
     icon: <Clock className="w-6 h-6" />,
-    title: "Flexible Scheduling",
-    description: "After-school, weekends, or online – whatever suits your family's busy schedule and learning preferences."
+    title: "Flexible scheduling",
+    description: "Flexible face-to-face and online tutoring, available after school and weekends; designed to suit your family’s schedule."
   }
 ]
 
@@ -138,7 +138,7 @@ const aboutFeatures = [
   {
     icon: <Award className="w-5 h-5" />,
     title: "Qualified Teachers",
-    description: "All our educators hold teaching qualifications with 10+ years of classroom experience."
+    description: "Our Founder has 10+ years’ experience and is dedicated to ongoing training, ensuring families receive exceptional, inclusive, and supportive teaching."
   },
   {
     icon: <Heart className="w-5 h-5" />,
@@ -159,7 +159,7 @@ const aboutFeatures = [
 
 const testimonials = [
   {
-    content: "New Era Education has transformed my daughter's confidence in reading. The teachers are amazing and the progress reports keep me informed every week.",
+    content: "Our teacher was amazing.",
     author: "Sarah M.",
     role: "Parent of Year 3 student"
   },
@@ -169,7 +169,7 @@ const testimonials = [
     role: "Parent of 5-year-old"
   },
   {
-    content: "The one-on-one tutoring has helped my child overcome their learning difficulties. The teachers are patient and understanding.",
+    content: "Our tutor was patient and understanding.",
     author: "Lisa K.",
     role: "Parent of Year 6 student"
   }
@@ -221,7 +221,7 @@ const timetableData: TimetableRow[] = [
     monday: { type: "session", text: "1:1", subject: "1:1" },
     tuesday: { type: "session", text: "1:1", subject: "1:1" },
     wednesday: { type: "session", text: "1:1", subject: "1:1" },
-    thursday: { type: "session", text: "1:1", subject: "1:1" },
+    thursday: { type: "closed", text: "Closed" },
     friday: { type: "closed", text: "Closed" },
     saturday: { type: "session", text: "1:1", subject: "1:1" },
     sunday: { type: "closed", text: "Closed" }
@@ -276,16 +276,7 @@ const timetableData: TimetableRow[] = [
     saturday: { type: "session", text: "1:1", subject: "1:1" },
     sunday: { type: "closed", text: "Closed" }
   },
-  {
-    time: "10:00 AM",
-    monday: { type: "closed", text: "Closed" },
-    tuesday: { type: "closed", text: "Closed" },
-    wednesday: { type: "closed", text: "Closed" },
-    thursday: { type: "closed", text: "Closed" },
-    friday: { type: "session", text: "Art Workshop", subject: "art" },
-    saturday: { type: "session", text: "Art Workshop", subject: "art" },
-    sunday: { type: "session", text: "Art Workshop", subject: "art" }
-  }
+  // Art workshops temporarily removed
 ]
 
 
@@ -553,7 +544,7 @@ export default function HomePage() {
       <Timetable 
         data={timetableData}
         title="Weekly Tutoring Timetable"
-        description="Explore our weekly tutoring schedule for primary and high school students across Melbourne. Sessions in Math, English, and Science are available throughout the week."
+        description="Keep up to date with our weekly tutoring schedule across Melbourne. Sessions in English and Maths are available face-to-face and online. Book now for more details."
       />
 
       {/* CTA Section */}

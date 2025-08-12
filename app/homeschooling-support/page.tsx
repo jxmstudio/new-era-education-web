@@ -31,7 +31,7 @@ const features = [
   {
     icon: <Users className="w-6 h-6" />,
     title: "Parent Consultation",
-    description: "Receive personalized consultation to address your specific homeschooling challenges and questions."
+    description: "Receive personalised consultation to address your specific homeschooling challenges and questions."
   },
   {
     icon: <Calendar className="w-6 h-6" />,
@@ -41,7 +41,7 @@ const features = [
   {
     icon: <Home className="w-6 h-6" />,
     title: "Home Visits",
-    description: "In-home consultations available to provide personalized support in your learning environment."
+    description: "In-home consultations available to provide personalised support in your learning environment."
   }
 ];
 

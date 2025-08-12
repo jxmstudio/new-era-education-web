@@ -1,17 +1,17 @@
 # New Era Education
 
-Premium tutoring services in Mickleham, Melbourne, offering personalized learning support for students from Foundation to Year 12.
+Premium tutoring services in Mickleham, Melbourne, offering personalised learning support for students from Foundation to Year 12.
 
 ## About
 
-New Era Education provides expert tutoring services with qualified teachers who have 10+ years of experience. We specialize in evidence-based literacy and numeracy methods, offering both in-person and online sessions.
+New Era Education provides expert tutoring services with qualified teachers who have 10+ years of experience. We specialise in evidence-based literacy and numeracy methods, offering both in-person and online sessions.
 
 ## Services
 
 - **School Readiness Program** - Prepare your child for school success
 - **English Tutoring** - Comprehensive support from Foundation to Year 12
 - **Mathematics Tutoring** - Build strong mathematical foundations
-- **One-on-One Tutoring** - Personalized learning plans
+- **One-on-One Tutoring** - Personalised learning plans
 - **Workshops** - Creative learning experiences
 - **Homeschooling Support** - Curriculum guidance and resources
 

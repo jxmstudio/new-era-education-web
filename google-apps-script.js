@@ -8,7 +8,8 @@ function doPost(e) {
     
     // Determine form type based on field names
     const isBookingForm = formData.fullName && formData.subject && formData.dateTime;
-    const isContactForm = formData.name && formData.message;
+    const isContactForm = formData.name && formData.message && formData.formType !== 'careers';
+    const isCareersForm = formData.formType === 'careers' && formData.name && formData.email && formData.phone;
     
     if (isBookingForm) {
       // Handle booking form - add to Google Sheets
@@ -54,6 +55,77 @@ Submitted on: ${new Date().toLocaleString()}
         subject: emailSubject,
         body: emailBody
       });
+      
+    } else if (isCareersForm) {
+      // Careers form → append to a Careers sheet; optionally store CV in Drive and email
+      const sheetId = '19GhX1X1UF0QBkXp-CTJO7CyAFts5VtoqeoPxgwlGs_o';
+      const ss = SpreadsheetApp.openById(sheetId);
+      let careersSheet = ss.getSheetByName('Careers');
+      if (!careersSheet) {
+        careersSheet = ss.insertSheet('Careers');
+        careersSheet.appendRow([
+          'Timestamp', 'Full Name', 'Email', 'Phone', 'Suburb', 'Subjects/Year levels', 'Availability', 'Message', 'CV File Name', 'CV File Size (bytes)', 'CV File URL'
+        ]);
+      }
+
+      // Save CV to Drive if a base64 payload is provided
+      var cvFileUrl = '';
+      if (formData.cvBase64 && formData.fileName) {
+        try {
+          var folder = getOrCreateFolder_('Careers Applications');
+          var bytes = Utilities.base64Decode(formData.cvBase64);
+          var mime = formData.cvMime || 'application/octet-stream';
+          var blob = Utilities.newBlob(bytes, mime, formData.fileName);
+          var file = folder.createFile(blob);
+          cvFileUrl = file.getUrl();
+          // Email the application with the CV attached
+          MailApp.sendEmail({
+            to: 'neweraeducationptyltd@gmail.com',
+            subject: 'New Tutor Application - ' + (formData.name || ''),
+            body: 'A new tutor application has been submitted.\n\n'
+              + 'Name: ' + (formData.name || '') + '\n'
+              + 'Email: ' + (formData.email || '') + '\n'
+              + 'Phone: ' + (formData.phone || '') + '\n'
+              + 'Suburb: ' + (formData.suburb || '') + '\n'
+              + 'Subjects/Year levels: ' + (formData.subjects || '') + '\n'
+              + 'Availability: ' + (formData.availability || '') + '\n'
+              + 'Message: ' + (formData.message || '') + '\n\n'
+              + 'CV saved in Drive: ' + cvFileUrl,
+            attachments: [blob]
+          });
+        } catch (err2) {
+          Logger.log('CV save/email failed: ' + err2);
+        }
+      } else {
+        // No CV payload — send email without attachment
+        MailApp.sendEmail({
+          to: 'neweraeducationptyltd@gmail.com',
+          subject: 'New Tutor Application - ' + (formData.name || ''),
+          body: 'A new tutor application has been submitted.\n\n'
+            + 'Name: ' + (formData.name || '') + '\n'
+            + 'Email: ' + (formData.email || '') + '\n'
+            + 'Phone: ' + (formData.phone || '') + '\n'
+            + 'Suburb: ' + (formData.suburb || '') + '\n'
+            + 'Subjects/Year levels: ' + (formData.subjects || '') + '\n'
+            + 'Availability: ' + (formData.availability || '') + '\n'
+            + 'Message: ' + (formData.message || '')
+        });
+      }
+
+      const rowData = [
+        new Date().toISOString(),
+        formData.name || '',
+        formData.email || '',
+        formData.phone || '',
+        formData.suburb || '',
+        formData.subjects || '',
+        formData.availability || '',
+        formData.message || '',
+        formData.fileName || '',
+        formData.fileSize || '',
+        cvFileUrl
+      ];
+      careersSheet.appendRow(rowData);
       
     } else {
       throw new Error('Unknown form type');

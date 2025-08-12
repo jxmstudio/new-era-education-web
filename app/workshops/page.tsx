@@ -96,7 +96,7 @@ export default function ArtWorkshopsPage() {
                 Workshops
               </h1>
               <p className="text-xl lg:text-2xl text-white/90 leading-relaxed">
-                Creative expression through art, fostering imagination and fine motor skills development
+                We offer tailored workshops for parents and students to enhance learning skills and support families:
               </p>
               <p className="text-lg text-white/80 leading-relaxed max-w-lg">
                 Join our engaging workshops where children explore creativity, develop essential skills, and discover the joy of artistic expression in a supportive environment.
@@ -116,98 +116,21 @@ export default function ArtWorkshopsPage() {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              What Makes Our Workshops Special
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our creative workshops are designed to inspire imagination while developing essential skills that benefit children academically and personally.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <FeatureCard
-                key={index}
-                icon={feature.icon}
-                title={feature.title}
-                description={feature.description}
-                index={index}
-                accentColor="purple"
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Schedule Section */}
-      <section id="schedule" className="py-20 px-4 bg-white/50">
+      {/* Workshops list */}
+      <section className="py-16 px-4 bg-white">
         <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Workshop Schedule
-            </h2>
-            <p className="text-xl text-gray-600">
-              Regular workshops throughout the week with special holiday programs
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {scheduleInfo.map((schedule, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow"
-              >
-                <div className="text-purple-600 font-bold text-lg mb-2">
-                  {schedule.day}
-                </div>
-                <div className="text-gray-900 font-semibold mb-2">
-                  {schedule.time}
-                </div>
-                <div className="text-sm text-gray-600">
-                  {schedule.type}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            viewport={{ once: true }}
-            className="text-center mt-12"
-          >
-            <div className="bg-purple-100 rounded-xl p-6 inline-block">
-              <h3 className="text-lg font-semibold text-purple-900 mb-2">
-                Holiday Programs Available
-              </h3>
-              <p className="text-purple-700">
-                Join our themed workshops during school holidays for intensive creative experiences.
-              </p>
-            </div>
-          </motion.div>
+          <ul className="list-disc pl-6 space-y-3 text-gray-800 text-lg">
+            <li>Study skills and time management</li>
+            <li>Reading and spelling</li>
+            <li>Number fluency</li>
+            <li>Specialised literacy & numeracy approaches</li>
+            <li>Creative arts and expression</li>
+            <li>Holiday programs</li>
+          </ul>
         </div>
       </section>
+
+      {/* Schedule temporarily removed per timetable note */}
 
       {/* Testimonials Section */}
       <section className="py-20 px-4">

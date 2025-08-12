@@ -7,7 +7,8 @@ import { motion, AnimatePresence } from "framer-motion"
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false)
+  const [isServicesOpen, setIsServicesOpen] = useState(false)
+  const [isTeamOpen, setIsTeamOpen] = useState(false)
 
   return (
     <motion.header
@@ -50,25 +51,25 @@ export default function Header() {
             <div className="relative group">
               <motion.button
                 className="flex items-center gap-1 whitespace-nowrap hover:text-gray-200 transition font-medium leading-none"
-                onMouseEnter={() => setIsDropdownOpen(true)}
-                onMouseLeave={() => setIsDropdownOpen(false)}
+                onMouseEnter={() => setIsServicesOpen(true)}
+                onMouseLeave={() => setIsServicesOpen(false)}
                 whileHover={{ y: -2 }}
                 transition={{ duration: 0.2 }}
               >
                 <span>Services</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isDropdownOpen ? "rotate-180" : ""}`} />
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isServicesOpen ? "rotate-180" : ""}`} />
               </motion.button>
 
               <AnimatePresence>
-                {isDropdownOpen && (
+                {isServicesOpen && (
                   <motion.div
                     initial={{ opacity: 0, y: -10, scale: 0.95 }}
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     exit={{ opacity: 0, y: -10, scale: 0.95 }}
                     transition={{ duration: 0.2 }}
                     className="absolute top-full left-0 mt-2 w-64 bg-gray-900 rounded-xl shadow-xl border border-gray-700 py-2"
-                    onMouseEnter={() => setIsDropdownOpen(true)}
-                    onMouseLeave={() => setIsDropdownOpen(false)}
+                    onMouseEnter={() => setIsServicesOpen(true)}
+                    onMouseLeave={() => setIsServicesOpen(false)}
                   >
                     {[
                       { href: "/school-readiness", label: "School Readiness" },
@@ -109,11 +110,52 @@ export default function Header() {
               </Link>
             </motion.div>
 
-            <motion.div whileHover={{ y: -2 }} transition={{ duration: 0.2 }}>
-              <Link href="/team" className="whitespace-nowrap hover:text-gray-200 transition font-medium leading-none">
-                Team
-              </Link>
-            </motion.div>
+            {/* Team with dropdown */}
+            <div className="relative group">
+              <motion.button
+                className="flex items-center gap-1 whitespace-nowrap hover:text-gray-200 transition font-medium leading-none"
+                onMouseEnter={() => setIsTeamOpen(true)}
+                onMouseLeave={() => setIsTeamOpen(false)}
+                whileHover={{ y: -2 }}
+                transition={{ duration: 0.2 }}
+              >
+                <Link href="/team">Team</Link>
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isTeamOpen ? "rotate-180" : ""}`} />
+              </motion.button>
+
+              <AnimatePresence>
+                {isTeamOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: -10, scale: 0.95 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute top-full left-0 mt-2 w-56 bg-gray-900 rounded-xl shadow-xl border border-gray-700 py-2"
+                    onMouseEnter={() => setIsTeamOpen(true)}
+                    onMouseLeave={() => setIsTeamOpen(false)}
+                  >
+                    {[
+                      { href: "/team", label: "Our Team" },
+                      { href: "/careers", label: "Careers" }
+                    ].map((item, index) => (
+                      <motion.div
+                        key={item.href}
+                        initial={{ opacity: 0, x: -10 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: index * 0.05 }}
+                      >
+                        <Link
+                          href={item.href}
+                          className="block px-4 py-2 hover:bg-primary/20 hover:text-primary transition-colors"
+                        >
+                          {item.label}
+                        </Link>
+                      </motion.div>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
 
             <motion.div whileHover={{ y: -2 }} transition={{ duration: 0.2 }}>
               <Link href="/#contact" className="whitespace-nowrap hover:text-gray-200 transition font-medium leading-none">
@@ -187,6 +229,7 @@ export default function Header() {
                 { href: "/faq", label: "FAQ" },
                 { href: "/comparison", label: "Why Choose Us" },
                 { href: "/team", label: "Team" },
+                { href: "/careers", label: "Careers" },
                 { href: "/#contact", label: "Contact" }
               ].map((item, index) => (
                 <motion.div
@@ -209,16 +252,16 @@ export default function Header() {
               <div>
                 <motion.button 
                   className="flex items-center justify-between w-full hover:text-gray-200 transition font-medium"
-                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                  onClick={() => setIsServicesOpen(!isServicesOpen)}
                   whileHover={{ x: 5 }}
                   transition={{ duration: 0.2 }}
                 >
                   <span>Services</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`} />
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isServicesOpen ? 'rotate-180' : ''}`} />
                 </motion.button>
                 
                 <AnimatePresence>
-                  {isDropdownOpen && (
+                  {isServicesOpen && (
                     <motion.div 
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: "auto" }}

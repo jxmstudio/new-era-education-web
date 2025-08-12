@@ -32,7 +32,7 @@ const faqData: FAQItem[] = [
   },
   {
     question: "What subjects do you tutor?",
-    answer: "We specialize in English and Mathematics from Foundation to Year 12, including VCE English and VCE Maths Methods. We also offer school readiness programs for young children.",
+    answer: "We specialise in English and Mathematics from Foundation to Year 12, including VCE English. We also offer school readiness programs for young children.",
     category: "Services"
   },
   {
@@ -41,8 +41,8 @@ const faqData: FAQItem[] = [
     category: "Booking"
   },
   {
-    question: "What areas do you serve?",
-    answer: "We're located in Mickleham, Melbourne and serve surrounding areas including Craigieburn, Greenvale, Beveridge, Wallan, and Epping. We also offer online tutoring for students outside these areas.",
+    question: "Where is your tutoring available?",
+    answer: "We’re located in Mickleham, in the northern suburbs of Victoria. We also provide online tutoring, bringing quality support to students across Melbourne and beyond.",
     category: "General"
   },
   {
@@ -61,8 +61,8 @@ const faqData: FAQItem[] = [
     category: "Booking"
   },
   {
-    question: "Do you offer group sessions?",
-    answer: "We primarily offer one-on-one tutoring to ensure personalized attention. However, we can arrange small group sessions (2-3 students) for siblings or friends studying the same subject.",
+    question: "Do you offer group sessions (up to 6 students)?",
+    answer: "We primarily offer one-on-one tutoring to ensure personalised attention. However, we can arrange small group sessions (up to 6 students) for siblings or friends studying the same subject.",
     category: "Services"
   },
   {
