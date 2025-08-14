@@ -44,7 +44,7 @@ const features = [
 const subjects = [
   {
     icon: <BookOpen className="w-8 h-8" />,
-    title: "English Tutoring",
+    title: "English",
     description: "Reading, writing, comprehension, and VCE preparation",
     levels: "Foundation - Year 12"
   },
@@ -53,12 +53,6 @@ const subjects = [
     title: "Mathematics",
     description: "Number skills, problem-solving, and algebraic thinking", 
     levels: "Foundation - Year 8"
-  },
-  {
-    icon: <Baby className="w-8 h-8" />,
-    title: "School Readiness",
-    description: "Literacy, numeracy, and social skills preparation",
-    levels: "Ages 3-5"
   }
 ];
 
@@ -87,7 +81,7 @@ const testimonials = [
     service: "One-on-One"
   },
   {
-    content: "The personalized approach and weekly progress reports keep us informed every step of the way. We couldn't be happier with the results.",
+    content: "The personalised approach and weekly progress reports keep us informed every step of the way. We couldn't be happier with the results.",
     name: "Lisa K.",
     role: "Parent of Year 6 student",
     rating: 5,
@@ -179,7 +173,7 @@ export default function OneOnOnePage() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {subjects.map((subject, index) => (
               <motion.div
                 key={index}
@@ -289,9 +283,9 @@ export default function OneOnOnePage() {
             <h2 className="text-4xl font-bold text-white mb-6">
               Give Your Child the Individual Attention They Deserve
             </h2>
-            <p className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">
-              Start with a free consultation to discuss your child's needs and create a personalized learning plan.
-            </p>
+              <p className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">
+              Start with a free consultation to discuss your child's needs and create a personalised learning plan.
+              </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.a
                 href="/book"

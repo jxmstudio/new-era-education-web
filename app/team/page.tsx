@@ -30,8 +30,8 @@ const values = [
   },
   {
     icon: <BookOpen className="w-8 h-8" />,
-    title: "Personalized Learning",
-    description: "Every student receives a customized learning plan tailored to their unique needs."
+    title: "Personalised Learning",
+    description: "Every student receives a customised learning plan tailored to their unique needs."
   },
   {
     icon: <Calculator className="w-8 h-8" />,
@@ -421,7 +421,7 @@ export default function TeamPage() {
               },
               {
                 title: "NDIS Support Specialist", 
-                description: "Certified to provide specialized support for students with diverse learning needs and abilities.",
+                description: "Certified to provide specialised support for students with diverse learning needs and abilities.",
                 icon: <Star className="w-6 h-6" />
               },
               {

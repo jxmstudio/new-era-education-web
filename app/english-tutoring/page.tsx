@@ -33,7 +33,7 @@ const features = [
   {
     icon: <Target className="w-6 h-6" />,
     title: "Individual Attention",
-    description: "Personalized learning plans tailored to each student's specific strengths and areas for improvement."
+    description: "Personalised learning plans tailored to each student's specific strengths and areas for improvement."
   },
   {
     icon: <TrendingUp className="w-6 h-6" />,
@@ -87,7 +87,7 @@ const yearLevels = [
 
 const benefits = [
   "Qualified English teachers with VIT registration",
-  "Personalized learning plans tailored to individual needs",
+  "Personalised learning plans tailored to individual needs",
   "Small group and one-on-one sessions available",
   "Regular progress tracking and parent communication",
   "Homework support and assignment assistance",
@@ -282,9 +282,9 @@ export default function EnglishTutoringPage() {
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Excel in English?
             </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Start with a free consultation to discuss your child's needs and create a personalized English learning plan.
-            </p>
+              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+               Start with a free consultation to discuss your child's needs and create a personalised English learning plan.
+              </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.a
                 href="/book"

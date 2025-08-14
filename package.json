@@ -1,7 +1,7 @@
 {
   "name": "new-era-education-website",
   "version": "1.0.0",
-  "description": "New Era Education - Premium tutoring services in Mickleham, Melbourne. Expert teachers providing personalized learning support for students from Foundation to Year 12.",
+  "description": "New Era Education - Premium tutoring services in Mickleham, Melbourne. Expert teachers providing personalised learning support for students from Foundation to Year 12.",
   "main": "google-apps-script.js",
   "scripts": {
     "dev": "next dev",

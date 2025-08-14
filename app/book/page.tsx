@@ -58,7 +58,7 @@ export default function BookPage() {
                 </h2>
                 <p className="text-gray-600 mb-8">
                   Our free consultation is the first step towards your child's academic success. 
-                  We'll assess their needs and create a personalized learning plan.
+                  We'll assess their needs and create a personalised learning plan.
                 </p>
               </div>
 

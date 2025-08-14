@@ -37,7 +37,7 @@ const faqData: FAQItem[] = [
   },
   {
     question: "How do I book a consultation?",
-    answer: "You can book a free 30-minute consultation through our website booking form, by calling us, or by sending us an email. We'll discuss your child's needs and create a personalized learning plan.",
+    answer: "You can book a free 30-minute consultation through our website booking form, by calling us, or by sending us an email. We'll discuss your child's needs and create a personalised learning plan.",
     category: "Booking"
   },
   {
@@ -377,7 +377,7 @@ export default function FAQPage() {
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
               Getting Started is Easy
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Follow these simple steps to begin your child's learning journey with New Era Education
             </p>
           </MotionWrapper>
@@ -393,7 +393,7 @@ export default function FAQPage() {
               {
                 step: "2", 
                 title: "Create Learning Plan",
-                description: "We'll develop a personalized learning plan tailored to your child's unique learning style.",
+                description: "We'll develop a personalised learning plan tailored to your child's unique learning style.",
                 icon: <BookOpen className="w-6 h-6" />
               },
               {

@@ -99,7 +99,7 @@ const services = [
       "Art appreciation",
       "Holiday programs"
     ],
-    href: "/art-workshops"
+    href: "/workshops"
   },
   {
     title: "Homeschooling Support",
@@ -159,7 +159,7 @@ const aboutFeatures = [
 
 const testimonials = [
   {
-    content: "Our teacher was amazing.",
+    content: "our teacher was amazing.",
     author: "Sarah M.",
     role: "Parent of Year 3 student"
   },
@@ -251,7 +251,7 @@ const timetableData: TimetableRow[] = [
     monday: { type: "session", text: "1:1", subject: "1:1" },
     tuesday: { type: "session", text: "1:1", subject: "1:1" },
     wednesday: { type: "session", text: "1:1", subject: "1:1" },
-    thursday: { type: "session", text: "1:1", subject: "1:1" },
+    thursday: { type: "closed", text: "Closed" },
     friday: { type: "closed", text: "Closed" },
     saturday: { type: "session", text: "1:1", subject: "1:1" },
     sunday: { type: "closed", text: "Closed" }
@@ -261,7 +261,7 @@ const timetableData: TimetableRow[] = [
     monday: { type: "session", text: "1:1", subject: "1:1" },
     tuesday: { type: "session", text: "1:1", subject: "1:1" },
     wednesday: { type: "session", text: "1:1", subject: "1:1" },
-    thursday: { type: "session", text: "1:1", subject: "1:1" },
+    thursday: { type: "closed", text: "Closed" },
     friday: { type: "closed", text: "Closed" },
     saturday: { type: "session", text: "1:1", subject: "1:1" },
     sunday: { type: "closed", text: "Closed" }
@@ -358,14 +358,14 @@ export default function HomePage() {
       <HeroSection
         title="Premium Tutoring for Every Stage of Learning"
         subtitle="Trusted by families across Mickleham and Melbourne"
-        description="Expert tutoring services with qualified teachers and evidence-based methods. Personalized learning plans for every student, from school readiness to Year 12."
+        description="Expert tutoring services with qualified teachers and evidence-based methods. Personalised learning plans for every student, from school readiness to Year 12."
         primaryButtonText="Book a Free Consultation"
         primaryButtonHref="/book"
         secondaryButtonText="View Programs"
         secondaryButtonHref="/#services"
         features={[
           { icon: <GraduationCap className="w-4 h-4" />, text: "Qualified Teachers" },
-          { icon: <Users className="w-4 h-4" />, text: "Personalized Learning" },
+          { icon: <Users className="w-4 h-4" />, text: "Personalised Learning" },
           { icon: <Clock className="w-4 h-4" />, text: "Flexible Scheduling" }
         ]}
         variant="image"
@@ -388,7 +388,7 @@ export default function HomePage() {
               Why Choose New Era Education?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We provide the foundation for academic success with our proven approach
+              We provide quality tutoring that is more than a service; it’s an investment in confidence, foundational academic success, and lifelong learning.
             </p>
           </MotionWrapper>
           
@@ -445,8 +445,7 @@ export default function HomePage() {
                 About New Era Education
               </h2>
               <p className="text-xl text-gray-600 leading-relaxed">
-                We believe every child deserves access to quality education that nurtures their unique potential. 
-                Our qualified teachers bring over 10 years of experience to create an inclusive, supportive learning environment.
+                We believe every child deserves access to quality education that nurtures their unique potential.
               </p>
               <div className="space-y-6">
                 {aboutFeatures.map((feature, index) => (
@@ -571,7 +570,7 @@ export default function HomePage() {
               Ready to Start Your Child's Learning Journey?
             </h2>
             <p className="text-xl text-gray-100 mb-8 max-w-3xl mx-auto">
-              Join our community of learners and watch your child thrive with personalized, evidence-based education.
+              Join our community of learners and watch your child thrive with personalised, evidence-based education.
             </p>
           </MotionWrapper>
           

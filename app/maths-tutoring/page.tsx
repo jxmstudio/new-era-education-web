@@ -34,7 +34,7 @@ const features = [
   {
     icon: <User className="w-6 h-6" />,
     title: "Individual Attention",
-    description: "Personalized learning plans tailored to each student's specific strengths and areas for improvement."
+    description: "Personalised learning plans tailored to each student's specific strengths and areas for improvement."
   }
 ]
 

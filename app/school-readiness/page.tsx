@@ -38,7 +38,7 @@ const features = [
   {
     icon: <Target className="w-6 h-6" />,
     title: "Individual Assessment", 
-    description: "Personalized evaluation to identify strengths and areas for development before starting school."
+    description: "Personalised evaluation to identify strengths and areas for development before starting school."
   }
 ]
 
@@ -290,7 +290,7 @@ export default function SchoolReadinessPage() {
               Ready to Prepare Your Child for School Success?
             </h2>
             <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
-              Start with a free consultation to discuss your child's needs and create a personalized school readiness plan.
+              Start with a free consultation to discuss your child's needs and create a personalised school readiness plan.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.a

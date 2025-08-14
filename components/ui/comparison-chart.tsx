@@ -1,50 +1,62 @@
-import { Check, X, Clock, DollarSign, Shield, Users, BookOpen, Star } from "lucide-react"
+import { Users, BookOpen, Shield, Star } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "./card"
 import { Badge } from "./badge"
 
 interface ComparisonFeature {
   name: string
-  newEra: string | boolean
-  other: string | boolean
+  newEra: string
+  other: string
   icon?: React.ReactNode
 }
 
 const features: ComparisonFeature[] = [
   {
-    name: "Risk-free trial",
-    newEra: "7-DAY TRIAL",
-    other: false,
+    name: "Caring, Qualified Teachers",
+    newEra: "Led by experienced educators who know the Victorian Curriculum.",
+    other: "Often unqualified or not teacher-trained.",
+    icon: <Users className="w-5 h-5 text-primary" />
+  },
+  {
+    name: "Personalised Support",
+    newEra: "Sessions tailored to your child's pace, strengths and needs.",
+    other: "One-size-fits-all programs with little flexibility.",
+    icon: <Star className="w-5 h-5 text-secondary" />
+  },
+  {
+    name: "Support for Learning Difficulties",
+    newEra: "Specialists in supporting diverse learners with patience and care.",
+    other: "Limited experience with additional needs.",
     icon: <Shield className="w-5 h-5 text-green-600" />
   },
   {
-    name: "Learn Anywhere",
-    newEra: true,
-    other: false,
+    name: "Evidence-Based Teaching",
+    newEra: "Our methods are grounded in research and proven classroom practice.",
+    other: "Approaches can be inconsistent or outdated.",
     icon: <BookOpen className="w-5 h-5 text-blue-600" />
   },
   {
-    name: "Pre-vetted Teachers",
-    newEra: "LIVE 1-1 INTERVIEW",
-    other: false,
+    name: "Face-to-Face Focus",
+    newEra: "In-person sessions that build focus, trust, and real engagement.",
+    other: "Mostly online, less personal interaction.",
     icon: <Users className="w-5 h-5 text-purple-600" />
   },
   {
-    name: "Time Required",
-    newEra: "30 MINUTES",
-    other: "3 HOURS MINIMUM",
-    icon: <Clock className="w-5 h-5 text-orange-600" />
+    name: "NDIS Registered",
+    newEra: "We work with families using NDIS and understand the process.",
+    other: "May not be NDIS approved or supportive.",
+    icon: <Shield className="w-5 h-5 text-emerald-600" />
   },
   {
-    name: "Payment Model",
-    newEra: "Monthly (Flat)",
-    other: "Pay 100% Upfront Plus Registration Fee",
-    icon: <DollarSign className="w-5 h-5 text-green-600" />
-  },
-  {
-    name: "Cost/Lesson",
-    newEra: "$$$",
-    other: "$$$$",
+    name: "Confidence & Motivation Building",
+    newEra: "Helping students feel proud, capable, and motivated to learn.",
+    other: "Often rush to cover content without building confidence.",
     icon: <Star className="w-5 h-5 text-yellow-600" />
+  },
+  {
+    name: "Aligned with Victorian Curriculum",
+    newEra: "Learning that connects directly with what's taught at school.",
+    other: "May not follow current curriculum standards.",
+    icon: <BookOpen className="w-5 h-5 text-indigo-600" />
   }
 ]
 
@@ -53,10 +65,10 @@ export function ComparisonChart() {
     <div className="w-full max-w-6xl mx-auto p-6">
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold text-gray-900 mb-4 font-display">
-          New Era vs. Other Tutor Programs
+          Why More Parents Are Choosing New Era Education
         </h2>
-        <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-          At New Era our memberships have access to handpicked professional tutors and the ability to book on-the-go and around your busy schedule.
+        <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+          At New Era Education, every child’s pathway is unique. Our approach is caring and personalised — grounded in proven teaching practices that help students thrive in and out of the classroom.
         </p>
       </div>
 
@@ -68,75 +80,38 @@ export function ComparisonChart() {
         </CardHeader>
         
         <CardContent className="p-0">
-          <div className="grid grid-cols-3 gap-0">
-            {/* Feature names column */}
-            <div className="bg-gray-50">
-              {features.map((feature, index) => (
-                <div 
-                  key={feature.name}
-                  className={`p-4 border-b border-gray-200 flex items-center gap-3 ${
-                    index === 0 ? 'bg-gray-100 font-semibold' : ''
-                  }`}
-                >
+          {/* Column headers */}
+          <div className="grid grid-cols-3">
+            <div className="p-4 bg-gray-50 border-b border-gray-200"></div>
+            <div className="p-4 bg-primary text-white text-center font-bold text-lg border-b border-primary/20">New Era Education</div>
+            <div className="p-4 bg-secondary text-white text-center font-bold text-lg border-b border-secondary/20">Typical Tutoring Services</div>
+          </div>
+
+          {/* Feature rows - render per-row to guarantee alignment */}
+          <div className="divide-y divide-gray-200">
+            {features.map((feature, index) => (
+              <div key={feature.name} className="grid grid-cols-3">
+                {/* Name + icon */}
+                <div className="p-5 bg-gray-50 flex items-center gap-3">
                   {feature.icon}
-                  <span className="font-medium text-gray-700">{feature.name}</span>
+                  <span className="font-medium text-gray-800">{feature.name}</span>
                 </div>
-              ))}
-            </div>
 
-            {/* New Era column */}
-            <div className="bg-gradient-to-b from-primary/10 to-accent/10">
-              <div className="p-4 bg-primary text-white text-center font-bold text-lg border-b border-primary/20">
-                NEW ERA
-              </div>
-              {features.map((feature, index) => (
-                <div 
-                  key={feature.name}
-                  className={`p-4 border-b border-primary/20 flex items-center justify-center ${
-                    index === 0 ? 'bg-primary/5 font-semibold' : ''
-                  }`}
-                >
-                  {typeof feature.newEra === 'boolean' ? (
-                    feature.newEra ? (
-                      <Check className="w-6 h-6 text-green-600" />
-                    ) : (
-                      <X className="w-6 h-6 text-red-600" />
-                    )
-                  ) : (
-                    <span className="text-center font-medium text-gray-800">
-                      {feature.newEra}
-                    </span>
-                  )}
+                {/* New Era cell */}
+                <div className={`${index % 2 === 0 ? 'bg-primary/5' : 'bg-accent/5'} p-5 flex items-center justify-center text-center`}> 
+                  <p className="text-gray-900 leading-relaxed font-medium">
+                    {feature.newEra}
+                  </p>
                 </div>
-              ))}
-            </div>
 
-            {/* Other column */}
-            <div className="bg-gradient-to-b from-secondary/10 to-gray-100">
-              <div className="p-4 bg-secondary text-white text-center font-bold text-lg border-b border-secondary/20">
-                OTHER
-              </div>
-              {features.map((feature, index) => (
-                <div 
-                  key={feature.name}
-                  className={`p-4 border-b border-secondary/20 flex items-center justify-center ${
-                    index === 0 ? 'bg-secondary/5 font-semibold' : ''
-                  }`}
-                >
-                  {typeof feature.other === 'boolean' ? (
-                    feature.other ? (
-                      <Check className="w-6 h-6 text-green-600" />
-                    ) : (
-                      <X className="w-6 h-6 text-red-600" />
-                    )
-                  ) : (
-                    <span className="text-center font-medium text-gray-800">
-                      {feature.other}
-                    </span>
-                  )}
+                {/* Other providers cell */}
+                <div className={`${index % 2 === 0 ? 'bg-orange-50' : 'bg-amber-50'} p-5 flex items-center justify-center text-center`}>
+                  <p className="text-gray-700 leading-relaxed">
+                    {feature.other}
+                  </p>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </CardContent>
       </Card>
@@ -145,14 +120,14 @@ export function ComparisonChart() {
       <div className="text-center mt-8 p-6 bg-gray-50 rounded-lg">
         <p className="text-lg text-gray-700 mb-4">
           To book your next tutor visit us at{" "}
-          <a href="mailto:contact@neweraeducation.com" className="text-primary hover:text-primary-dark font-semibold">
-            contact@neweraeducation.com
+          <a href="mailto:info@neweralearning.com.au" className="text-primary hover:text-primary-dark font-semibold">
+            info@neweralearning.com.au
           </a>
         </p>
         <p className="text-gray-600 mb-6">
           or call{" "}
-          <a href="tel:+61415186680" className="text-primary hover:text-primary-dark font-semibold">
-            +61 415 186 680
+          <a href="tel:+61458498170" className="text-primary hover:text-primary-dark font-semibold">
+            0458 498 170
           </a>
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

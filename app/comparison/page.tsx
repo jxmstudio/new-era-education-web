@@ -62,7 +62,7 @@ export default function ComparisonPage() {
               className="bg-white p-6 rounded-lg shadow-md"
             >
               <div className="text-primary text-4xl mb-4">🎯</div>
-              <h3 className="text-xl font-semibold mb-3">Personalized Approach</h3>
+              <h3 className="text-xl font-semibold mb-3">Personalised Approach</h3>
               <p className="text-gray-600">
                 Every student gets a customized learning plan tailored to their unique needs and learning style.
               </p>
