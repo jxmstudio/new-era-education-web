@@ -16,26 +16,26 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://neweralearning.com.au'),
-  title: 'New Era Learning | VCE Tutoring Melbourne & High School Tutors',
-  description: 'Expert VCE tutoring in Melbourne for Years 7–12. 1:1 and small-group sessions with qualified teachers. Free assessment—enquire today.',
+  metadataBase: new URL('https://neweraeducation.com.au'),
+  title: 'New Era Education | Premium Primary & Secondary Tutoring Melbourne',
+  description: 'Premium tutoring in Melbourne for primary and secondary students. Expert teachers, tailored programs, and proven results for your child’s success.',
   keywords: 'VCE tutoring Melbourne, high school tutoring near me, tutoring Mickleham, English tutoring, Maths tutoring, school readiness program, Craigieburn, Greenvale, Beveridge, Wallan, Epping, Melbourne tutoring, Year 12 tutoring',
   authors: [{ name: 'New Era Learning' }],
   creator: 'New Era Learning',
   publisher: 'New Era Learning',
   robots: 'index, follow',
   openGraph: {
-    title: 'New Era Learning | VCE Tutoring Melbourne & High School Tutors',
-    description: 'Expert VCE tutoring in Melbourne for Years 7–12. 1:1 and small-group sessions with qualified teachers. Free assessment—enquire today.',
-    url: 'https://neweralearning.com.au',
-    siteName: 'New Era Learning',
+    title: 'New Era Education | Premium Primary & Secondary Tutoring Melbourne',
+    description: 'Premium tutoring in Melbourne for primary and secondary students. Expert teachers, tailored programs, and proven results for your child’s success.',
+    url: 'https://neweraeducation.com.au',
+    siteName: 'New Era Education',
     locale: 'en_AU',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'New Era Learning | VCE Tutoring Melbourne & High School Tutors',
-    description: 'Expert VCE tutoring in Melbourne for Years 7–12. 1:1 and small-group sessions with qualified teachers. Free assessment—enquire today.',
+    title: 'New Era Education | Premium Primary & Secondary Tutoring Melbourne',
+    description: 'Premium tutoring in Melbourne for primary and secondary students. Expert teachers, tailored programs, and proven results for your child’s success.',
   },
   alternates: {
     canonical: '/',
