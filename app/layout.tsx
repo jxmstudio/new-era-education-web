@@ -16,35 +16,26 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://www.neweralearning.com.au'),
-  title: 'VCE Tutoring Melbourne | High School Tutoring Near Me | New Era Learning',
-  description: 'Expert VCE tutoring and high school tutoring in Mickleham, Melbourne. Qualified teachers with 10+ years experience. English, Maths, School Readiness. Book your free consultation today!',
+  metadataBase: new URL('https://neweralearning.com.au'),
+  title: 'New Era Learning | VCE Tutoring Melbourne & High School Tutors',
+  description: 'Expert VCE tutoring in Melbourne for Years 7–12. 1:1 and small-group sessions with qualified teachers. Free assessment—enquire today.',
   keywords: 'VCE tutoring Melbourne, high school tutoring near me, tutoring Mickleham, English tutoring, Maths tutoring, school readiness program, Craigieburn, Greenvale, Beveridge, Wallan, Epping, Melbourne tutoring, Year 12 tutoring',
   authors: [{ name: 'New Era Learning' }],
   creator: 'New Era Learning',
   publisher: 'New Era Learning',
   robots: 'index, follow',
   openGraph: {
-    title: 'New Era Learning - Premium Tutoring Services',
-    description: 'Qualified teachers with 10+ years’ experience. Evidence-based literacy & numeracy methods. Book your session today!',
-    url: '/',
+    title: 'New Era Learning | VCE Tutoring Melbourne & High School Tutors',
+    description: 'Expert VCE tutoring in Melbourne for Years 7–12. 1:1 and small-group sessions with qualified teachers. Free assessment—enquire today.',
+    url: 'https://neweralearning.com.au',
     siteName: 'New Era Learning',
-    images: [
-      {
-        url: '/assets/hero-bg.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'New Era Learning - Premium Tutoring Services',
-      },
-    ],
     locale: 'en_AU',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'New Era Learning - Premium Tutoring Services',
-    description: 'Qualified teachers with 10+ years experience. Evidence-based literacy & numeracy methods. Book your session today!',
-    images: ['/assets/hero-bg.jpg'],
+    title: 'New Era Learning | VCE Tutoring Melbourne & High School Tutors',
+    description: 'Expert VCE tutoring in Melbourne for Years 7–12. 1:1 and small-group sessions with qualified teachers. Free assessment—enquire today.',
   },
   alternates: {
     canonical: '/',
