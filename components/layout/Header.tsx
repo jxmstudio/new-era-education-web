@@ -8,7 +8,8 @@ import { motion, AnimatePresence } from "framer-motion"
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(false)
-  const [isTeamOpen, setIsTeamOpen] = useState(false)
+  const [isAboutOpen, setIsAboutOpen] = useState(false)
+  const [isMobileAboutOpen, setIsMobileAboutOpen] = useState(false)
 
   return (
     <motion.header
@@ -41,11 +42,53 @@ export default function Header() {
               </Link>
             </motion.div>
 
-            <motion.div whileHover={{ y: -2 }} transition={{ duration: 0.2 }}>
-              <Link href="/#about" className="whitespace-nowrap hover:text-gray-200 transition font-medium leading-none">
-                About
-              </Link>
-            </motion.div>
+            {/* About Dropdown */}
+            <div className="relative group">
+              <motion.button
+                className="flex items-center gap-1 whitespace-nowrap hover:text-gray-200 transition font-medium leading-none"
+                onMouseEnter={() => setIsAboutOpen(true)}
+                onMouseLeave={() => setIsAboutOpen(false)}
+                whileHover={{ y: -2 }}
+                transition={{ duration: 0.2 }}
+              >
+                <span>About</span>
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isAboutOpen ? "rotate-180" : ""}`} />
+              </motion.button>
+
+              <AnimatePresence>
+                {isAboutOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: -10, scale: 0.95 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute top-full left-0 mt-2 w-56 bg-gray-900 rounded-xl shadow-xl border border-gray-700 py-2"
+                    onMouseEnter={() => setIsAboutOpen(true)}
+                    onMouseLeave={() => setIsAboutOpen(false)}
+                  >
+                    {[
+                      { href: "/#about", label: "About Us" },
+                      { href: "/team", label: "Our Team" },
+                      { href: "/careers", label: "Careers" }
+                    ].map((item, index) => (
+                      <motion.div
+                        key={item.href}
+                        initial={{ opacity: 0, x: -10 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: index * 0.05 }}
+                      >
+                        <Link
+                          href={item.href}
+                          className="block px-4 py-2 hover:bg-primary/20 hover:text-primary transition-colors"
+                        >
+                          {item.label}
+                        </Link>
+                      </motion.div>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
 
             {/* Services Dropdown */}
             <div className="relative group">
@@ -71,38 +114,70 @@ export default function Header() {
                     onMouseEnter={() => setIsServicesOpen(true)}
                     onMouseLeave={() => setIsServicesOpen(false)}
                   >
+                    {/* School Readiness */}
+                    <motion.div
+                      initial={{ opacity: 0, x: -10 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0 * 0.05 }}
+                    >
+                      <Link
+                        href="/school-readiness"
+                        className="block px-4 py-2 hover:bg-primary/20 hover:text-primary transition-colors"
+                      >
+                        School Readiness
+                      </Link>
+                    </motion.div>
+
+                    {/* Separator */}
+                    <div className="border-t border-gray-700 my-2"></div>
+
+                    {/* Tutoring Group Header */}
+                    <div className="px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">
+                      Tutoring
+                    </div>
+
+                    {/* Tutoring Services */}
                     {[
-                      { href: "/school-readiness", label: "School Readiness" },
                       { href: "/english-tutoring", label: "English Tutoring" },
                       { href: "/maths-tutoring", label: "Maths Tutoring" },
                       { href: "/one-on-one", label: "One-on-One" },
-                      { href: "/workshops", label: "Workshops" },
                       { href: "/homeschooling-support", label: "Homeschooling Support" }
                     ].map((item, index) => (
                       <motion.div
                         key={item.href}
                         initial={{ opacity: 0, x: -10 }}
                         animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: index * 0.05 }}
+                        transition={{ delay: (index + 1) * 0.05 }}
                       >
                         <Link
                           href={item.href}
-                          className="block px-4 py-2 hover:bg-primary/20 hover:text-primary transition-colors"
+                          className="block px-4 py-2 pl-6 hover:bg-primary/20 hover:text-primary transition-colors"
                         >
                           {item.label}
                         </Link>
                       </motion.div>
                     ))}
+
+                    {/* Separator */}
+                    <div className="border-t border-gray-700 my-2"></div>
+
+                    {/* Workshops */}
+                    <motion.div
+                      initial={{ opacity: 0, x: -10 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 5 * 0.05 }}
+                    >
+                      <Link
+                        href="/workshops"
+                        className="block px-4 py-2 hover:bg-primary/20 hover:text-primary transition-colors"
+                      >
+                        Workshops
+                      </Link>
+                    </motion.div>
                   </motion.div>
                 )}
               </AnimatePresence>
             </div>
-
-            <motion.div whileHover={{ y: -2 }} transition={{ duration: 0.2 }}>
-              <Link href="/faq" className="whitespace-nowrap hover:text-gray-200 transition font-medium leading-none">
-                FAQ
-              </Link>
-            </motion.div>
 
             <motion.div whileHover={{ y: -2 }} transition={{ duration: 0.2 }}>
               <Link href="/comparison" className="whitespace-nowrap hover:text-gray-200 transition font-medium leading-none">
@@ -111,57 +186,16 @@ export default function Header() {
             </motion.div>
 
             <motion.div whileHover={{ y: -2 }} transition={{ duration: 0.2 }}>
+              <Link href="/faq" className="whitespace-nowrap hover:text-gray-200 transition font-medium leading-none">
+                FAQ
+              </Link>
+            </motion.div>
+
+            <motion.div whileHover={{ y: -2 }} transition={{ duration: 0.2 }}>
               <Link href="/ndis" className="whitespace-nowrap hover:text-gray-200 transition font-medium leading-none">
                 NDIS
               </Link>
             </motion.div>
-
-            {/* Team with dropdown */}
-            <div className="relative group">
-              <motion.button
-                className="flex items-center gap-1 whitespace-nowrap hover:text-gray-200 transition font-medium leading-none"
-                onMouseEnter={() => setIsTeamOpen(true)}
-                onMouseLeave={() => setIsTeamOpen(false)}
-                whileHover={{ y: -2 }}
-                transition={{ duration: 0.2 }}
-              >
-                <Link href="/team">Team</Link>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isTeamOpen ? "rotate-180" : ""}`} />
-              </motion.button>
-
-              <AnimatePresence>
-                {isTeamOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, y: -10, scale: 0.95 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: -10, scale: 0.95 }}
-                    transition={{ duration: 0.2 }}
-                    className="absolute top-full left-0 mt-2 w-56 bg-gray-900 rounded-xl shadow-xl border border-gray-700 py-2"
-                    onMouseEnter={() => setIsTeamOpen(true)}
-                    onMouseLeave={() => setIsTeamOpen(false)}
-                  >
-                    {[
-                      { href: "/team", label: "Our Team" },
-                      { href: "/careers", label: "Careers" }
-                    ].map((item, index) => (
-                      <motion.div
-                        key={item.href}
-                        initial={{ opacity: 0, x: -10 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: index * 0.05 }}
-                      >
-                        <Link
-                          href={item.href}
-                          className="block px-4 py-2 hover:bg-primary/20 hover:text-primary transition-colors"
-                        >
-                          {item.label}
-                        </Link>
-                      </motion.div>
-                    ))}
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
 
             <motion.div whileHover={{ y: -2 }} transition={{ duration: 0.2 }}>
               <Link href="/#contact" className="whitespace-nowrap hover:text-gray-200 transition font-medium leading-none">
@@ -180,15 +214,6 @@ export default function Header() {
                 className="border border-white/20 rounded-xl px-3 py-2 font-medium leading-none hover:bg-white/10"
               >
                 Parent Portal
-              </Link>
-            </motion.div>
-
-            <motion.div whileHover={{ y: -2 }} transition={{ duration: 0.2 }}>
-              <Link
-                href="/#contact"
-                className="border border-white/20 rounded-xl px-3 py-2 font-medium leading-none hover:bg-white/10"
-              >
-                Enquire Now
               </Link>
             </motion.div>
 
@@ -231,12 +256,9 @@ export default function Header() {
             <div className="p-4 flex flex-col gap-4">
               {[
                 { href: "/#home", label: "Home" },
-                { href: "/#about", label: "About" },
-                { href: "/faq", label: "FAQ" },
                 { href: "/comparison", label: "Why Choose Us" },
+                { href: "/faq", label: "FAQ" },
                 { href: "/ndis", label: "NDIS" },
-                { href: "/team", label: "Team" },
-                { href: "/careers", label: "Careers" },
                 { href: "/#contact", label: "Contact" }
               ].map((item, index) => (
                 <motion.div
@@ -254,6 +276,52 @@ export default function Header() {
                   </Link>
                 </motion.div>
               ))}
+
+              {/* Mobile About Dropdown */}
+              <div>
+                <motion.button 
+                  className="flex items-center justify-between w-full hover:text-gray-200 transition font-medium"
+                  onClick={() => setIsMobileAboutOpen(!isMobileAboutOpen)}
+                  whileHover={{ x: 5 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <span>About</span>
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isMobileAboutOpen ? 'rotate-180' : ''}`} />
+                </motion.button>
+                
+                <AnimatePresence>
+                  {isMobileAboutOpen && (
+                    <motion.div 
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.3 }}
+                      className="mt-2 ml-4 space-y-2 overflow-hidden"
+                    >
+                      {[
+                        { href: "/#about", label: "About Us" },
+                        { href: "/team", label: "Our Team" },
+                        { href: "/careers", label: "Careers" }
+                      ].map((item, index) => (
+                        <motion.div
+                          key={item.href}
+                          initial={{ opacity: 0, x: -10 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ delay: index * 0.05 }}
+                        >
+                          <Link 
+                            href={item.href} 
+                            className="block text-gray-300 hover:text-gray-100 transition"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                          >
+                            {item.label}
+                          </Link>
+                        </motion.div>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
               
               {/* Mobile Services Dropdown */}
               <div>
@@ -276,29 +344,63 @@ export default function Header() {
                       transition={{ duration: 0.3 }}
                       className="mt-2 ml-4 space-y-2 overflow-hidden"
                     >
+                      {/* School Readiness */}
+                      <motion.div
+                        initial={{ opacity: 0, x: -10 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0 * 0.05 }}
+                      >
+                        <Link 
+                          href="/school-readiness" 
+                          className="block text-gray-300 hover:text-gray-100 transition"
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          School Readiness
+                        </Link>
+                      </motion.div>
+
+                      {/* Tutoring Group Header */}
+                      <div className="text-xs font-semibold text-gray-400 uppercase tracking-wider mt-3 mb-1">
+                        Tutoring
+                      </div>
+
+                      {/* Tutoring Services */}
                       {[
-                        { href: "/school-readiness", label: "School Readiness" },
                         { href: "/english-tutoring", label: "English Tutoring" },
                         { href: "/maths-tutoring", label: "Maths Tutoring" },
                         { href: "/one-on-one", label: "One-on-One" },
-                        { href: "/workshops", label: "Workshops" },
                         { href: "/homeschooling-support", label: "Homeschooling Support" }
                       ].map((item, index) => (
                         <motion.div
                           key={item.href}
                           initial={{ opacity: 0, x: -10 }}
                           animate={{ opacity: 1, x: 0 }}
-                          transition={{ delay: index * 0.05 }}
+                          transition={{ delay: (index + 1) * 0.05 }}
                         >
                           <Link 
                             href={item.href} 
-                            className="block text-gray-300 hover:text-gray-100 transition"
+                            className="block text-gray-300 hover:text-gray-100 transition ml-2"
                             onClick={() => setIsMobileMenuOpen(false)}
                           >
                             {item.label}
                           </Link>
                         </motion.div>
                       ))}
+
+                      {/* Workshops */}
+                      <motion.div
+                        initial={{ opacity: 0, x: -10 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 5 * 0.05 }}
+                      >
+                        <Link 
+                          href="/workshops" 
+                          className="block text-gray-300 hover:text-gray-100 transition mt-3"
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          Workshops
+                        </Link>
+                      </motion.div>
                     </motion.div>
                   )}
                 </AnimatePresence>
@@ -314,16 +416,6 @@ export default function Header() {
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Parent Portal
-                  </Link>
-                </motion.div>
-
-                <motion.div whileHover={{ y: -1 }}>
-                  <Link
-                    href="/#contact"
-                    className="block text-center border border-white/20 rounded-xl px-3 py-2 font-medium leading-none hover:bg-white/10"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    Enquire Now
                   </Link>
                 </motion.div>
 
