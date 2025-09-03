@@ -258,7 +258,7 @@ export default function EnglishTutoringPage() {
                 Learn more about this innovative literacy program:
               </p>
               <a 
-                href="https://www.touchtype-readandspell.com" 
+                href="https://www.readandspell.com/" 
                 target="_blank" 
                 rel="noopener"
                 className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-300"
