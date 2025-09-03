@@ -33,7 +33,7 @@ const features = [
   {
     icon: <Baby className="w-6 h-6" />,
     title: "School Readiness",
-    description: "Transition preparation including routine management and classroom behavior expectations."
+    description: "Transition preparation including routine management and classroom behaviour expectations."
   },
   {
     icon: <Target className="w-6 h-6" />,
@@ -103,13 +103,10 @@ export default function SchoolReadinessPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[500px]">
             <div className="space-y-8">
               <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-white">
-                School Readiness Program
+                School Readiness Program — Coming soon…
               </h1>
               <p className="text-xl lg:text-2xl text-white/90 leading-relaxed">
-                Prepare your child for success in their educational journey
-              </p>
-              <p className="text-lg text-white/80 leading-relaxed max-w-lg">
-                Our comprehensive school readiness program builds the essential skills and confidence children need to thrive in their first years of formal education.
+                Taking interest for group session enrolments now! Our comprehensive school readiness program builds the essential skills and confidence children need to thrive in their first years of school.
               </p>
               <div className="pt-4">
                 <Button 
@@ -117,11 +114,30 @@ export default function SchoolReadinessPage() {
                   asChild
                   className="bg-white text-emerald-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 rounded-lg"
                 >
-                  <a href="/book">Book Free Consultation</a>
+                  <a href="/book">Join Class</a>
                 </Button>
               </div>
             </div>
-            <div className="hidden lg:block"></div>
+            <div className="bg-white/95 rounded-2xl p-8 shadow-2xl">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Are you a parent wondering…</h3>
+              <ul className="space-y-4 text-gray-800">
+                <li className="flex items-start">
+                  <span className="text-emerald-600 mr-3">•</span>
+                  <span>How can I give my child the best start to school?</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-emerald-600 mr-3">•</span>
+                  <span>How can I make these early years meaningful and productive?</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-emerald-600 mr-3">•</span>
+                  <span>Will they be confident and resilient in new social situations?</span>
+                </li>
+              </ul>
+              <p className="mt-6 text-gray-700">
+                If these questions sound familiar, you've come to the right place. We help the process for your child's early development.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -140,7 +156,7 @@ export default function SchoolReadinessPage() {
               What Our Program Covers
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our comprehensive school readiness program addresses all essential areas of development needed for a successful start to formal education.
+              Our comprehensive school readiness program addresses all essential areas of development needed for a successful start to school.
             </p>
           </motion.div>
 

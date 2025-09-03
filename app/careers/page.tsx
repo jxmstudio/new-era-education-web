@@ -161,6 +161,46 @@ export default function CareersPage() {
         </div>
       </section>
 
+      {/* Administration & Marketing Support Assistant Role */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-8">Administration & Marketing Support Assistant (entry or junior level)</h3>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h4 className="text-xl font-semibold text-gray-900 mb-4">Key Responsibilities:</h4>
+              <ul className="list-disc pl-6 space-y-2 text-gray-800">
+                <li>Support with general day-to-day administrative tasks</li>
+                <li>Help manage and update social media accounts and online presence daily</li>
+                <li>Assist in preparing print and digital resources for students and parents</li>
+                <li>Assist with marketing communications</li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 className="text-xl font-semibold text-gray-900 mb-4">Skills & Attributes:</h4>
+              <ul className="list-disc pl-6 space-y-2 text-gray-800">
+                <li>Strong organisational and time-management skills</li>
+                <li>Excellent written and verbal communication skills</li>
+                <li>Comfortable using social media platforms professionally (Facebook, Instagram, etc.)</li>
+                <li>Ability to work independently and as part of a team</li>
+                <li>Proficient with Microsoft Office (Word, Excel, Outlook) or similar software</li>
+                <li>Friendly, approachable, and customer-focused attitude</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div className="mt-8">
+            <h4 className="text-xl font-semibold text-gray-900 mb-4">Why Join Us:</h4>
+            <ul className="list-disc pl-6 space-y-2 text-gray-800">
+              <li>Be part of a supportive, mission-driven team focused on student success</li>
+              <li>Gain valuable experience in administration, education, and social media</li>
+              <li>Opportunities for professional development and growth</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-8 bg-gradient-to-r from-primary to-primary-dark text-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

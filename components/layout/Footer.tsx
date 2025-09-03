@@ -107,7 +107,8 @@ export default function Footer() {
                 { href: "/#about", label: "About Us" },
                 { href: "/#testimonials", label: "Testimonials" },
                 { href: "/#contact", label: "Contact" },
-                { href: "/faq", label: "FAQ" }
+                { href: "/faq", label: "FAQ" },
+                { href: "/ndis", label: "NDIS" }
               ].map((item, index) => (
                 <motion.li
                   key={item.href}

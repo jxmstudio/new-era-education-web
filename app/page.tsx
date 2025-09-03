@@ -231,7 +231,7 @@ const timetableData: TimetableRow[] = [
     monday: { type: "session", text: "Group Session", subject: "group" },
     tuesday: { type: "session", text: "Group Session", subject: "group" },
     wednesday: { type: "session", text: "Group Session", subject: "group" },
-    thursday: { type: "session", text: "Group Session", subject: "group" },
+    thursday: { type: "closed", text: "Closed" },
     friday: { type: "closed", text: "Closed" },
     saturday: { type: "session", text: "1:1", subject: "1:1" },
     sunday: { type: "closed", text: "Closed" }
@@ -241,7 +241,7 @@ const timetableData: TimetableRow[] = [
     monday: { type: "session", text: "Group Session", subject: "group" },
     tuesday: { type: "session", text: "Group Session", subject: "group" },
     wednesday: { type: "session", text: "Group Session", subject: "group" },
-    thursday: { type: "session", text: "Group Session", subject: "group" },
+    thursday: { type: "closed", text: "Closed" },
     friday: { type: "closed", text: "Closed" },
     saturday: { type: "session", text: "1:1", subject: "1:1" },
     sunday: { type: "closed", text: "Closed" }
@@ -436,6 +436,60 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Workshops Box */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 lg:p-12">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                Workshops
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                We offer tailored workshops for parents and students to enhance learning skills and support families:
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <BookOpen className="w-6 h-6 text-purple-600" />
+                  </div>
+                  <h3 className="font-semibold text-gray-900 mb-2">Study skills and time management</h3>
+                </div>
+              </div>
+              
+              <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Users className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <h3 className="font-semibold text-gray-900 mb-2">Specialised literacy & numeracy approaches</h3>
+                </div>
+              </div>
+              
+              <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Palette className="w-6 h-6 text-pink-600" />
+                  </div>
+                  <h3 className="font-semibold text-gray-900 mb-2">Creative arts and expression</h3>
+                </div>
+              </div>
+              
+              <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Calendar className="w-6 h-6 text-green-600" />
+                  </div>
+                  <h3 className="font-semibold text-gray-900 mb-2">Holiday programs</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* About Section */}
       <section id="about" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -467,6 +521,60 @@ export default function HomePage() {
                    style={{ 
                      backgroundImage: `linear-gradient(to right, rgba(9, 47, 121, 0.7), rgba(0, 166, 138, 0.7)), url('/stock2.png')` 
                    }}>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Workshops Box for About */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 lg:p-12">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                Workshops
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                We offer tailored workshops for parents and students to enhance learning skills and support families:
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <BookOpen className="w-6 h-6 text-purple-600" />
+                  </div>
+                  <h3 className="font-semibold text-gray-900 mb-2">Study skills and time management</h3>
+                </div>
+              </div>
+              
+              <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Users className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <h3 className="font-semibold text-gray-900 mb-2">Specialised literacy & numeracy approaches</h3>
+                </div>
+              </div>
+              
+              <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Palette className="w-6 h-6 text-pink-600" />
+                  </div>
+                  <h3 className="font-semibold text-gray-900 mb-2">Creative arts and expression</h3>
+                </div>
+              </div>
+              
+              <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Calendar className="w-6 h-6 text-green-600" />
+                  </div>
+                  <h3 className="font-semibold text-gray-900 mb-2">Holiday programs</h3>
+                </div>
               </div>
             </div>
           </div>

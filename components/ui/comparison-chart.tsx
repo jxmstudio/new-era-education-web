@@ -57,6 +57,12 @@ const features: ComparisonFeature[] = [
     newEra: "Learning that connects directly with what's taught at school.",
     other: "May not follow current curriculum standards.",
     icon: <BookOpen className="w-5 h-5 text-indigo-600" />
+  },
+  {
+    name: "Parent Support",
+    newEra: "New Era – Clear feedback helps you understand where your child is at in line with their stage of learning.",
+    other: "Limited clarity on a child's progress toward age-appropriate goals.",
+    icon: <Users className="w-5 h-5 text-teal-600" />
   }
 ]
 
@@ -122,7 +128,8 @@ export function ComparisonChart() {
           To book your next tutor visit us at{" "}
           <a href="mailto:info@neweralearning.com.au" className="text-primary hover:text-primary-dark font-semibold">
             info@neweralearning.com.au
-          </a>
+          </a>{" "}
+          customised to s
         </p>
         <p className="text-gray-600 mb-6">
           or call{" "}

@@ -200,6 +200,79 @@ export default function EnglishTutoringPage() {
         </div>
       </section>
 
+      {/* Touch-type Read and Spell (TTRS) Section */}
+      <section className="py-20 px-4 bg-white/50">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <div className="flex justify-center mb-6">
+              <img 
+                src="/TTRS.png" 
+                alt="Touch-type Read and Spell Logo" 
+                className="h-20 w-auto rounded-lg"
+              />
+            </div>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              Touch-type Read and Spell (TTRS)
+            </h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+              Touch-type Read and Spell (TTRS) is an award-winning literacy support program designed to help students of all ages develop stronger reading, writing, and spelling skills through multi-sensory learning. By combining structured phonics instruction with typing practice, it creates an engaging and accessible way for students to build confidence in their literacy. The program is particularly supportive for learners with dyslexia or other learning differences, but it benefits any student looking to improve their literacy foundations.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Key Benefits:</h3>
+              <ul className="space-y-4">
+                <li className="flex items-start">
+                  <CheckCircle className="w-6 h-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-800">Builds literacy and spelling skills through phonics-based practice</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-6 h-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-800">Improves typing speed and confidence while reinforcing reading and writing</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-6 h-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-800">Supports students with dyslexia and other learning difficulties</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-6 h-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-800">Boosts focus, self-esteem, and independent learning habits</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-6 h-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-800">Flexible and adaptive, allowing students to learn at their own pace</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div className="bg-blue-50 rounded-xl p-8">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Resource Link</h3>
+              <p className="text-gray-700 mb-6">
+                Learn more about this innovative literacy program:
+              </p>
+              <a 
+                href="https://www.touchtype-readandspell.com" 
+                target="_blank" 
+                rel="noopener"
+                className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-300"
+              >
+                Visit TTRS
+                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Benefits Section */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto">

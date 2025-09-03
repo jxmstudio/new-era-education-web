@@ -57,12 +57,12 @@ const faqData: FAQItem[] = [
   },
   {
     question: "What is your cancellation policy?",
-    answer: "We require 24 hours notice for session cancellations. This allows us to offer the time slot to other students. Emergency cancellations are handled on a case-by-case basis.",
+    answer: "We require 8 hours notice for session cancellations. This allows us to offer the time slot to other students. We also offer make-up vouchers for missed sessions. See our policies for details.",
     category: "Booking"
   },
   {
-    question: "Do you offer group sessions (up to 6 students)?",
-    answer: "We primarily offer one-on-one tutoring to ensure personalised attention. However, we can arrange small group sessions (up to 6 students) for siblings or friends studying the same subject.",
+    question: "How do group sessions work?",
+    answer: "We primarily offer one-on-one tutoring to ensure personalised attention. However, we offer a range of small group sessions (up to 6 students) for siblings or peers at a similar level.",
     category: "Services"
   },
   {

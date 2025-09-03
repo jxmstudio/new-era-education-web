@@ -110,6 +110,12 @@ export default function Header() {
               </Link>
             </motion.div>
 
+            <motion.div whileHover={{ y: -2 }} transition={{ duration: 0.2 }}>
+              <Link href="/ndis" className="whitespace-nowrap hover:text-gray-200 transition font-medium leading-none">
+                NDIS
+              </Link>
+            </motion.div>
+
             {/* Team with dropdown */}
             <div className="relative group">
               <motion.button
@@ -228,6 +234,7 @@ export default function Header() {
                 { href: "/#about", label: "About" },
                 { href: "/faq", label: "FAQ" },
                 { href: "/comparison", label: "Why Choose Us" },
+                { href: "/ndis", label: "NDIS" },
                 { href: "/team", label: "Team" },
                 { href: "/careers", label: "Careers" },
                 { href: "/#contact", label: "Contact" }
