@@ -40,7 +40,7 @@ function doPost(e) {
     if (isBookingForm) {
       // Handle booking form - add to Google Sheets
       // Sheet headers: Full Name, Email, Phone Number, Child's Year Lev, Preferred Date/T Additional Notes
-      const sheetId = '19GhX1X1UF0QBkXp-CTJO7CyAFts5VtoqeoPxgwlGs_o';
+      const sheetId = '1mqwiT2WTaClvSaGrvTSilU7n4nNV2ZXgLHOFUDMXVUQ';
       const sheet = SpreadsheetApp.openById(sheetId).getActiveSheet();
       
       // Combine preferred day and time into one string
@@ -73,7 +73,7 @@ function doPost(e) {
     } else if (isContactForm) {
       // Handle contact form - add to Google Sheets (same as booking form)
       // Sheet headers: Full Name, Email, Phone Number, Child's Year Lev, Preferred Date/T Additional Notes
-      const sheetId = '19GhX1X1UF0QBkXp-CTJO7CyAFts5VtoqeoPxgwlGs_o';
+      const sheetId = '1mqwiT2WTaClvSaGrvTSilU7n4nNV2ZXgLHOFUDMXVUQ';
       const sheet = SpreadsheetApp.openById(sheetId).getActiveSheet();
       
       // For contact form, combine service and message
@@ -120,7 +120,7 @@ Submitted on: ${new Date().toLocaleString()}
       
     } else if (isCareersForm) {
       // Careers form → append to a Careers sheet; optionally store CV in Drive and email
-      const sheetId = '19GhX1X1UF0QBkXp-CTJO7CyAFts5VtoqeoPxgwlGs_o';
+      const sheetId = '1mqwiT2WTaClvSaGrvTSilU7n4nNV2ZXgLHOFUDMXVUQ';
       const ss = SpreadsheetApp.openById(sheetId);
       let careersSheet = ss.getSheetByName('Careers');
       if (!careersSheet) {
