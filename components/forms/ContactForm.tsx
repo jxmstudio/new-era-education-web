@@ -52,7 +52,7 @@ export default function ContactForm() {
       })
 
       // Send to Google Apps Script
-      await fetch("https://script.google.com/macros/s/AKfycbxKGshzFGUPzx2sCFkx7cvD9JorIpxlKuvGc79k270yjQY6neAUIwN_DUsA9iOlspIvYA/exec", {
+      await fetch("https://script.google.com/macros/s/AKfycbwr3Ti4T2o076Gm3bu8tgoDGIK_WM99ieX9C0TGa8N_NkZHI01OlrW0v8y9SMPli7uG2A/exec", {
         method: "POST",
         mode: "no-cors",
         body: formDataObj
