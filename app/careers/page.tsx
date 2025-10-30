@@ -87,7 +87,7 @@ export default function CareersPage() {
         formDataObj.append('cvBase64', base64.split(',')[1] || '')
       }
 
-      await fetch('https://script.google.com/macros/s/AKfycbwr3Ti4T2o076Gm3bu8tgoDGIK_WM99ieX9C0TGa8N_NkZHI01OlrW0v8y9SMPli7uG2A/exec', {
+      await fetch('https://script.google.com/macros/s/AKfycbz-HUnMpTB_THNHNbua93gK4piOLvOvb23oVhuD402MMNrbps239j_qslvThwY-8XqNFg/exec', {
         method: 'POST',
         mode: 'no-cors',
         body: formDataObj,
