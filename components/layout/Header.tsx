@@ -42,6 +42,12 @@ export default function Header() {
               </Link>
             </motion.div>
 
+            <motion.div whileHover={{ y: -2 }} transition={{ duration: 0.2 }}>
+              <Link href="/comparison" className="whitespace-nowrap hover:text-gray-200 transition font-medium leading-none">
+                Why Choose Us
+              </Link>
+            </motion.div>
+
             {/* About Dropdown */}
             <div className="relative group">
               <motion.button
@@ -180,20 +186,14 @@ export default function Header() {
             </div>
 
             <motion.div whileHover={{ y: -2 }} transition={{ duration: 0.2 }}>
-              <Link href="/comparison" className="whitespace-nowrap hover:text-gray-200 transition font-medium leading-none">
-                Why Choose Us
+              <Link href="/ndis" className="whitespace-nowrap hover:text-gray-200 transition font-medium leading-none">
+                NDIS
               </Link>
             </motion.div>
 
             <motion.div whileHover={{ y: -2 }} transition={{ duration: 0.2 }}>
               <Link href="/faq" className="whitespace-nowrap hover:text-gray-200 transition font-medium leading-none">
                 FAQ
-              </Link>
-            </motion.div>
-
-            <motion.div whileHover={{ y: -2 }} transition={{ duration: 0.2 }}>
-              <Link href="/ndis" className="whitespace-nowrap hover:text-gray-200 transition font-medium leading-none">
-                NDIS
               </Link>
             </motion.div>
 
@@ -257,8 +257,8 @@ export default function Header() {
               {[
                 { href: "/#home", label: "Home" },
                 { href: "/comparison", label: "Why Choose Us" },
-                { href: "/faq", label: "FAQ" },
                 { href: "/ndis", label: "NDIS" },
+                { href: "/faq", label: "FAQ" },
                 { href: "/#contact", label: "Contact" }
               ].map((item, index) => (
                 <motion.div

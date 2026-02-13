@@ -42,22 +42,22 @@ export default function FeatureCard({
           : `bg-gray-800 border border-${accentColor}-500/20 hover:border-${accentColor}-400/40`
       }`}>
         {/* Decorative elements */}
-        <div className={`absolute top-0 right-0 w-32 h-32 bg-${accentColor}-500/10 rounded-full -translate-y-16 translate-x-16 group-hover:scale-110 transition-transform duration-300`} />
-        <div className={`absolute bottom-0 left-0 w-20 h-20 bg-${accentColor}-500/5 rounded-full translate-y-10 -translate-x-10`} />
+        <div className={`absolute top-0 right-0 w-24 sm:w-32 h-24 sm:h-32 bg-${accentColor}-500/10 rounded-full -translate-y-12 sm:-translate-y-16 translate-x-12 sm:translate-x-16 group-hover:scale-110 transition-transform duration-300`} />
+        <div className={`absolute bottom-0 left-0 w-16 sm:w-20 h-16 sm:h-20 bg-${accentColor}-500/5 rounded-full translate-y-8 sm:translate-y-10 -translate-x-8 sm:-translate-x-10`} />
         
-        <CardHeader className="relative pb-4">
-          <div className={`w-16 h-16 bg-gradient-to-br from-${accentColor}-500 to-${accentColor}-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg mb-4`}>
-            <div className="text-white">
+        <CardHeader className="relative pb-3 sm:pb-4">
+          <div className={`w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-${accentColor}-500 to-${accentColor}-600 rounded-xl sm:rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg mb-3 sm:mb-4`}>
+            <div className="text-white scale-75 sm:scale-100">
               {icon}
             </div>
           </div>
-          <CardTitle className={`text-xl font-bold ${variant === "highlighted" ? "text-gray-900" : "text-white"} group-hover:text-${accentColor}-400 transition-colors duration-300`}>
+          <CardTitle className={`text-lg sm:text-xl font-bold ${variant === "highlighted" ? "text-gray-900" : "text-white"} group-hover:text-${accentColor}-400 transition-colors duration-300 leading-tight`}>
             {title}
           </CardTitle>
         </CardHeader>
         
-        <CardContent className="relative">
-          <p className={`leading-relaxed transition-colors duration-300 ${
+        <CardContent className="relative pt-0">
+          <p className={`text-sm sm:text-base leading-relaxed transition-colors duration-300 ${
             variant === "highlighted" 
               ? "text-gray-600 group-hover:text-gray-700" 
               : "text-gray-300 group-hover:text-gray-200"

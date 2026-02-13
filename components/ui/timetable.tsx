@@ -37,16 +37,24 @@ export default function Timetable({ data, title, description }: TimetableProps) 
     switch (cell.type) {
       case 'session':
         const sessionClasses = `${baseClasses} text-white font-medium`
-        // Handle specific session types
-        if (cell.text === '1:1') {
-          return `${sessionClasses} bg-gradient-to-br from-orange-400 to-orange-600`
-        } else if (cell.text === 'Group Session') {
-          return `${sessionClasses} bg-gradient-to-br from-blue-400 to-blue-600`
-        } else if (cell.text === 'Art Workshop') {
-          return `${sessionClasses} bg-gradient-to-br from-purple-400 to-purple-600`
-        } else {
-          // Subject-specific sessions
-          return `${sessionClasses} ${getSubjectBackgroundColor(cell.text)}`
+        // Use subject-based coloring for consistency
+        switch (cell.subject) {
+          case 'homeschool':
+            return `${sessionClasses} bg-gradient-to-br from-teal-400 to-teal-600`
+          case 'readiness':
+            return `${sessionClasses} bg-gradient-to-br from-purple-400 to-purple-600`
+          case 'onetoone':
+            return `${sessionClasses} bg-gradient-to-br from-orange-400 to-orange-600`
+          case 'group':
+            return `${sessionClasses} bg-gradient-to-br from-blue-400 to-blue-600`
+          case '1:1':
+            return `${sessionClasses} bg-gradient-to-br from-orange-400 to-orange-600`
+          case 'english':
+            return `${sessionClasses} bg-gradient-to-br from-green-400 to-green-600`
+          case 'maths':
+            return `${sessionClasses} bg-gradient-to-br from-indigo-400 to-indigo-600`
+          default:
+            return `${sessionClasses} bg-gradient-to-br from-gray-400 to-gray-600`
         }
       case 'closed':
         return `${baseClasses} bg-gray-200 text-gray-500 font-medium`
@@ -58,53 +66,33 @@ export default function Timetable({ data, title, description }: TimetableProps) 
   }
 
   const getSubjectBackgroundColor = (sessionText: string) => {
-    const text = sessionText.toLowerCase()
-    
-    // Homeschool Support Sessions
-    if (text.includes('foundational homeschool english') || text.includes('foundational hs english')) {
-      return 'bg-gradient-to-br from-green-400 to-green-600'
-    } else if (text.includes('foundational hs maths') || text.includes('foundational homeschool maths')) {
-      return 'bg-gradient-to-br from-blue-400 to-blue-600'
-    } else if (text.includes('english senior homeschool') || text.includes('senior homeschool english')) {
-      return 'bg-gradient-to-br from-emerald-400 to-emerald-600'
-    } else if (text.includes('maths senior hs') || text.includes('senior homeschool maths') || text.includes('senior hs maths')) {
-      return 'bg-gradient-to-br from-indigo-400 to-indigo-600'
-    } 
-    // Generic subjects (fallback)
-    else if (text.includes('homeschool') && text.includes('english')) {
-      return 'bg-gradient-to-br from-green-400 to-green-600'
-    } else if (text.includes('homeschool') && (text.includes('maths') || text.includes('math'))) {
-      return 'bg-gradient-to-br from-blue-400 to-blue-600'
-    } else if (text.includes('english')) {
-      return 'bg-gradient-to-br from-green-400 to-green-600'
-    } else if (text.includes('math') || text.includes('maths')) {
-      return 'bg-gradient-to-br from-blue-400 to-blue-600'
-    } 
-    // Default for unknown sessions
-    else {
-      return 'bg-gradient-to-br from-gray-400 to-gray-600'
-    }
+    // This function is now deprecated - we use subject tags instead
+    return 'bg-gradient-to-br from-gray-400 to-gray-600'
   }
 
   const getSubjectColor = (subject?: string) => {
     switch (subject?.toLowerCase()) {
+      case 'homeschool':
+        return 'bg-teal-500'
+      case 'readiness':
+        return 'bg-purple-500'
+      case 'onetoone':
+        return 'bg-orange-500'
+      case 'group':
+        return 'bg-blue-500'
+      case '1:1':
+        return 'bg-orange-500'
       case 'math':
       case 'maths':
-        return 'bg-blue-500'
+        return 'bg-indigo-500'
       case 'english':
         return 'bg-green-500'
       case 'science':
         return 'bg-purple-500'
       case 'primary':
         return 'bg-orange-500'
-      case '1:1':
-        return 'bg-orange-500'
-      case 'group':
-        return 'bg-blue-500'
       case 'art':
         return 'bg-purple-500'
-      case 'homeschool':
-        return 'bg-teal-500'
       default:
         return 'bg-gray-500'
     }
@@ -178,16 +166,7 @@ export default function Timetable({ data, title, description }: TimetableProps) 
                         key={cellIndex} 
                         className={getCellClasses(cell)}
                       >
-                        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
-                          <span className="text-xs sm:text-sm font-medium leading-tight">{cell.text}</span>
-                          {cell.subject && (
-                            <Badge 
-                              className={`text-xs ${getSubjectColor(cell.subject)} text-white self-start sm:self-auto`}
-                            >
-                              {cell.subject}
-                            </Badge>
-                          )}
-                        </div>
+                        <span className="text-xs sm:text-sm font-medium leading-tight">{cell.text}</span>
                       </td>
                     ))}
                   </motion.tr>
@@ -210,35 +189,22 @@ export default function Timetable({ data, title, description }: TimetableProps) 
               <CardTitle className="text-lg font-semibold text-gray-900">Schedule Legend</CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div className="flex items-center space-x-2">
-                  <div className="w-4 h-4 bg-orange-500 rounded"></div>
+                  <div className="w-4 h-4 bg-gradient-to-br from-teal-400 to-teal-600 rounded"></div>
+                  <span className="text-sm text-gray-700">Homeschool Support</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-4 h-4 bg-gradient-to-br from-purple-400 to-purple-600 rounded"></div>
+                  <span className="text-sm text-gray-700">School Readiness</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-4 h-4 bg-gradient-to-br from-orange-400 to-orange-600 rounded"></div>
                   <span className="text-sm text-gray-700">1:1 Sessions</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <div className="w-4 h-4 bg-blue-500 rounded"></div>
+                  <div className="w-4 h-4 bg-gradient-to-br from-blue-400 to-blue-600 rounded"></div>
                   <span className="text-sm text-gray-700">Group Sessions</span>
-                </div>
-                {/* Art workshops temporarily removed */}
-                <div className="flex items-center space-x-2">
-                  <div className="w-4 h-4 bg-green-500 rounded"></div>
-                  <span className="text-sm text-gray-700">Foundational English</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-4 h-4 bg-blue-600 rounded"></div>
-                  <span className="text-sm text-gray-700">Foundational Maths</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-4 h-4 bg-emerald-500 rounded"></div>
-                  <span className="text-sm text-gray-700">Senior English</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-4 h-4 bg-indigo-500 rounded"></div>
-                  <span className="text-sm text-gray-700">Senior Maths</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-4 h-4 bg-teal-500 rounded"></div>
-                  <span className="text-sm text-gray-700">Homeschool Support</span>
                 </div>
               </div>
             </CardContent>

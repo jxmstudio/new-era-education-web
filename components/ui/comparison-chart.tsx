@@ -128,8 +128,7 @@ export function ComparisonChart() {
           To book your next tutor visit us at{" "}
           <a href="mailto:info@neweralearning.com.au" className="text-primary hover:text-primary-dark font-semibold">
             info@neweralearning.com.au
-          </a>{" "}
-          customised to s
+          </a>
         </p>
         <p className="text-gray-600 mb-6">
           or call{" "}
