@@ -68,63 +68,67 @@ const features: ComparisonFeature[] = [
 
 export function ComparisonChart() {
   return (
-    <div className="w-full max-w-6xl mx-auto p-6">
+    <div className="w-full max-w-6xl mx-auto px-4 py-6 sm:px-6">
       <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold text-gray-900 mb-4 font-display">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 font-display px-4">
           Why More Parents Are Choosing New Era Education
         </h2>
-        <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+        <p className="text-base sm:text-lg text-gray-700 max-w-3xl mx-auto px-4">
           At New Era Education, every child’s pathway is unique. Our approach is caring and personalised — grounded in proven teaching practices that help students thrive in and out of the classroom.
         </p>
       </div>
 
-      <Card className="overflow-hidden shadow-xl border-0">
-        <CardHeader className="bg-gradient-to-r from-primary to-accent text-white p-6">
-          <CardTitle className="text-2xl font-bold text-center">
+      <div className="overflow-x-auto -mx-4 sm:mx-0">
+        <div className="min-w-[600px] sm:min-w-0 px-4 sm:px-0">
+          <Card className="overflow-hidden shadow-xl border-0">
+            <CardHeader className="bg-gradient-to-r from-primary to-accent text-white p-4 sm:p-6">
+              <CardTitle className="text-lg sm:text-2xl font-bold text-center">
             OVERVIEW
           </CardTitle>
         </CardHeader>
-        
-        <CardContent className="p-0">
-          {/* Column headers */}
-          <div className="grid grid-cols-3">
-            <div className="p-4 bg-gray-50 border-b border-gray-200"></div>
-            <div className="p-4 bg-primary text-white text-center font-bold text-lg border-b border-primary/20">New Era Education</div>
-            <div className="p-4 bg-secondary text-white text-center font-bold text-lg border-b border-secondary/20">Typical Tutoring Services</div>
+          
+          <CardContent className="p-0">
+            {/* Column headers */}
+            <div className="grid grid-cols-3 text-xs sm:text-sm lg:text-base">
+              <div className="p-2 sm:p-4 bg-gray-50 border-b border-gray-200"></div>
+              <div className="p-2 sm:p-4 bg-primary text-white text-center font-bold border-b border-primary/20">New Era Education</div>
+              <div className="p-2 sm:p-4 bg-secondary text-white text-center font-bold border-b border-secondary/20">Typical Tutoring Services</div>
           </div>
 
-          {/* Feature rows - render per-row to guarantee alignment */}
-          <div className="divide-y divide-gray-200">
-            {features.map((feature, index) => (
-              <div key={feature.name} className="grid grid-cols-3">
-                {/* Name + icon */}
-                <div className="p-5 bg-gray-50 flex items-center gap-3">
-                  {feature.icon}
-                  <span className="font-medium text-gray-800">{feature.name}</span>
+            {/* Feature rows - render per-row to guarantee alignment */}
+            <div className="divide-y divide-gray-200">
+              {features.map((feature, index) => (
+                <div key={feature.name} className="grid grid-cols-3 text-xs sm:text-sm lg:text-base">
+                  {/* Name + icon */}
+                  <div className="p-3 sm:p-5 bg-gray-50 flex items-center gap-2 sm:gap-3">
+                    <div className="flex-shrink-0">{feature.icon}</div>
+                    <span className="font-medium text-gray-800">{feature.name}</span>
                 </div>
 
-                {/* New Era cell */}
-                <div className={`${index % 2 === 0 ? 'bg-primary/5' : 'bg-accent/5'} p-5 flex items-center justify-center text-center`}> 
-                  <p className="text-gray-900 leading-relaxed font-medium">
+                  {/* New Era cell */}
+                  <div className={`${index % 2 === 0 ? 'bg-primary/5' : 'bg-accent/5'} p-3 sm:p-5 flex items-center justify-center text-center`}> 
+                    <p className="text-gray-900 leading-normal sm:leading-relaxed font-medium">
                     {feature.newEra}
                   </p>
                 </div>
 
-                {/* Other providers cell */}
-                <div className={`${index % 2 === 0 ? 'bg-orange-50' : 'bg-amber-50'} p-5 flex items-center justify-center text-center`}>
-                  <p className="text-gray-700 leading-relaxed">
+                  {/* Other providers cell */}
+                  <div className={`${index % 2 === 0 ? 'bg-orange-50' : 'bg-amber-50'} p-3 sm:p-5 flex items-center justify-center text-center`}>
+                    <p className="text-gray-700 leading-normal sm:leading-relaxed">
                     {feature.other}
                   </p>
                 </div>
               </div>
-            ))}
-          </div>
-        </CardContent>
-      </Card>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
+        </div>
+      </div>
 
       {/* Contact information */}
-      <div className="text-center mt-8 p-6 bg-gray-50 rounded-lg">
-        <p className="text-lg text-gray-700 mb-4">
+      <div className="text-center mt-8 p-4 sm:p-6 bg-gray-50 rounded-lg">
+        <p className="text-base sm:text-lg text-gray-700 mb-4">
           To book your next tutor visit us at{" "}
           <a href="mailto:info@neweralearning.com.au" className="text-primary hover:text-primary-dark font-semibold">
             info@neweralearning.com.au
