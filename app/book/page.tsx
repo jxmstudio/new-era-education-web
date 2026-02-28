@@ -2,6 +2,16 @@ import { CheckCircle, Clock, Users, Star } from "lucide-react"
 import Header from "@/components/layout/Header"
 import Footer from "@/components/layout/Footer"
 import BookingForm from "@/components/forms/BookingForm"
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Book Free Consultation | New Era Education Tutoring in Mickleham VIC',
+  description: 'Book a free 30-minute consultation for tutoring services in Mickleham and Northern Melbourne. Discuss your child\'s needs and create a personalised learning plan. Call 0458 498 170.',
+  alternates: {
+    canonical: 'https://neweralearning.com.au/book',
+  },
+  robots: 'index, follow',
+};
 
 const benefits = [
   {
@@ -101,6 +111,23 @@ export default function BookPage() {
                     <span>No pressure to commit - consultation is completely free</span>
                   </li>
                 </ul>
+              </div>
+
+              {/* What Happens Next */}
+              <div className="bg-blue-50 rounded-lg p-6">
+                <h3 className="font-semibold text-gray-900 mb-4">What Happens Next?</h3>
+                <p className="text-gray-600 mb-3">
+                  After you submit your booking request:
+                </p>
+                <ol className="space-y-2 text-gray-600 list-decimal list-inside">
+                  <li>We'll contact you within 24 hours to confirm your preferred time</li>
+                  <li>You'll receive a confirmation email with session details</li>
+                  <li>We'll send a reminder the day before your consultation</li>
+                  <li>After the consultation, we'll provide a written summary and next steps</li>
+                </ol>
+                <p className="text-gray-600 mt-3">
+                  Servicing families across Mickleham, Craigieburn, Greenvale, Roxburgh Park, Wollert, and surrounding Northern Melbourne areas.
+                </p>
               </div>
 
               {/* Contact Info */}

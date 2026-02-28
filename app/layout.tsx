@@ -16,7 +16,7 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://neweraeducation.com.au'),
+  metadataBase: new URL('https://neweralearning.com.au'),
   title: 'New Era Education | Premium Primary & Secondary Tutoring Melbourne',
   description: 'Premium tutoring in Melbourne for primary and secondary students. Expert teachers, tailored programs, and proven results for your child’s success.',
   keywords: 'VCE tutoring Melbourne, high school tutoring near me, tutoring Mickleham, English tutoring, Maths tutoring, school readiness program, Craigieburn, Greenvale, Beveridge, Wallan, Epping, Melbourne tutoring, Year 12 tutoring',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'New Era Education | Premium Primary & Secondary Tutoring Melbourne',
     description: 'Premium tutoring in Melbourne for primary and secondary students. Expert teachers, tailored programs, and proven results for your child’s success.',
-    url: 'https://neweraeducation.com.au',
+    url: 'https://neweralearning.com.au',
     siteName: 'New Era Education',
     locale: 'en_AU',
     type: 'website',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     description: 'Premium tutoring in Melbourne for primary and secondary students. Expert teachers, tailored programs, and proven results for your child’s success.',
   },
   alternates: {
-    canonical: '/',
+    canonical: 'https://neweralearning.com.au/',
   },
   other: {
     'geo.region': 'AU-VIC',
@@ -70,7 +70,7 @@ export default function RootLayout({
               "@type": "EducationalOrganization",
                              "name": "New Era Learning",
                "description": "Premium tutoring services in Mickleham, Melbourne with qualified teachers and evidence-based methods",
-               "url": "https://www.neweralearning.com.au",
+               "url": "https://neweralearning.com.au",
               "telephone": "+61-XXX-XXX-XXX",
               "address": {
                 "@type": "PostalAddress",

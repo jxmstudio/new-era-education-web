@@ -3,6 +3,16 @@ import Header from "@/components/layout/Header"
 import Footer from "@/components/layout/Footer"
 import ContactForm from "@/components/forms/ContactForm"
 import dynamic from "next/dynamic"
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Contact New Era Education | Tutoring in Mickleham VIC & Northern Melbourne',
+  description: 'Contact New Era Education for tutoring enquiries in Mickleham, Craigieburn, and Northern Melbourne. Phone: 0458 498 170 | Email: info@neweralearning.com.au | Mon-Fri 8AM-8PM, Sat 10AM-3PM',
+  alternates: {
+    canonical: 'https://neweralearning.com.au/contact',
+  },
+  robots: 'index, follow',
+};
 
 const GoogleMapEmbed = dynamic(() => import("@/components/GoogleMapEmbed"), {
   ssr: false,
@@ -29,7 +39,7 @@ export default function ContactPage() {
               Get in Touch
             </h1>
             <p className="text-xl text-gray-100 max-w-3xl mx-auto">
-              Have a question about our tutoring services? We'd love to hear from you. 
+              Have a question about our tutoring services in Mickleham or Northern Melbourne? We'd love to hear from you. 
               Send us a message and we'll respond as soon as possible.
             </p>
           </div>
