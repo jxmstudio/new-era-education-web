@@ -516,60 +516,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Workshops Box for About */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 lg:p-12">
-            <div className="text-center mb-8">
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-                Workshops
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                We offer tailored workshops for parents and students to enhance learning skills and support families:
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <BookOpen className="w-6 h-6 text-purple-600" />
-                  </div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Study skills and time management</h3>
-                </div>
-              </div>
-              
-              <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Users className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Specialised literacy & numeracy approaches</h3>
-                </div>
-              </div>
-              
-              <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Palette className="w-6 h-6 text-pink-600" />
-                  </div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Creative arts and expression</h3>
-                </div>
-              </div>
-              
-              <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Calendar className="w-6 h-6 text-green-600" />
-                  </div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Holiday programs</h3>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Testimonials Section */}
       <section id="testimonials" className="py-20 bg-gradient-to-br from-slate-50 via-blue-50/30 to-purple-50/20 relative overflow-hidden">
         {/* Background Pattern */}
@@ -799,7 +745,11 @@ export default function HomePage() {
                     "
                   </div>
                   <blockquote className="text-xl lg:text-2xl text-gray-700 leading-relaxed italic mb-6 relative z-10">
-                    As the founder and owner of New Era Education, I'm passionate about helping children discover their unique path to learning. Our approach is built on care, trust, and proven practices — and every child is treated as the individual they are. Thank you for considering us.
+                    I created our centre with a simple belief — to put your child at the very heart of everything we do.
+                    <br /><br />
+                    New Era is an exclusive, nurturing learning space where your child is truly seen. We take the time to truly understand our students, their strengths, their challenges, and the way they learn best.
+                    <br /><br />
+                    With personalised guidance, high standards, and genuine care, it's an honour to support each unique student and we're committed to helping them become capable, confident learners for life.
                   </blockquote>
                   <div className="text-6xl text-primary/20 absolute bottom-0 right-0 transform translate-x-2 translate-y-4">
                     "

@@ -31,7 +31,7 @@ export default function Footer() {
               <span className="text-xl font-bold">New Era Education</span>
             </motion.div>
             <p className="text-gray-300 leading-relaxed">
-              Premium tutoring services in Mickleham, Melbourne. Qualified teachers with evidence-based methods.
+              Premium education support and intervention, servicing Mickleham and wider Melbourne.
             </p>
             <div className="flex space-x-4">
               <motion.a 
