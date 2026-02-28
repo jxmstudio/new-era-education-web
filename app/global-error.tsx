@@ -69,10 +69,10 @@ export default function GlobalError({ error, reset }: GlobalErrorProps) {
                 <p className="text-sm text-gray-500">
                   If this problem persists, please contact our support team at{' '}
                   <a 
-                    href="mailto:info@neweraeducation.com.au" 
+                    href="mailto:info@neweralearning.com.au" 
                     className="text-red-600 hover:text-red-700 underline"
                   >
-                    info@neweraeducation.com.au
+                    info@neweralearning.com.au
                   </a>
                 </p>
               </div>

@@ -79,10 +79,10 @@ export default function NotFound() {
             <p className="text-sm text-gray-500">
               Need help? Contact us at{' '}
               <a 
-                href="mailto:info@neweraeducation.com.au" 
+                href="mailto:info@neweralearning.com.au" 
                 className="text-blue-600 hover:text-blue-700 underline"
               >
-                info@neweraeducation.com.au
+                info@neweralearning.com.au
               </a>
             </p>
           </div>

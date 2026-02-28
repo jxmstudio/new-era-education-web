@@ -91,7 +91,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
-                    <p className="text-gray-600">info@neweraeducation.com.au</p>
+                    <p className="text-gray-600">info@neweralearning.com.au</p>
                     <p className="text-gray-600">We'll respond within 24 hours</p>
                   </div>
                 </div>

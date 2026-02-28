@@ -183,7 +183,7 @@ export default function Footer() {
                 transition={{ duration: 0.2 }}
               >
                 <Mail className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                <span className="text-gray-300">info@neweraeducation.com.au</span>
+                <span className="text-gray-300">info@neweralearning.com.au</span>
               </motion.li>
               <motion.li 
                 className="flex items-start space-x-3"
