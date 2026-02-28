@@ -177,17 +177,7 @@ const testimonials = [
 
 const timetableData: TimetableRow[] = [
   {
-    time: "9:30 AM",
-    monday: { type: "session", text: "Homeschool Support", subject: "homeschool" },
-    tuesday: { type: "session", text: "Homeschool Support", subject: "homeschool" },
-    wednesday: { type: "session", text: "Homeschool Support", subject: "homeschool" },
-    thursday: { type: "session", text: "School Readiness", subject: "readiness" },
-    friday: { type: "session", text: "School Readiness", subject: "readiness" },
-    saturday: { type: "closed", text: "Closed" },
-    sunday: { type: "closed", text: "Closed" }
-  },
-  {
-    time: "10:30 AM",
+    time: "9:00 AM",
     monday: { type: "session", text: "Homeschool Support", subject: "homeschool" },
     tuesday: { type: "session", text: "Homeschool Support", subject: "homeschool" },
     wednesday: { type: "session", text: "Homeschool Support", subject: "homeschool" },
@@ -197,7 +187,17 @@ const timetableData: TimetableRow[] = [
     sunday: { type: "closed", text: "Closed" }
   },
   {
-    time: "12:00 PM",
+    time: "10:00 AM",
+    monday: { type: "session", text: "Homeschool Support", subject: "homeschool" },
+    tuesday: { type: "session", text: "Homeschool Support", subject: "homeschool" },
+    wednesday: { type: "session", text: "Homeschool Support", subject: "homeschool" },
+    thursday: { type: "session", text: "School Readiness", subject: "readiness" },
+    friday: { type: "session", text: "School Readiness", subject: "readiness" },
+    saturday: { type: "session", text: "1:1 Sessions", subject: "onetoone" },
+    sunday: { type: "closed", text: "Closed" }
+  },
+  {
+    time: "11:30 AM",
     monday: { type: "closed", text: "Closed" },
     tuesday: { type: "closed", text: "Closed" },
     wednesday: { type: "closed", text: "Closed" },
@@ -207,7 +207,7 @@ const timetableData: TimetableRow[] = [
     sunday: { type: "closed", text: "Closed" }
   },
   {
-    time: "1:00 PM",
+    time: "12:30 PM",
     monday: { type: "closed", text: "Closed" },
     tuesday: { type: "closed", text: "Closed" },
     wednesday: { type: "closed", text: "Closed" },
@@ -217,7 +217,7 @@ const timetableData: TimetableRow[] = [
     sunday: { type: "closed", text: "Closed" }
   },
   {
-    time: "4:30 PM",
+    time: "4:00 PM",
     monday: { type: "session", text: "1:1 & Group Sessions", subject: "group" },
     tuesday: { type: "session", text: "1:1 & Group Sessions", subject: "group" },
     wednesday: { type: "session", text: "1:1 & Group Sessions", subject: "group" },
@@ -227,7 +227,7 @@ const timetableData: TimetableRow[] = [
     sunday: { type: "closed", text: "Closed" }
   },
   {
-    time: "5:30 PM",
+    time: "5:00 PM",
     monday: { type: "session", text: "1:1 & Group Sessions", subject: "group" },
     tuesday: { type: "session", text: "1:1 & Group Sessions", subject: "group" },
     wednesday: { type: "session", text: "1:1 & Group Sessions", subject: "group" },
@@ -237,7 +237,7 @@ const timetableData: TimetableRow[] = [
     sunday: { type: "closed", text: "Closed" }
   },
   {
-    time: "6:30 PM",
+    time: "6:00 PM",
     monday: { type: "session", text: "1:1 & Group Sessions", subject: "group" },
     tuesday: { type: "session", text: "1:1 & Group Sessions", subject: "group" },
     wednesday: { type: "session", text: "1:1 & Group Sessions", subject: "group" },
@@ -247,7 +247,7 @@ const timetableData: TimetableRow[] = [
     sunday: { type: "closed", text: "Closed" }
   },
   {
-    time: "7:30 PM",
+    time: "7:00 PM",
     monday: { type: "session", text: "1:1 & Group Sessions", subject: "group" },
     tuesday: { type: "session", text: "1:1 & Group Sessions", subject: "group" },
     wednesday: { type: "session", text: "1:1 & Group Sessions", subject: "group" },
@@ -257,7 +257,7 @@ const timetableData: TimetableRow[] = [
     sunday: { type: "closed", text: "Closed" }
   },
   {
-    time: "8:30 PM",
+    time: "8:00 PM",
     monday: { type: "session", text: "1:1 & Group Sessions", subject: "group" },
     tuesday: { type: "session", text: "1:1 & Group Sessions", subject: "group" },
     wednesday: { type: "session", text: "1:1 & Group Sessions", subject: "group" },
