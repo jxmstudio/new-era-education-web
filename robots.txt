@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://www.neweralearning.com.au/sitemap.xml
+Sitemap: https://neweralearning.com.au/sitemap.xml
 
 # Disallow admin areas (if any)
 Disallow: /admin/
@@ -14,4 +14,4 @@ Allow: /css/
 Allow: /js/
 
 # Crawl delay for respectful crawling
-Crawl-delay: 1 
+Crawl-delay: 1
