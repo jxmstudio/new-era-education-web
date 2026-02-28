@@ -12,22 +12,22 @@ import { MotionWrapper } from "@/components/ui/motion-wrapper";
 const supportAreas = [
   {
     icon: <BookOpen className="w-6 h-6" />,
-    title: "Individualised learning plans aligned to participant goals",
+    title: "Goal-aligned capacity building supports (based on participant goals)",
     description: "We work closely with families and support coordinators to create personalised learning plans that align with NDIS goals and objectives."
   },
   {
     icon: <Users className="w-6 h-6" />,
-    title: "Literacy and numeracy tutoring (face-to-face and online)",
+    title: "Everyday literacy & numeracy for independence (e.g., instructions, forms, timetables, money skills)",
     description: "Comprehensive support in reading, writing, and mathematics, delivered in the format that works best for each participant."
   },
   {
     icon: <Shield className="w-6 h-6" />,
-    title: "Study skills, time management, and learning strategies",
+    title: "Executive functioning support (routines, planning, attention, task breakdown)",
     description: "Building essential skills for academic success and independent learning, tailored to individual needs and abilities."
   },
   {
     icon: <Heart className="w-6 h-6" />,
-    title: "Collaboration with families and support coordinators",
+    title: "Family collaboration strategies to support consistency at home",
     description: "Regular communication and collaboration to ensure learning goals remain aligned with NDIS plans and family priorities."
   }
 ];
@@ -45,20 +45,36 @@ const supportCategories = [
 
 const ndisFAQs = [
   {
-    question: "Can I use my NDIS funding for tutoring services?",
-    answer: "Yes, educational support like tutoring can be funded through your NDIS plan under specific categories such as Capacity Building (Improved Daily Living) or Core Supports (assistance related to learning participation). We recommend discussing this with your plan manager or support coordinator to ensure our services align with your plan goals."
+    question: "Is this the same as tutoring?",
+    answer: "No. Our sessions focus on capacity building and functional skills that support participation and independence. We may use everyday literacy and numeracy as tools (for example, routines, timetables, instructions, forms, or money skills), rather than delivering school curriculum tutoring."
   },
   {
-    question: "What NDIS support categories cover educational support?",
-    answer: "Educational support typically falls under 'Capacity Building: Improved Daily Living' for skill development and learning strategies, or 'Core Supports' for direct assistance with learning participation. The specific category depends on your individual plan and goals."
+    question: "What ages do you support?",
+    answer: "We support children and young people with goals related to communication, routines, participation, and independence. For younger children, we use play-based and routine-based approaches aligned with early childhood supports."
   },
   {
-    question: "Do I need to be registered with NDIS to access your services?",
-    answer: "While we work with NDIS participants, you don't need to have NDIS funding to access our tutoring services. We welcome all students and can discuss payment options that work for you, whether through NDIS funding, private payment, or a combination."
+    question: "Can NDIS funding be used for these supports?",
+    answer: "It depends on the participant's plan, goals, and plan management type. We work with self-managed and plan-managed participants and provide invoices/documentation to help your plan manager assess claims."
   },
   {
-    question: "How do I claim tutoring through my NDIS plan?",
-    answer: "If you self-manage or plan-manage your NDIS funding, we'll provide detailed invoices that you can submit for reimbursement. We include all necessary information aligned with your plan goals. For agency-managed plans, please speak with your support coordinator about how we can work together."
+    question: "What support categories might apply?",
+    answer: "This depends on the plan. Supports are often linked to Capacity Building categories. If you share your goals, we can help you describe the support so you can confirm with your plan manager."
+  },
+  {
+    question: "Do you work with support coordinators and allied health providers?",
+    answer: "Yes—where appropriate and with consent, we can collaborate to keep supports aligned with participant goals."
+  },
+  {
+    question: "How is progress tracked?",
+    answer: "We agree on functional goals, track progress over time, and provide updates aligned to the participant's goals (and reports where requested)."
+  },
+  {
+    question: "Do you need to be a registered NDIS provider?",
+    answer: "Not always. Many self-managed and plan-managed participants can use non-registered providers—please confirm with your plan manager."
+  },
+  {
+    question: "How do we get started?",
+    answer: "Send an enquiry with your goals (or plan extracts you're comfortable sharing), and we'll recommend a simple starting plan and session frequency to trial."
   }
 ];
 
@@ -108,7 +124,7 @@ export default function NDISPage() {
               viewport={{ once: true }}
             >
               <p className="text-xl text-white/90 max-w-4xl mx-auto drop-shadow-sm">
-                New Era Education is proud to support NDIS participants with capacity building learning support. We work with families to align learning goals with NDIS plans, helping students build confidence, independence, and core skills.
+                We support NDIS participants with capacity-building supports that strengthen everyday communication, routines, confidence, and independence. Sessions focus on functional skills and participation at home, school, and in the community, aligned to the participant's goals and plan.
               </p>
             </MotionWrapper>
           </div>
@@ -175,9 +191,7 @@ export default function NDISPage() {
               Using Your NDIS Funding
             </h2>
             <p className="text-xl text-gray-600 leading-relaxed mb-8">
-              We support participants who self-manage or plan-manage their NDIS funding. 
-              If you're unsure whether these supports fit your child's plan, get in touch with us first — we're happy to guide you. 
-              We also provide clear, NDIS-aligned invoices and documentation. Your plan manager can then help confirm funding and categories.
+              We support self-managed and plan-managed participants. Funding depends on plan goals and what's considered reasonable and necessary under the NDIS. If you're unsure, we can provide clear invoices and session notes for your plan manager to review.
             </p>
           </MotionWrapper>
 
@@ -502,7 +516,7 @@ export default function NDISPage() {
               Support Categories
             </h2>
             <p className="text-lg text-gray-600 mb-8">
-              Typical educational alignment; non-legal, informational
+              Our supports commonly align with the following NDIS categories. This is general information only—not funding advice.
             </p>
           </MotionWrapper>
 
@@ -545,7 +559,7 @@ export default function NDISPage() {
               Frequently Asked Questions
             </h2>
             <p className="text-xl text-gray-600">
-              Common questions about NDIS funding and our educational support services
+              Common questions about NDIS funding and our capacity building supports
             </p>
           </MotionWrapper>
 
@@ -595,7 +609,7 @@ export default function NDISPage() {
                   Have More Questions?
                 </h3>
                 <p className="text-gray-600 mb-6">
-                  Visit our general FAQ page for more information about our tutoring services, 
+                  Visit our general FAQ page for more information about our services, 
                   booking process, and what to expect.
                 </p>
                 <Button asChild variant="outline">
@@ -620,7 +634,7 @@ export default function NDISPage() {
               Getting Started
             </h2>
             <p className="text-xl text-gray-600 mb-8">
-              Ready to discuss NDIS-aligned learning support? Contact our team to create a tailored plan.
+              Ready to discuss NDIS-aligned capacity building supports? Contact our team to create a tailored plan.
             </p>
             <Button 
               size="lg" 
