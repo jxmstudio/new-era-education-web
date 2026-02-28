@@ -191,7 +191,7 @@ export default function Footer() {
                 transition={{ duration: 0.2 }}
               >
                 <Clock className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                <span className="text-gray-300">Mon-Wed: 8AM-7:30PM, Sat: 9AM-5PM</span>
+                <span className="text-gray-300">Mon-Fri: 8AM-8PM, Sat: 10AM-3PM</span>
               </motion.li>
             </ul>
           </motion.div>

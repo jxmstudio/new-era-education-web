@@ -85,7 +85,7 @@ export default function RootLayout({
                 "latitude": -37.5167,
                 "longitude": 144.8833
               },
-              "openingHours": "Mo-Fr 09:00-18:00, Sa 09:00-14:00",
+              "openingHours": "Mo-Fr 08:00-20:00, Sa 10:00-15:00",
               "sameAs": [
                 "https://facebook.com/neweraeducation",
                 "https://instagram.com/neweraeducation"

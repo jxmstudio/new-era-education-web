@@ -113,7 +113,7 @@ export default function BookPage() {
                 <div className="space-y-2 text-sm text-gray-600">
                   <p><strong>Phone:</strong> 0458 498 170 or (03) 8467 0773</p>
                   <p><strong>Email:</strong> info@neweralearning.com.au</p>
-                  <p><strong>Hours:</strong> Mon-Fri 9AM-6PM, Sat 9AM-2PM</p>
+                  <p><strong>Hours:</strong> Mon-Fri 8AM-8PM, Sat 10AM-3PM</p>
                 </div>
               </div>
             </div>
