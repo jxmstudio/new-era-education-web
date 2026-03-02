@@ -358,7 +358,7 @@ export default function HomePage() {
           { icon: <Clock className="w-4 h-4" />, text: "Flexible Scheduling" }
         ]}
         variant="image"
-        backgroundImage="/stock1.png"
+        backgroundImage="/homepage.JPG"
       />
 
 
@@ -508,7 +508,7 @@ export default function HomePage() {
             <div className="relative">
               <div className="relative bg-cover bg-center bg-no-repeat rounded-2xl h-80 overflow-hidden shadow-lg"
                    style={{ 
-                     backgroundImage: `linear-gradient(to right, rgba(9, 47, 121, 0.7), rgba(0, 166, 138, 0.7)), url('/stock2.png')` 
+                     backgroundImage: `linear-gradient(to right, rgba(9, 47, 121, 0.7), rgba(0, 166, 138, 0.7)), url('/neweraphotos/IMG_3916.JPG')` 
                    }}>
               </div>
             </div>

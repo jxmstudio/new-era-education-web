@@ -106,7 +106,7 @@ export default function CareersPage() {
       <Header />
 
       {/* Hero */}
-      <section className="relative py-20 bg-cover bg-center bg-no-repeat text-white" style={{ backgroundImage: `linear-gradient(to right, rgba(9, 47, 121, 0.7), rgba(0, 166, 138, 0.7)), url('/stock2.png')` }}>
+      <section className="relative py-20 bg-cover bg-center bg-no-repeat text-white" style={{ backgroundImage: `linear-gradient(to right, rgba(9, 47, 121, 0.7), rgba(0, 166, 138, 0.7)), url('/neweraphotos/IMG_3914.JPG')` }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <MotionWrapper initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>

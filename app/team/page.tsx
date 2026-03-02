@@ -53,7 +53,7 @@ export default function TeamPage() {
       {/* Hero Section */}
       <section className="relative py-20 bg-cover bg-center bg-no-repeat text-white min-h-[400px] sm:min-h-[500px] lg:min-h-[600px]" 
                style={{ 
-                 backgroundImage: `linear-gradient(to right, rgba(9, 47, 121, 0.7), rgba(0, 166, 138, 0.7)), url('/stock1.png')` 
+                 backgroundImage: `linear-gradient(to right, rgba(9, 47, 121, 0.7), rgba(0, 166, 138, 0.7)), url('/neweraphotos/IMG_3917.JPG')` 
                }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center min-h-[400px] sm:min-h-[500px] lg:min-h-[600px]">
           <div className="text-center w-full">

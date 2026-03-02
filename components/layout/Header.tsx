@@ -19,7 +19,7 @@ export default function Header() {
       className="bg-black text-white sticky top-0 z-50 border-b border-gray-800"
     >
       <div className="max-w-7xl mx-auto px-4">
-        <div className="flex items-center justify-between gap-4 min-h-[72px]">
+        <div className="flex items-center justify-between gap-4 min-h-[80px]">
           {/* Logo */}
           <motion.div
             className="flex items-center gap-3 whitespace-nowrap"
@@ -27,8 +27,8 @@ export default function Header() {
             transition={{ duration: 0.2 }}
           >
             <Link href="/" className="flex items-center space-x-3 group">
-              <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-lg ring-2 ring-primary/20 group-hover:ring-primary/40 transition-all duration-300">
-                <img src="/logo.jpg" alt="New Era Education" className="w-10 h-10 object-contain rounded-lg transition-transform duration-300 group-hover:scale-110" />
+              <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center shadow-lg ring-2 ring-primary/20 group-hover:ring-primary/40 transition-all duration-300">
+                <img src="/logo.jpg" alt="New Era Education" className="w-14 h-14 object-contain rounded-lg transition-transform duration-300 group-hover:scale-110" />
               </div>
               <span className="text-xl font-bold leading-none hidden sm:block group-hover:text-primary transition-colors duration-300">New Era Education</span>
             </Link>

@@ -25,7 +25,7 @@ export default function Footer() {
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.2 }}
             >
-              <div className="w-10 h-10 bg-gradient-to-br from-primary to-primary-dark rounded-xl flex items-center justify-center shadow-lg">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary-dark rounded-xl flex items-center justify-center shadow-lg">
                 <img src="/logo.jpg" alt="New Era Education Logo" className="w-full h-full object-cover rounded-xl" />
               </div>
               <span className="text-xl font-bold">New Era Education</span>
