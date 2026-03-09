@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import { Inter, Poppins } from 'next/font/google'
 import './globals.css'
 
@@ -115,6 +116,20 @@ export default function RootLayout({
             })
           }}
         />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-RB5W9LWWZR"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-RB5W9LWWZR', {
+            page_path: window.location.pathname + window.location.search,
+            });
+          `}
+        </Script>
       </head>
       <body className={`${inter.className} antialiased`}>
         {children}
