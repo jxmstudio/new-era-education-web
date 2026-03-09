@@ -3,13 +3,13 @@ import Script from 'next/script'
 import { Inter, Poppins } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ 
+const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
   display: 'swap',
 })
 
-const poppins = Poppins({ 
+const poppins = Poppins({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600', '700', '800'],
   variable: '--font-poppins',
@@ -18,25 +18,37 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://neweralearning.com.au'),
-  title: 'New Era Education | Premium Primary & Secondary Tutoring Melbourne',
-  description: 'Premium tutoring in Melbourne for primary and secondary students. Expert teachers, tailored programs, and proven results for your child’s success.',
-  keywords: 'VCE tutoring Melbourne, high school tutoring near me, tutoring Mickleham, English tutoring, Maths tutoring, school readiness program, Craigieburn, Greenvale, Beveridge, Wallan, Epping, Melbourne tutoring, Year 12 tutoring',
-  authors: [{ name: 'New Era Learning' }],
-  creator: 'New Era Learning',
-  publisher: 'New Era Learning',
+  title: {
+    default: 'New Era Education | Premium Primary & Secondary Tutoring in Mickleham, Melbourne',
+    template: '%s | New Era Education',
+  },
+  description: 'Premium tutoring in Mickleham & Northern Melbourne for primary and secondary students. VIT-registered teachers, tailored programs, and proven results. Serving Craigieburn, Greenvale, Beveridge & surrounds.',
+  keywords: 'tutoring Mickleham, VCE tutoring Melbourne, tutor Craigieburn, English tutoring Northern Melbourne, Maths tutoring Greenvale, school readiness program, NDIS tutoring Melbourne, private tutor Beveridge, Wallan tutor, Epping tutoring, Year 12 tutoring',
+  authors: [{ name: 'New Era Education' }],
+  creator: 'New Era Education',
+  publisher: 'New Era Education',
   robots: 'index, follow',
   openGraph: {
-    title: 'New Era Education | Premium Primary & Secondary Tutoring Melbourne',
-    description: 'Premium tutoring in Melbourne for primary and secondary students. Expert teachers, tailored programs, and proven results for your child’s success.',
+    title: 'New Era Education | Premium Tutoring in Mickleham, Melbourne',
+    description: 'Premium tutoring in Mickleham & Northern Melbourne. VIT-registered teachers, tailored programs, proven results. Book a free consultation today.',
     url: 'https://neweralearning.com.au',
     siteName: 'New Era Education',
     locale: 'en_AU',
     type: 'website',
+    images: [
+      {
+        url: '/hero-bg.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'New Era Education - Premium Tutoring in Mickleham, Melbourne',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'New Era Education | Premium Primary & Secondary Tutoring Melbourne',
-    description: 'Premium tutoring in Melbourne for primary and secondary students. Expert teachers, tailored programs, and proven results for your child’s success.',
+    title: 'New Era Education | Premium Tutoring in Mickleham, Melbourne',
+    description: 'Premium tutoring in Mickleham & Northern Melbourne. VIT-registered teachers, tailored programs, proven results.',
+    images: ['/hero-bg.jpg'],
   },
   alternates: {
     canonical: 'https://neweralearning.com.au/',
@@ -60,24 +72,27 @@ export default function RootLayout({
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-        
-        {/* Schema.org Structured Data */}
+
+        {/* Schema.org Structured Data - EducationalOrganization + LocalBusiness */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "EducationalOrganization",
-                             "name": "New Era Learning",
-               "description": "Premium tutoring services in Mickleham, Melbourne with qualified teachers and evidence-based methods",
-               "url": "https://neweralearning.com.au",
-              "telephone": "+61-XXX-XXX-XXX",
+              "@type": ["EducationalOrganization", "LocalBusiness"],
+              "name": "New Era Education",
+              "description": "Premium tutoring services in Mickleham, Melbourne with VIT-registered teachers and evidence-based methods",
+              "url": "https://neweralearning.com.au",
+              "telephone": "+61384670773",
+              "email": "info@neweralearning.com.au",
+              "image": "https://neweralearning.com.au/hero-bg.jpg",
+              "logo": "https://neweralearning.com.au/logo.jpg",
+              "priceRange": "$$",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "Mickleham, Melbourne",
+                "streetAddress": "Suite 4 Level 3, 21 Cityside Dr",
                 "addressLocality": "Mickleham",
-                "addressRegion": "Victoria",
+                "addressRegion": "VIC",
                 "postalCode": "3064",
                 "addressCountry": "AU"
               },
@@ -86,11 +101,40 @@ export default function RootLayout({
                 "latitude": -37.5167,
                 "longitude": 144.8833
               },
-              "openingHours": "Mo-Fr 08:00-20:00, Sa 10:00-15:00",
-              "sameAs": [
-                "https://facebook.com/neweraeducation",
-                "https://instagram.com/neweraeducation"
+              "openingHoursSpecification": [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                  "opens": "09:00",
+                  "closes": "20:00"
+                },
+                {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": "Saturday",
+                  "opens": "10:00",
+                  "closes": "15:00"
+                }
               ],
+              "areaServed": [
+                { "@type": "City", "name": "Mickleham" },
+                { "@type": "City", "name": "Craigieburn" },
+                { "@type": "City", "name": "Greenvale" },
+                { "@type": "City", "name": "Roxburgh Park" },
+                { "@type": "City", "name": "Wollert" },
+                { "@type": "City", "name": "Beveridge" },
+                { "@type": "City", "name": "Wallan" },
+                { "@type": "City", "name": "Epping" }
+              ],
+              "sameAs": [
+                "https://www.facebook.com/profile.php?id=61577979322687",
+                "https://www.instagram.com/newera.education_/"
+              ],
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "5.0",
+                "reviewCount": "21",
+                "bestRating": "5"
+              },
               "hasOfferCatalog": {
                 "@type": "OfferCatalog",
                 "name": "Tutoring Services",
@@ -100,7 +144,7 @@ export default function RootLayout({
                     "itemOffered": {
                       "@type": "Course",
                       "name": "School Readiness Program",
-                      "description": "Prepare your child for school with comprehensive readiness program"
+                      "description": "Comprehensive school readiness program for children ages 3-6 in Mickleham"
                     }
                   },
                   {
@@ -108,7 +152,47 @@ export default function RootLayout({
                     "itemOffered": {
                       "@type": "Course",
                       "name": "English Tutoring",
-                      "description": "Comprehensive English support from Foundation to Year 12"
+                      "description": "English tutoring from Foundation to Year 12, including VCE preparation"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Course",
+                      "name": "Mathematics Tutoring",
+                      "description": "Maths tutoring from Foundation to Year 12 in Mickleham and Northern Melbourne"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Course",
+                      "name": "One-on-One Tutoring",
+                      "description": "Personalised one-on-one tutoring sessions for all subjects and year levels"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Course",
+                      "name": "Workshops",
+                      "description": "Study skills, literacy, numeracy workshops and holiday programs"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Course",
+                      "name": "Homeschooling Support",
+                      "description": "Curriculum guidance, assessment support and resources for homeschooling families"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Course",
+                      "name": "NDIS Capacity Building",
+                      "description": "NDIS capacity building supports including functional literacy and numeracy"
                     }
                   }
                 ]
@@ -116,6 +200,8 @@ export default function RootLayout({
             })
           }}
         />
+
+        {/* Google Analytics 4 */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-RB5W9LWWZR"
           strategy="afterInteractive"
@@ -126,10 +212,35 @@ export default function RootLayout({
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-RB5W9LWWZR', {
-            page_path: window.location.pathname + window.location.search,
+              page_path: window.location.pathname + window.location.search,
             });
           `}
         </Script>
+
+        {/* Auto-track phone link clicks (tel:) for GA4 + Meta Pixel */}
+        <Script id="phone-click-tracking" strategy="afterInteractive">
+          {`
+            document.addEventListener('click', function(e) {
+              var link = e.target.closest('a[href^="tel:"]');
+              if (link) {
+                var phone = link.getAttribute('href').replace('tel:', '');
+                if (typeof gtag === 'function') {
+                  gtag('event', 'contact', {
+                    event_category: 'engagement',
+                    event_label: 'phone_click',
+                    method: 'phone',
+                    phone_number: phone
+                  });
+                }
+                if (typeof fbq === 'function') {
+                  fbq('track', 'Contact', { content_name: 'phone_click' });
+                }
+              }
+            });
+          `}
+        </Script>
+
+        {/* Meta Pixel */}
         <Script id="meta-pixel" strategy="afterInteractive">
           {`
 !function(f,b,e,v,n,t,s)
@@ -150,8 +261,18 @@ fbq('track', 'PageView');
         </Script>
       </head>
       <body className={`${inter.className} antialiased`}>
+        {/* Meta Pixel noscript fallback */}
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: 'none' }}
+            src="https://www.facebook.com/tr?id=2173960733444460&ev=PageView&noscript=1"
+            alt=""
+          />
+        </noscript>
         {children}
       </body>
     </html>
   )
-} 
+}

@@ -11,6 +11,13 @@ export const metadata: Metadata = {
     canonical: 'https://neweralearning.com.au/book',
   },
   robots: 'index, follow',
+  openGraph: {
+    title: 'Book Free Consultation | New Era Education Tutoring in Mickleham VIC',
+    description: 'Book a free 30-minute consultation for tutoring services in Mickleham and Northern Melbourne.',
+    url: 'https://neweralearning.com.au/book',
+    type: 'website',
+    images: [{ url: '/hero-bg.jpg', width: 1200, height: 630, alt: 'Book a Consultation - New Era Education Mickleham' }],
+  },
 };
 
 const benefits = [
@@ -140,7 +147,7 @@ export default function BookPage() {
                 <div className="space-y-2 text-sm text-gray-600">
                   <p><strong>Phone:</strong> 0458 498 170 or (03) 8467 0773</p>
                   <p><strong>Email:</strong> info@neweralearning.com.au</p>
-                  <p><strong>Hours:</strong> Mon-Fri 8AM-8PM, Sat 10AM-3PM</p>
+                  <p><strong>Hours:</strong> Mon-Fri 9AM-8PM, Sat 10AM-3PM</p>
                 </div>
               </div>
             </div>

@@ -303,23 +303,23 @@ const contactInfo = [
         <div className="space-y-1 text-sm">
           <div className="flex justify-between">
             <span>Monday:</span>
-            <span>8:00 AM – 8:00 PM</span>
+            <span>9:00 AM – 8:00 PM</span>
           </div>
           <div className="flex justify-between">
             <span>Tuesday:</span>
-            <span>8:00 AM – 8:00 PM</span>
+            <span>9:00 AM – 8:00 PM</span>
           </div>
           <div className="flex justify-between">
             <span>Wednesday:</span>
-            <span>8:00 AM – 8:00 PM</span>
+            <span>9:00 AM – 8:00 PM</span>
           </div>
           <div className="flex justify-between">
             <span>Thursday:</span>
-            <span>8:00 AM – 8:00 PM</span>
+            <span>9:00 AM – 8:00 PM</span>
           </div>
           <div className="flex justify-between">
             <span>Friday:</span>
-            <span>8:00 AM – 8:00 PM</span>
+            <span>9:00 AM – 8:00 PM</span>
           </div>
           <div className="flex justify-between">
             <span>Saturday:</span>

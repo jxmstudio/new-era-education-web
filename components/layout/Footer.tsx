@@ -160,16 +160,16 @@ export default function Footer() {
                 <Phone className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                 <div className="space-y-1">
                   <div>
-                    <a 
-                      href="tel:+61458498170" 
+                    <a
+                      href="tel:+61458498170"
                       className="text-gray-300 hover:text-white transition-colors duration-300"
                     >
                       0458 498 170
                     </a>
                   </div>
                   <div>
-                    <a 
-                      href="tel:+61384670773" 
+                    <a
+                      href="tel:+61384670773"
                       className="text-gray-300 hover:text-white transition-colors duration-300"
                     >
                       (03) 8467 0773
@@ -191,7 +191,7 @@ export default function Footer() {
                 transition={{ duration: 0.2 }}
               >
                 <Clock className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                <span className="text-gray-300">Mon-Fri: 8AM-8PM, Sat: 10AM-3PM</span>
+                <span className="text-gray-300">Mon-Fri: 9AM-8PM, Sat: 10AM-3PM</span>
               </motion.li>
             </ul>
           </motion.div>

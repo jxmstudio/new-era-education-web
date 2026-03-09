@@ -9,6 +9,13 @@ export const metadata: Metadata = {
     canonical: 'https://neweralearning.com.au/one-on-one',
   },
   robots: 'index, follow',
+  openGraph: {
+    title: 'One-on-One Tutoring in Mickleham VIC & Northern Melbourne | New Era Education',
+    description: 'Expert one-on-one tutoring in Mickleham, Craigieburn, and Northern Melbourne.',
+    url: 'https://neweralearning.com.au/one-on-one',
+    type: 'website',
+    images: [{ url: '/hero-bg.jpg', width: 1200, height: 630, alt: 'One-on-One Tutoring at New Era Education Mickleham' }],
+  },
 };
 
 export default function OneOnOnePage() {

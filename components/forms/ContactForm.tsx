@@ -8,6 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Check, X, Send } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
+import { trackLead } from "@/lib/tracking"
 
 interface ContactFormData {
   name: string
@@ -71,9 +72,8 @@ export default function ContactForm() {
       // Show success popup
       setShowPopup(true)
 
-      if (typeof window !== 'undefined' && (window as any).fbq) {
-        ;(window as any).fbq('track', 'Lead')
-      }
+      // Track lead conversion (GA4 + Meta Pixel)
+      trackLead('contact_form')
     } catch (error) {
       console.error("Submission failed:", error)
     } finally {

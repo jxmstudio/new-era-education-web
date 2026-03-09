@@ -9,6 +9,13 @@ export const metadata: Metadata = {
     canonical: 'https://neweralearning.com.au/workshops',
   },
   robots: 'index, follow',
+  openGraph: {
+    title: 'Learning Workshops in Mickleham VIC | New Era Education',
+    description: 'Educational workshops in Mickleham and Northern Melbourne: study skills, literacy, numeracy, and holiday programs.',
+    url: 'https://neweralearning.com.au/workshops',
+    type: 'website',
+    images: [{ url: '/hero-bg.jpg', width: 1200, height: 630, alt: 'Workshops at New Era Education Mickleham' }],
+  },
 };
 
 export default function WorkshopsPage() {

@@ -7,11 +7,18 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Contact New Era Education | Tutoring in Mickleham VIC & Northern Melbourne',
-  description: 'Contact New Era Education for tutoring enquiries in Mickleham, Craigieburn, and Northern Melbourne. Phone: 0458 498 170 | Email: info@neweralearning.com.au | Mon-Fri 8AM-8PM, Sat 10AM-3PM',
+  description: 'Contact New Era Education for tutoring enquiries in Mickleham, Craigieburn, and Northern Melbourne. Phone: 0458 498 170 | Email: info@neweralearning.com.au | Mon-Fri 9AM-8PM, Sat 10AM-3PM',
   alternates: {
     canonical: 'https://neweralearning.com.au/contact',
   },
   robots: 'index, follow',
+  openGraph: {
+    title: 'Contact New Era Education | Tutoring in Mickleham VIC',
+    description: 'Contact New Era Education for tutoring enquiries in Mickleham and Northern Melbourne.',
+    url: 'https://neweralearning.com.au/contact',
+    type: 'website',
+    images: [{ url: '/hero-bg.jpg', width: 1200, height: 630, alt: 'Contact New Era Education Mickleham' }],
+  },
 };
 
 const GoogleMapEmbed = dynamic(() => import("@/components/GoogleMapEmbed"), {
@@ -112,7 +119,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Business Hours</h3>
-                    <p className="text-gray-600">Monday - Friday: 8:00 AM - 8:00 PM</p>
+                    <p className="text-gray-600">Monday - Friday: 9:00 AM - 8:00 PM</p>
                     <p className="text-gray-600">Saturday: 10:00 AM - 3:00 PM</p>
                     <p className="text-gray-600">Sunday: Closed</p>
                   </div>

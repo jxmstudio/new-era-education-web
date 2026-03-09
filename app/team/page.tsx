@@ -1,3 +1,4 @@
+import { Metadata } from 'next'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -5,6 +6,20 @@ import { GraduationCap, BookOpen, Calculator, Star, Quote } from "lucide-react"
 import Header from "@/components/layout/Header"
 import Footer from "@/components/layout/Footer"
 import { MotionWrapper } from "@/components/ui/motion-wrapper"
+
+export const metadata: Metadata = {
+  title: 'Our Team | Meet the Educators at New Era Education Mickleham',
+  description: 'Meet the qualified, VIT-registered educators at New Era Education in Mickleham. 10+ years of teaching experience dedicated to your child\'s success.',
+  alternates: { canonical: 'https://neweralearning.com.au/team' },
+  robots: 'index, follow',
+  openGraph: {
+    title: 'Our Team | Meet the Educators at New Era Education Mickleham',
+    description: 'Meet the qualified, VIT-registered educators at New Era Education in Mickleham.',
+    url: 'https://neweralearning.com.au/team',
+    type: 'website',
+    images: [{ url: '/hero-bg.jpg', width: 1200, height: 630, alt: 'New Era Education Team - Mickleham' }],
+  },
+}
 
 interface TeamMember {
   name: string

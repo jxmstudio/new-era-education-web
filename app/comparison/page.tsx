@@ -1,7 +1,22 @@
+import { Metadata } from 'next'
 import { ComparisonChart } from "@/components/ui/comparison-chart"
 import Header from "@/components/layout/Header"
 import Footer from "@/components/layout/Footer"
 import { MotionWrapper } from "@/components/ui/motion-wrapper"
+
+export const metadata: Metadata = {
+  title: 'Why Choose New Era Education | Tutoring Comparison | Mickleham VIC',
+  description: 'See why families in Mickleham and Northern Melbourne choose New Era Education. Compare our VIT-registered tutors, personalised programs, and proven results.',
+  alternates: { canonical: 'https://neweralearning.com.au/comparison' },
+  robots: 'index, follow',
+  openGraph: {
+    title: 'Why Choose New Era Education | Tutoring Comparison',
+    description: 'See why families in Mickleham and Northern Melbourne choose New Era Education.',
+    url: 'https://neweralearning.com.au/comparison',
+    type: 'website',
+    images: [{ url: '/hero-bg.jpg', width: 1200, height: 630, alt: 'Why Choose New Era Education Mickleham' }],
+  },
+}
 
 export default function ComparisonPage() {
   return (

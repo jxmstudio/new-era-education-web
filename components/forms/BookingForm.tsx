@@ -8,6 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Check, Calendar, Clock } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
+import { trackLead } from "@/lib/tracking"
 
 interface BookingFormData {
   name: string
@@ -81,9 +82,8 @@ export default function BookingForm({ variant = "default" }: BookingFormProps) {
       // Show success popup
       setShowPopup(true)
 
-      if (typeof window !== 'undefined' && (window as any).fbq) {
-        ;(window as any).fbq('track', 'Lead')
-      }
+      // Track lead conversion (GA4 + Meta Pixel)
+      trackLead('booking_form')
     } catch (error) {
       console.error("Submission failed:", error)
     } finally {
@@ -261,7 +261,7 @@ export default function BookingForm({ variant = "default" }: BookingFormProps) {
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300"
               >
                 <option value="">Select time</option>
-                <option value="8:00-am">8:00 AM</option>
+
                 <option value="9:00-am">9:00 AM</option>
                 <option value="10:00-am">10:00 AM</option>
                 <option value="11:00-am">11:00 AM</option>
@@ -497,7 +497,7 @@ export default function BookingForm({ variant = "default" }: BookingFormProps) {
                     className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300"
                   >
                     <option value="">Select time</option>
-                    <option value="8:00-am">8:00 AM</option>
+    
                     <option value="9:00-am">9:00 AM</option>
                     <option value="10:00-am">10:00 AM</option>
                     <option value="11:00-am">11:00 AM</option>
