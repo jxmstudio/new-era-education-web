@@ -80,6 +80,10 @@ export default function BookingForm({ variant = "default" }: BookingFormProps) {
 
       // Show success popup
       setShowPopup(true)
+
+      if (typeof window !== 'undefined' && (window as any).fbq) {
+        ;(window as any).fbq('track', 'Lead')
+      }
     } catch (error) {
       console.error("Submission failed:", error)
     } finally {
