@@ -22,7 +22,7 @@ const nextConfig = {
           },
           {
             key: 'Content-Security-Policy',
-            value: "frame-src 'self' https://www.google.com https://maps.google.com https://maps.googleapis.com https://*.google.com https://*.googleapis.com https://www.facebook.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://maps.googleapis.com https://maps.gstatic.com https://www.googletagmanager.com https://connect.facebook.net; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://maps.googleapis.com https://maps.gstatic.com https://www.facebook.com https://connect.facebook.net https://graph.facebook.com; img-src 'self' data: https://www.facebook.com https://connect.facebook.net https://www.google-analytics.com; object-src 'none';",
+            value: "frame-src 'self' https://www.google.com https://maps.google.com https://maps.googleapis.com https://*.google.com https://*.googleapis.com https://www.facebook.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://maps.googleapis.com https://maps.gstatic.com https://www.googletagmanager.com https://connect.facebook.net; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://maps.googleapis.com https://maps.gstatic.com https://www.facebook.com https://connect.facebook.net https://graph.facebook.com https://script.google.com https://script.googleusercontent.com; img-src 'self' data: https://www.facebook.com https://connect.facebook.net https://www.google-analytics.com; object-src 'none';",
           },
         ],
       },
