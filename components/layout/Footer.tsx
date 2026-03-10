@@ -74,7 +74,10 @@ export default function Footer() {
                 { href: "/maths-tutoring", label: "Mathematics Tutoring" },
                 { href: "/one-on-one", label: "One-on-One Tutoring" },
                 { href: "/workshops", label: "Workshops" },
-                { href: "/homeschooling-support", label: "Homeschooling Support" }
+                { href: "/homeschooling-support", label: "Homeschooling Support" },
+                { href: "/ndis", label: "NDIS Support" },
+                { href: "/faq", label: "FAQ" },
+                { href: "/comparison", label: "Why Choose Us" }
               ].map((item, index) => (
                 <motion.li
                   key={item.href}
@@ -94,21 +97,23 @@ export default function Footer() {
             </ul>
           </motion.div>
           
-          {/* Quick Links */}
+          {/* Locations */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h4 className="text-lg font-semibold mb-4 text-white">Quick Links</h4>
+            <h4 className="text-lg font-semibold mb-4 text-white">Locations We Serve</h4>
             <ul className="space-y-2">
               {[
-                { href: "/#about", label: "About Us" },
-                { href: "/#testimonials", label: "Testimonials" },
-                { href: "/#contact", label: "Contact" },
-                { href: "/faq", label: "FAQ" },
-                { href: "/ndis", label: "NDIS" }
+                { href: "/tutoring/craigieburn", label: "Tutoring in Craigieburn" },
+                { href: "/tutoring/greenvale", label: "Tutoring in Greenvale" },
+                { href: "/tutoring/roxburgh-park", label: "Tutoring in Roxburgh Park" },
+                { href: "/tutoring/wollert", label: "Tutoring in Wollert" },
+                { href: "/tutoring/beveridge", label: "Tutoring in Beveridge" },
+                { href: "/tutoring/wallan", label: "Tutoring in Wallan" },
+                { href: "/tutoring/epping", label: "Tutoring in Epping" }
               ].map((item, index) => (
                 <motion.li
                   key={item.href}
@@ -117,8 +122,8 @@ export default function Footer() {
                   transition={{ delay: index * 0.05 }}
                   viewport={{ once: true }}
                 >
-                  <Link 
-                    href={item.href} 
+                  <Link
+                    href={item.href}
                     className="text-gray-300 hover:text-white transition-colors duration-300 hover:translate-x-1 inline-block"
                   >
                     {item.label}
@@ -209,14 +214,14 @@ export default function Footer() {
             &copy; 2025 New Era Education. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link 
-              href="#" 
+            <Link
+              href="/privacy"
               className="text-gray-300 hover:text-white transition-colors duration-300 text-sm"
             >
               Privacy Policy
             </Link>
-            <Link 
-              href="#" 
+            <Link
+              href="/terms"
               className="text-gray-300 hover:text-white transition-colors duration-300 text-sm"
             >
               Terms of Service

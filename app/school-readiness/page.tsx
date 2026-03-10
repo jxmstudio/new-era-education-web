@@ -17,5 +17,60 @@ export const metadata: Metadata = {
 };
 
 export default function SchoolReadinessPage() {
-  return <SchoolReadinessContent />;
+  const courseSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Course',
+    name: 'School Readiness Program',
+    description:
+      'School readiness program for children ages 3-6. Build literacy, numeracy, and social skills before starting school.',
+    provider: {
+      '@type': 'Organization',
+      name: 'New Era Education',
+      url: 'https://neweralearning.com.au',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Suite 4 Level 3, 21 Cityside Dr',
+        addressLocality: 'Mickleham',
+        addressRegion: 'VIC',
+        postalCode: '3064',
+        addressCountry: 'AU',
+      },
+    },
+    url: 'https://neweralearning.com.au/school-readiness',
+    coursePrerequisites: 'None - suitable for children ages 3-6',
+    educationalLevel: 'Preschool / Early Years',
+    inLanguage: 'en-AU',
+    isAccessibleForFree: false,
+    offers: {
+      '@type': 'Offer',
+      category: 'Paid',
+      availability: 'https://schema.org/InStock',
+    },
+    hasCourseInstance: {
+      '@type': 'CourseInstance',
+      courseMode: 'onsite',
+      location: {
+        '@type': 'Place',
+        name: 'New Era Education Mickleham',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: 'Suite 4 Level 3, 21 Cityside Dr',
+          addressLocality: 'Mickleham',
+          addressRegion: 'VIC',
+          postalCode: '3064',
+          addressCountry: 'AU',
+        },
+      },
+    },
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
+      <SchoolReadinessContent />
+    </>
+  );
 }

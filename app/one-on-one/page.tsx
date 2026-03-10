@@ -19,5 +19,66 @@ export const metadata: Metadata = {
 };
 
 export default function OneOnOnePage() {
-  return <OneOnOneContent />;
+  const courseSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Course',
+    name: 'One-on-One Tutoring',
+    description:
+      'Personalised one-on-one tutoring for Foundation to Year 12 students. Individual English and maths support tailored to each student.',
+    provider: {
+      '@type': 'Organization',
+      name: 'New Era Education',
+      url: 'https://neweralearning.com.au',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Suite 4 Level 3, 21 Cityside Dr',
+        addressLocality: 'Mickleham',
+        addressRegion: 'VIC',
+        postalCode: '3064',
+        addressCountry: 'AU',
+      },
+    },
+    url: 'https://neweralearning.com.au/one-on-one',
+    coursePrerequisites: 'None',
+    educationalLevel: 'Foundation to Year 12',
+    inLanguage: 'en-AU',
+    isAccessibleForFree: false,
+    offers: {
+      '@type': 'Offer',
+      category: 'Paid',
+      availability: 'https://schema.org/InStock',
+    },
+    hasCourseInstance: [
+      {
+        '@type': 'CourseInstance',
+        courseMode: 'onsite',
+        location: {
+          '@type': 'Place',
+          name: 'New Era Education Mickleham',
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: 'Suite 4 Level 3, 21 Cityside Dr',
+            addressLocality: 'Mickleham',
+            addressRegion: 'VIC',
+            postalCode: '3064',
+            addressCountry: 'AU',
+          },
+        },
+      },
+      {
+        '@type': 'CourseInstance',
+        courseMode: 'online',
+      },
+    ],
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
+      <OneOnOneContent />
+    </>
+  );
 }

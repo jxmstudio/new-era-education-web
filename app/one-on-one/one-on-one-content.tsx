@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Button } from "@/components/ui/button";
 import { User, Clock, Target, TrendingUp, BookOpen, Calculator, Star, CheckCircle, Users } from 'lucide-react';
 import Header from '@/components/layout/Header';
@@ -291,6 +292,55 @@ export default function OneOnOneContent() {
                 service={testimonial.service}
                 index={index}
               />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Related Services */}
+      <section className="py-16 px-4 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Explore Related Services
+            </h2>
+            <p className="text-lg text-gray-600">
+              Explore other ways we can support your child
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              { name: 'English Tutoring', href: '/english-tutoring', description: 'Expert English and literacy tutoring for all year levels.', color: 'bg-blue-100 text-blue-700' },
+              { name: 'Maths Tutoring', href: '/maths-tutoring', description: 'Comprehensive mathematics support and exam preparation.', color: 'bg-red-100 text-red-700' },
+              { name: 'NDIS Support', href: '/ndis', description: 'Capacity building supports for NDIS participants.', color: 'bg-sky-100 text-sky-700' },
+            ].map((service, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Link
+                  href={service.href}
+                  className="block p-6 bg-white rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 group"
+                >
+                  <span className={`inline-block px-3 py-1 rounded-full text-sm font-medium mb-3 ${service.color}`}>
+                    {service.name}
+                  </span>
+                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  <span className="text-sm font-semibold text-gray-900 group-hover:translate-x-1 transition-transform duration-300 inline-flex items-center gap-1">
+                    Learn more →
+                  </span>
+                </Link>
+              </motion.div>
             ))}
           </div>
         </div>

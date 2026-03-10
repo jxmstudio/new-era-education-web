@@ -37,6 +37,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }))
 
+  const funnelPages: MetadataRoute.Sitemap = [
+    { path: '/get-started', priority: 0.9 },
+    { path: '/get-started/school-readiness', priority: 0.9 },
+  ].map(({ path, priority }) => ({
+    url: `${baseUrl}${path}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority,
+  }))
+
   const infoPages: MetadataRoute.Sitemap = [
     { path: '/book', priority: 0.9 },
     { path: '/contact', priority: 0.8 },
@@ -44,12 +54,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/faq', priority: 0.7 },
     { path: '/team', priority: 0.7 },
     { path: '/careers', priority: 0.6 },
+    { path: '/privacy', priority: 0.3 },
+    { path: '/terms', priority: 0.3 },
   ].map(({ path, priority }) => ({
     url: `${baseUrl}${path}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority,
   }))
+
+  const locationHubPage: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}/tutoring`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
+  ]
 
   const locationPages: MetadataRoute.Sitemap = suburbs.map((suburb) => ({
     url: `${baseUrl}/tutoring/${suburb}`,
@@ -58,5 +79,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
-  return [...mainPages, ...servicePages, ...infoPages, ...locationPages]
+  return [...mainPages, ...servicePages, ...funnelPages, ...infoPages, ...locationHubPage, ...locationPages]
 }

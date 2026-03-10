@@ -19,5 +19,60 @@ export const metadata: Metadata = {
 };
 
 export default function NDISPage() {
-  return <NDISContent />;
+  const courseSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Course',
+    name: 'NDIS Capacity Building & Learning Support',
+    description:
+      'NDIS capacity building supports including functional literacy, numeracy, and life skills development for NDIS participants.',
+    provider: {
+      '@type': 'Organization',
+      name: 'New Era Education',
+      url: 'https://neweralearning.com.au',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Suite 4 Level 3, 21 Cityside Dr',
+        addressLocality: 'Mickleham',
+        addressRegion: 'VIC',
+        postalCode: '3064',
+        addressCountry: 'AU',
+      },
+    },
+    url: 'https://neweralearning.com.au/ndis',
+    coursePrerequisites: 'Active NDIS plan with capacity building funding',
+    educationalLevel: 'All levels',
+    inLanguage: 'en-AU',
+    isAccessibleForFree: false,
+    offers: {
+      '@type': 'Offer',
+      category: 'Paid',
+      availability: 'https://schema.org/InStock',
+    },
+    hasCourseInstance: {
+      '@type': 'CourseInstance',
+      courseMode: 'onsite',
+      location: {
+        '@type': 'Place',
+        name: 'New Era Education Mickleham',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: 'Suite 4 Level 3, 21 Cityside Dr',
+          addressLocality: 'Mickleham',
+          addressRegion: 'VIC',
+          postalCode: '3064',
+          addressCountry: 'AU',
+        },
+      },
+    },
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
+      <NDISContent />
+    </>
+  );
 }

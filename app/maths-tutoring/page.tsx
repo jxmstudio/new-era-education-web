@@ -17,5 +17,60 @@ export const metadata: Metadata = {
 };
 
 export default function MathsTutoringPage() {
-  return <MathsTutoringContent />;
+  const courseSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Course',
+    name: 'Mathematics Tutoring - Foundation to Year 12',
+    description:
+      'Expert mathematics tutoring including problem solving, exam preparation, and building strong maths foundations.',
+    provider: {
+      '@type': 'Organization',
+      name: 'New Era Education',
+      url: 'https://neweralearning.com.au',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Suite 4 Level 3, 21 Cityside Dr',
+        addressLocality: 'Mickleham',
+        addressRegion: 'VIC',
+        postalCode: '3064',
+        addressCountry: 'AU',
+      },
+    },
+    url: 'https://neweralearning.com.au/maths-tutoring',
+    coursePrerequisites: 'None',
+    educationalLevel: 'Foundation to Year 12',
+    inLanguage: 'en-AU',
+    isAccessibleForFree: false,
+    offers: {
+      '@type': 'Offer',
+      category: 'Paid',
+      availability: 'https://schema.org/InStock',
+    },
+    hasCourseInstance: {
+      '@type': 'CourseInstance',
+      courseMode: 'onsite',
+      location: {
+        '@type': 'Place',
+        name: 'New Era Education Mickleham',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: 'Suite 4 Level 3, 21 Cityside Dr',
+          addressLocality: 'Mickleham',
+          addressRegion: 'VIC',
+          postalCode: '3064',
+          addressCountry: 'AU',
+        },
+      },
+    },
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
+      <MathsTutoringContent />
+    </>
+  );
 }

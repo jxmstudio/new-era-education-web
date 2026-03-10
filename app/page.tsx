@@ -589,6 +589,54 @@ export default function HomePage() {
         description="Keep up to date with our weekly tutoring schedule across Melbourne. Sessions in English and Maths are available face-to-face and online. Book now for more details."
       />
 
+      {/* Locations We Serve */}
+      <section className="py-12 sm:py-16 md:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+              Serving Families Across Northern Melbourne
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Our Mickleham centre is conveniently located for families across these suburbs. Find out how we can help students in your area.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+            {[
+              { name: "Craigieburn", slug: "craigieburn", time: "5 min" },
+              { name: "Greenvale", slug: "greenvale", time: "10 min" },
+              { name: "Roxburgh Park", slug: "roxburgh-park", time: "10 min" },
+              { name: "Wollert", slug: "wollert", time: "10 min" },
+              { name: "Beveridge", slug: "beveridge", time: "15 min" },
+              { name: "Wallan", slug: "wallan", time: "20 min" },
+              { name: "Epping", slug: "epping", time: "15 min" },
+              { name: "Mickleham", slug: "", time: "Home" },
+            ].map((loc) => (
+              loc.slug ? (
+                <Link
+                  key={loc.slug}
+                  href={`/tutoring/${loc.slug}`}
+                  className="group flex items-center gap-3 p-4 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all bg-white"
+                >
+                  <MapPin className="w-5 h-5 text-blue-600 flex-shrink-0" />
+                  <div>
+                    <span className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors block">{loc.name}</span>
+                    <span className="text-sm text-gray-500">{loc.time} drive</span>
+                  </div>
+                </Link>
+              ) : (
+                <div key="mickleham" className="flex items-center gap-3 p-4 rounded-xl border-2 border-blue-200 bg-blue-50">
+                  <MapPin className="w-5 h-5 text-blue-600 flex-shrink-0" />
+                  <div>
+                    <span className="font-semibold text-blue-700 block">{loc.name}</span>
+                    <span className="text-sm text-blue-500">Our Centre</span>
+                  </div>
+                </div>
+              )
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-primary to-primary-dark text-white relative overflow-hidden">
         {/* Background Pattern */}
