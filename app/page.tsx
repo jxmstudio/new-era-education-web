@@ -356,6 +356,7 @@ export default function HomePage() {
                 index={index}
                 image={service.image}
                 imageAlt={service.imageAlt}
+                imagePosition={'imagePosition' in service ? (service as any).imagePosition : undefined}
               />
             ))}
           </div>

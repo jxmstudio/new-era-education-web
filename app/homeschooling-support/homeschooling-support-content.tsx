@@ -85,12 +85,11 @@ export default function HomeschoolingContent() {
     <div className="min-h-screen">
       <Header />
 
-      <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${getServiceBySlug('homeschooling-support')?.image ?? ''})` }} />
-        <div className="absolute inset-0 bg-black/30" />
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/80 via-blue-500/70 to-green-500/80" />
+      <section className="relative py-12 lg:py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-no-repeat" style={{ backgroundImage: `url(${getServiceBySlug('homeschooling-support')?.image ?? ''})`, backgroundPosition: 'center 15%' }} />
+        <div className="absolute inset-0 bg-black/40" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[500px]">
+          <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[350px]">
             <div className="space-y-8">
               <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-white">
                 Homeschooling Support

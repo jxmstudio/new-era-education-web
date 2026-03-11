@@ -36,7 +36,7 @@ export const SERVICES = [
     title: "Mathematics Tutoring",
     slug: "maths-tutoring",
     description: "Build strong mathematical foundations with our evidence-based numeracy programs.",
-    image: "/newphotos/math.png",
+    image: "/newphotos/math.jpg",
     imageAlt: "Mathematics Tutoring at New Era Education",
     age: "Foundation - Year 8",
     features: [
@@ -50,7 +50,7 @@ export const SERVICES = [
     title: "One-on-One Tutoring",
     slug: "one-on-one",
     description: "Personalised learning plans tailored to your child's unique needs and learning style.",
-    image: "/newphotos/1on1.png",
+    image: "/neweraphotos/IMG_3916.JPG",
     imageAlt: "One-on-One Tutoring at New Era Education",
     age: "All Ages",
     features: [
@@ -64,8 +64,9 @@ export const SERVICES = [
     title: "Workshops in Public Schools",
     slug: "workshops",
     description: "Creative expression through art, fostering imagination and fine motor skills development.",
-    image: "/newphotos/workshops.png",
+    image: "/neweraphotos/IMG_3914.JPG",
     imageAlt: "Workshops at New Era Education",
+    imagePosition: "center 30%",
     age: "All Ages",
     features: [
       "Creative expression",
@@ -78,8 +79,9 @@ export const SERVICES = [
     title: "Full-Time Learning Support",
     slug: "homeschooling-support",
     description: "Specialised support for homeschooling families in literacy and numeracy development.",
-    image: "/newphotos/homeschool.png",
+    image: "/neweraphotos/IMG_3902.JPG",
     imageAlt: "Full-Time Learning Support / Homeschooling at New Era Education",
+    imagePosition: "center 15%",
     age: "All Ages",
     features: [
       "Curriculum guidance",

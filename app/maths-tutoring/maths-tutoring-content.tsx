@@ -99,8 +99,7 @@ export default function MathsTutoringContent() {
 
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${getServiceBySlug('maths-tutoring')?.image ?? ''})` }} />
-        <div className="absolute inset-0 bg-black/30" />
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/80 via-blue-500/70 to-green-500/80" />
+        <div className="absolute inset-0 bg-black/40" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[500px]">
             <div className="space-y-8">

@@ -19,35 +19,39 @@ interface ServiceCardProps {
   /** Root-relative image path e.g. /newphotos/school-readiness.png */
   image?: string
   imageAlt?: string
+  /** CSS object-position value to control image crop, e.g. "center 70%" */
+  imagePosition?: string
 }
 
-export default function ServiceCard({ 
-  title, 
-  age, 
-  description, 
-  icon, 
-  features, 
-  href, 
+export default function ServiceCard({
+  title,
+  age,
+  description,
+  icon,
+  features,
+  href,
   index = 0,
   image,
   imageAlt = title,
+  imagePosition,
 }: ServiceCardProps) {
   return (
+    <Link href={href} className="block">
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ 
-        duration: 0.5, 
+      transition={{
+        duration: 0.5,
         delay: index * 0.1,
         ease: "easeOut"
       }}
-      whileHover={{ 
+      whileHover={{
         y: -8,
         transition: { duration: 0.2 }
       }}
-      className="group"
+      className="group h-full"
     >
-      <Card className="h-full bg-white border-0 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden relative">
+      <Card className="h-full bg-white border-0 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden relative cursor-pointer">
         {/* Gradient overlay on hover */}
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         
@@ -62,10 +66,9 @@ export default function ServiceCard({
               alt={imageAlt}
               fill
               className="object-cover group-hover:scale-105 transition-transform duration-300"
+              style={imagePosition ? { objectPosition: imagePosition } : undefined}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
-            <div className="absolute inset-0 bg-black/30" />
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-600/80 via-blue-500/70 to-green-500/80" />
           </div>
         )}
         
@@ -112,16 +115,14 @@ export default function ServiceCard({
           </div>
           
           {/* Button */}
-          <Button 
-            asChild 
-            className="w-full bg-gradient-to-r from-primary to-primary-dark hover:from-primary-dark hover:to-primary text-white font-semibold py-3 text-lg shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105"
+          <div
+            className="w-full bg-gradient-to-r from-primary to-primary-dark text-white font-semibold py-3 text-lg shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105 text-center rounded-md"
           >
-            <Link href={href}>
-              Book Now
-            </Link>
-          </Button>
+            Book Now
+          </div>
         </CardContent>
       </Card>
     </motion.div>
+    </Link>
   )
 } 
