@@ -1,5 +1,8 @@
 import { Metadata } from 'next';
 import HomeschoolingContent from './homeschooling-support-content';
+import { getServiceBySlug } from '@/lib/services';
+
+const service = getServiceBySlug('homeschooling-support');
 
 export const metadata: Metadata = {
   title: 'Homeschooling Support in Mickleham VIC & Melbourne | New Era Education',
@@ -12,7 +15,7 @@ export const metadata: Metadata = {
     description: 'Professional homeschooling support in Mickleham and Melbourne. Curriculum guidance, assessment support, and educational resources.',
     url: 'https://neweralearning.com.au/homeschooling-support',
     type: 'website',
-    images: [{ url: '/hero-bg.jpg', width: 1200, height: 630, alt: 'Homeschooling Support at New Era Education Mickleham' }],
+    images: [{ url: service?.image ?? '/hero-bg.jpg', width: 1200, height: 630, alt: service?.imageAlt ?? 'Homeschooling Support at New Era Education Mickleham' }],
   },
 };
 

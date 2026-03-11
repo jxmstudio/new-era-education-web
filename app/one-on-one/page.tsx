@@ -1,5 +1,8 @@
 import { Metadata } from 'next';
 import OneOnOneContent from './one-on-one-content';
+import { getServiceBySlug } from '@/lib/services';
+
+const service = getServiceBySlug('one-on-one');
 
 export const metadata: Metadata = {
   title: 'One-on-One Tutoring in Mickleham VIC & Northern Melbourne | New Era Education',
@@ -14,7 +17,7 @@ export const metadata: Metadata = {
     description: 'Expert one-on-one tutoring in Mickleham, Craigieburn, and Northern Melbourne.',
     url: 'https://neweralearning.com.au/one-on-one',
     type: 'website',
-    images: [{ url: '/hero-bg.jpg', width: 1200, height: 630, alt: 'One-on-One Tutoring at New Era Education Mickleham' }],
+    images: [{ url: service?.image ?? '/hero-bg.jpg', width: 1200, height: 630, alt: service?.imageAlt ?? 'One-on-One Tutoring at New Era Education Mickleham' }],
   },
 };
 

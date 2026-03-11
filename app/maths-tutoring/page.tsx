@@ -1,5 +1,8 @@
 import { Metadata } from 'next';
 import MathsTutoringContent from './maths-tutoring-content';
+import { getServiceBySlug } from '@/lib/services';
+
+const service = getServiceBySlug('maths-tutoring');
 
 export const metadata: Metadata = {
   title: 'Maths Tutoring in Mickleham VIC | Foundation to Year 12 | New Era Education',
@@ -12,7 +15,7 @@ export const metadata: Metadata = {
     description: 'Expert mathematics tutoring in Mickleham and Northern Melbourne. Problem solving, exam preparation, and building strong foundations.',
     url: 'https://neweralearning.com.au/maths-tutoring',
     type: 'website',
-    images: [{ url: '/hero-bg.jpg', width: 1200, height: 630, alt: 'Maths Tutoring at New Era Education Mickleham' }],
+    images: [{ url: service?.image ?? '/hero-bg.jpg', width: 1200, height: 630, alt: service?.imageAlt ?? 'Maths Tutoring at New Era Education Mickleham' }],
   },
 };
 

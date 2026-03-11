@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -15,6 +16,9 @@ interface ServiceCardProps {
   features: string[]
   href: string
   index?: number
+  /** Root-relative image path e.g. /newphotos/school-readiness.png */
+  image?: string
+  imageAlt?: string
 }
 
 export default function ServiceCard({ 
@@ -24,7 +28,9 @@ export default function ServiceCard({
   icon, 
   features, 
   href, 
-  index = 0 
+  index = 0,
+  image,
+  imageAlt = title,
 }: ServiceCardProps) {
   return (
     <motion.div
@@ -47,6 +53,21 @@ export default function ServiceCard({
         
         {/* Decorative elements */}
         <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -translate-y-16 translate-x-16 group-hover:scale-110 transition-transform duration-300" />
+        
+        {/* Service image with same blue-to-teal overlay as HeroSection / About */}
+        {image && (
+          <div className="relative w-full aspect-[16/10] overflow-hidden bg-gray-100">
+            <Image
+              src={image}
+              alt={imageAlt}
+              fill
+              className="object-cover group-hover:scale-105 transition-transform duration-300"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+            <div className="absolute inset-0 bg-black/30" />
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-600/80 via-blue-500/70 to-green-500/80" />
+          </div>
+        )}
         
         <CardHeader className="relative">
           <div className="flex items-center justify-between mb-4">

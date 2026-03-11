@@ -34,87 +34,22 @@ import type { TimetableRow } from "@/components/ui/timetable"
 import { MotionWrapper } from "@/components/ui/motion-wrapper"
 import GoogleMapEmbed from "@/components/GoogleMapEmbed"
 import { ComparisonChart } from "@/components/ui/comparison-chart"
+import { SERVICES } from "@/lib/services"
 
-const services = [
-  {
-    title: "School Readiness Program",
-    age: "Ages 3-5",
-    description: "Prepare your child for school with our comprehensive readiness program focusing on literacy, numeracy, and social skills.",
-    icon: <Baby className="w-6 h-6" />,
-    features: [
-      "Early literacy development",
-      "Basic numeracy skills", 
-      "Social interaction skills",
-      "Fine motor development"
-    ],
-    href: "/school-readiness"
-  },
-  {
-    title: "English Tutoring",
-    age: "Foundation - Year 12",
-    description: "Comprehensive English support from foundational reading skills to advanced VCE preparation.",
-    icon: <BookOpen className="w-6 h-6" />,
-    features: [
-      "Reading comprehension",
-      "Creative writing",
-      "Essay writing", 
-      "VCE exam preparation"
-    ],
-    href: "/english-tutoring"
-  },
-  {
-    title: "Mathematics Tutoring",
-    age: "Foundation - Year 8",
-    description: "Build strong mathematical foundations with our evidence-based numeracy programs.",
-    icon: <Calculator className="w-6 h-6" />,
-    features: [
-      "Number sense development",
-      "Problem-solving strategies",
-      "Algebraic thinking",
-      "Year 9-12 coming soon"
-    ],
-    href: "/maths-tutoring"
-  },
-  {
-    title: "One-on-One Tutoring",
-    age: "All Ages",
-    description: "Personalised learning plans tailored to your child's unique needs and learning style.",
-    icon: <Users className="w-6 h-6" />,
-    features: [
-      "Individual attention",
-      "Custom learning plans",
-      "Face-to-face & online",
-      "Weekly progress reports"
-    ],
-    href: "/one-on-one"
-  },
-  {
-    title: "Workshops",
-    age: "All Ages",
-    description: "Creative expression through art, fostering imagination and fine motor skills development.",
-    icon: <Palette className="w-6 h-6" />,
-    features: [
-      "Creative expression",
-      "Fine motor skills",
-      "Art appreciation",
-      "Holiday programs"
-    ],
-    href: "/workshops"
-  },
-  {
-    title: "Homeschooling Support",
-    age: "All Ages",
-    description: "Specialised support for homeschooling families in literacy and numeracy development.",
-    icon: <Home className="w-6 h-6" />,
-    features: [
-      "Curriculum guidance",
-      "Assessment support",
-      "Resource recommendations",
-      "Parent consultation"
-    ],
-    href: "/homeschooling-support"
-  }
-]
+const slugToIcon: Record<string, React.ReactNode> = {
+  "school-readiness": <Baby className="w-6 h-6" />,
+  "english-tutoring": <BookOpen className="w-6 h-6" />,
+  "maths-tutoring": <Calculator className="w-6 h-6" />,
+  "one-on-one": <Users className="w-6 h-6" />,
+  "workshops": <Palette className="w-6 h-6" />,
+  "homeschooling-support": <Home className="w-6 h-6" />,
+}
+
+const services = SERVICES.map((s) => ({
+  ...s,
+  href: `/${s.slug}`,
+  icon: slugToIcon[s.slug] ?? <Star className="w-6 h-6" />,
+}))
 
 const benefits = [
   {
@@ -411,7 +346,7 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <ServiceCard
-                key={index}
+                key={service.slug}
                 title={service.title}
                 age={service.age}
                 description={service.description}
@@ -419,6 +354,8 @@ export default function HomePage() {
                 features={service.features}
                 href={service.href}
                 index={index}
+                image={service.image}
+                imageAlt={service.imageAlt}
               />
             ))}
           </div>

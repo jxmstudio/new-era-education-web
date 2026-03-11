@@ -1,5 +1,8 @@
 import { Metadata } from 'next';
 import EnglishTutoringContent from './english-tutoring-content';
+import { getServiceBySlug } from '@/lib/services';
+
+const service = getServiceBySlug('english-tutoring');
 
 export const metadata: Metadata = {
   title: 'English Tutoring in Mickleham VIC | Foundation to Year 12 | New Era Education',
@@ -12,7 +15,7 @@ export const metadata: Metadata = {
     description: 'Expert English tutoring in Mickleham and Northern Melbourne. VCE English preparation, essay writing, text analysis, and reading comprehension.',
     url: 'https://neweralearning.com.au/english-tutoring',
     type: 'website',
-    images: [{ url: '/hero-bg.jpg', width: 1200, height: 630, alt: 'English Tutoring at New Era Education Mickleham' }],
+    images: [{ url: service?.image ?? '/hero-bg.jpg', width: 1200, height: 630, alt: service?.imageAlt ?? 'English Tutoring at New Era Education Mickleham' }],
   },
 };
 

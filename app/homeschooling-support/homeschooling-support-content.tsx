@@ -10,6 +10,7 @@ import Footer from "@/components/layout/Footer";
 import FeatureCard from '@/components/ui/feature-card';
 import TestimonialCard from '@/components/ui/testimonial-card';
 import ContactForm from "@/components/forms/ContactForm";
+import { getServiceBySlug } from '@/lib/services';
 
 
 
@@ -84,8 +85,11 @@ export default function HomeschoolingContent() {
     <div className="min-h-screen">
       <Header />
 
-      <section className="bg-indigo-500 py-20 lg:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 lg:py-32 overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${getServiceBySlug('homeschooling-support')?.image ?? ''})` }} />
+        <div className="absolute inset-0 bg-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/80 via-blue-500/70 to-green-500/80" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[500px]">
             <div className="space-y-8">
               <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-white">

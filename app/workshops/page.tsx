@@ -1,5 +1,8 @@
 import { Metadata } from 'next';
 import WorkshopsContent from './workshops-content';
+import { getServiceBySlug } from '@/lib/services';
+
+const service = getServiceBySlug('workshops');
 
 export const metadata: Metadata = {
   title: 'Learning Workshops in Mickleham VIC | Study Skills, Literacy & Numeracy | New Era Education',
@@ -14,7 +17,7 @@ export const metadata: Metadata = {
     description: 'Educational workshops in Mickleham and Northern Melbourne: study skills, literacy, numeracy, and holiday programs.',
     url: 'https://neweralearning.com.au/workshops',
     type: 'website',
-    images: [{ url: '/hero-bg.jpg', width: 1200, height: 630, alt: 'Workshops at New Era Education Mickleham' }],
+    images: [{ url: service?.image ?? '/hero-bg.jpg', width: 1200, height: 630, alt: service?.imageAlt ?? 'Workshops at New Era Education Mickleham' }],
   },
 };
 

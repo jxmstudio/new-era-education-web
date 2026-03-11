@@ -1,5 +1,8 @@
 import { Metadata } from 'next';
 import SchoolReadinessContent from './school-readiness-content';
+import { getServiceBySlug } from '@/lib/services';
+
+const service = getServiceBySlug('school-readiness');
 
 export const metadata: Metadata = {
   title: 'School Readiness Program in Mickleham VIC | Ages 3-6 | New Era Education',
@@ -12,7 +15,7 @@ export const metadata: Metadata = {
     description: 'School readiness program in Mickleham for children ages 3-6. Build literacy, numeracy, and social skills before starting school.',
     url: 'https://neweralearning.com.au/school-readiness',
     type: 'website',
-    images: [{ url: '/hero-bg.jpg', width: 1200, height: 630, alt: 'School Readiness Program at New Era Education Mickleham' }],
+    images: [{ url: service?.image ?? '/hero-bg.jpg', width: 1200, height: 630, alt: service?.imageAlt ?? 'School Readiness Program at New Era Education Mickleham' }],
   },
 };
 
