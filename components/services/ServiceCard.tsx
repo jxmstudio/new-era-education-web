@@ -13,7 +13,7 @@ interface ServiceCardProps {
   age: string
   description: string
   icon: ReactNode
-  features: string[]
+  features: readonly string[]
   href: string
   index?: number
   /** Root-relative image path e.g. /newphotos/school-readiness.png */
