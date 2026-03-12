@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Phone, MapPin, Mail, BookOpen, Calculator, Baby, Users, Home, Award, ChevronRight, Play } from 'lucide-react';
+import { Phone, MapPin, Mail, BookOpen, Calculator, Baby, Users, Home, Award, ChevronRight } from 'lucide-react';
 import ContactForm from '@/components/forms/ContactForm';
 
 export const metadata: Metadata = {
@@ -98,8 +98,19 @@ export default function GetStartedPage() {
 
       {/* ===== HERO SECTION ===== */}
       <section
-        className="relative min-h-screen flex items-center bg-gradient-to-br from-slate-900 via-slate-800 to-blue-900 overflow-hidden"
+        className="relative min-h-screen flex items-center overflow-hidden"
       >
+        {/* Background image */}
+        <Image
+          src="/neweraphotos/IMG_3916.JPG"
+          alt="New Era Education tutoring session"
+          fill
+          className="object-cover"
+          style={{ objectPosition: 'center 40%' }}
+          priority
+        />
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/85 via-slate-800/80 to-blue-900/85" />
         {/* Subtle dot pattern */}
         <div
           className="absolute inset-0 opacity-[0.07]"
@@ -170,19 +181,18 @@ export default function GetStartedPage() {
             </p>
           </div>
 
-          {/* Video container */}
-          <div className="relative aspect-video bg-slate-900 rounded-2xl overflow-hidden shadow-2xl shadow-slate-900/20 group cursor-pointer">
-            {/* Placeholder play button — replace this div's contents with YouTube/Vimeo iframe */}
-            <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900">
-              <div className="relative">
-                {/* Pulse ring */}
-                <div className="absolute inset-0 rounded-full bg-white/20 animate-ping" style={{ animationDuration: '2s' }} />
-                {/* Play button */}
-                <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-white/15 backdrop-blur-sm border-2 border-white/30 flex items-center justify-center group-hover:bg-white/25 transition-all duration-300 group-hover:scale-110">
-                  <Play className="w-8 h-8 sm:w-10 sm:h-10 text-white ml-1" fill="white" />
-                </div>
-              </div>
-            </div>
+          {/* Video container — 9:16 portrait */}
+          <div className="relative max-w-sm mx-auto aspect-[9/16] bg-slate-900 rounded-2xl overflow-hidden shadow-2xl shadow-slate-900/20">
+            <video
+              controls
+              playsInline
+              preload="auto"
+              className="w-full h-full object-cover"
+            >
+              <source src="https://pub-ffc9a413470f4e69a929b4e0ce1199a7.r2.dev/founder.mov#t=1" type="video/quicktime" />
+              <source src="https://pub-ffc9a413470f4e69a929b4e0ce1199a7.r2.dev/founder.mov#t=1" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
 
           {/* Founder bio */}
@@ -400,6 +410,34 @@ export default function GetStartedPage() {
               <Phone className="w-5 h-5" />
               Call (03) 8467 0773
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== FIND US ===== */}
+      <section className="py-16 sm:py-20 lg:py-24 bg-slate-50">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="font-[var(--font-poppins)] text-3xl sm:text-4xl font-bold text-slate-900 mb-3">
+              Visit Our Learning Centre
+            </h2>
+            <div className="flex items-center justify-center gap-2 text-slate-600">
+              <MapPin className="w-5 h-5 text-blue-600 flex-shrink-0" />
+              <p className="text-lg">Suite 4 Level 3, 21 Cityside Dr, Mickleham VIC 3064</p>
+            </div>
+          </div>
+          <div className="w-full h-[450px] rounded-2xl overflow-hidden shadow-lg">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1581.8959786895587!2d144.92061142520066!3d-37.536401157337394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad653f7c3e4b2f7%3A0x4895e70aa591a0d6!2sNew%20Era%20Education!5e0!3m2!1sen!2sau!4v1754631303077!5m2!1sen!2sau"
+              width="100%"
+              height="450"
+              style={{ border: 0, width: '100%', height: '100%', borderRadius: '16px' }}
+              allowFullScreen
+              loading="eager"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="New Era Education Location"
+              aria-label="Google Maps showing New Era Education location in Mickleham"
+            />
           </div>
         </div>
       </section>

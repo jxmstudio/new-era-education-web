@@ -8,7 +8,7 @@ export const SERVICES = [
     title: "School Readiness Program",
     slug: "school-readiness",
     description: "Prepare your child for school with our comprehensive readiness program focusing on literacy, numeracy, and social skills.",
-    image: "/newphotos/school-readiness.png",
+    image: "/newphotos/school-readiness.webp",
     imageAlt: "School Readiness Program at New Era Education",
     age: "Ages 3-5",
     features: [
@@ -22,7 +22,7 @@ export const SERVICES = [
     title: "English Tutoring",
     slug: "english-tutoring",
     description: "Comprehensive English support from foundational reading skills to advanced VCE preparation.",
-    image: "/newphotos/english-tutoring.png",
+    image: "/newphotos/english-tutor-service.webp",
     imageAlt: "English Tutoring at New Era Education",
     age: "Foundation - Year 12",
     features: [
@@ -36,7 +36,7 @@ export const SERVICES = [
     title: "Mathematics Tutoring",
     slug: "maths-tutoring",
     description: "Build strong mathematical foundations with our evidence-based numeracy programs.",
-    image: "/newphotos/math.jpg",
+    image: "/newphotos/math-tutor-service.webp",
     imageAlt: "Mathematics Tutoring at New Era Education",
     age: "Foundation - Year 8",
     features: [
@@ -64,7 +64,7 @@ export const SERVICES = [
     title: "Workshops in Public Schools",
     slug: "workshops",
     description: "Creative expression through art, fostering imagination and fine motor skills development.",
-    image: "/neweraphotos/IMG_3914.JPG",
+    image: "/newphotos/workspace-service.webp",
     imageAlt: "Workshops at New Era Education",
     imagePosition: "center 30%",
     age: "All Ages",

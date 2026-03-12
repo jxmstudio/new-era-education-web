@@ -1,4 +1,5 @@
-import { MapPin, Phone, Mail, Clock } from "lucide-react"
+import Link from 'next/link'
+import { MapPin, Phone, Mail, Clock, BookOpen, Calculator, Baby, Users, Home, Award, GraduationCap, ChevronRight } from "lucide-react"
 import Header from "@/components/layout/Header"
 import Footer from "@/components/layout/Footer"
 import ContactForm from "@/components/forms/ContactForm"
@@ -152,11 +153,42 @@ export default function ContactPage() {
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">Find Us on Google Maps</h3>
             <p className="text-lg text-gray-600">
-              We're conveniently located in Mickleham, serving families from surrounding areas including 
+              We are conveniently located in Mickleham, serving families from surrounding areas including
               Craigieburn, Greenvale, Beveridge, Wallan, and Epping.
             </p>
           </div>
           <GoogleMapEmbed />
+        </div>
+      </section>
+
+      {/* Explore Our Services */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Explore Our Tutoring Services</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { title: 'School Readiness', href: '/school-readiness', icon: Baby, desc: 'Ages 3-6' },
+              { title: 'English Tutoring', href: '/english-tutoring', icon: BookOpen, desc: 'Foundation-Year 12' },
+              { title: 'Maths Tutoring', href: '/maths-tutoring', icon: Calculator, desc: 'Foundation-Year 12' },
+              { title: 'One-on-One', href: '/one-on-one', icon: Users, desc: 'Personalised sessions' },
+              { title: 'Workshops', href: '/workshops', icon: GraduationCap, desc: 'Study skills & more' },
+              { title: 'Homeschooling', href: '/homeschooling-support', icon: Home, desc: 'Curriculum support' },
+              { title: 'NDIS Support', href: '/ndis', icon: Award, desc: 'Capacity building' },
+              { title: 'Why Choose Us', href: '/comparison', icon: ChevronRight, desc: 'See the difference' },
+            ].map((service) => (
+              <Link
+                key={service.href}
+                href={service.href}
+                className="group flex items-center gap-3 p-4 rounded-lg bg-gray-50 hover:bg-primary/5 transition-colors"
+              >
+                <service.icon className="w-5 h-5 text-primary flex-shrink-0" />
+                <div>
+                  <span className="font-medium text-gray-900 group-hover:text-primary transition-colors text-sm">{service.title}</span>
+                  <p className="text-xs text-gray-500">{service.desc}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 

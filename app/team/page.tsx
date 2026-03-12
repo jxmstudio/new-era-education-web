@@ -1,8 +1,9 @@
 import { Metadata } from 'next'
+import Link from 'next/link'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { GraduationCap, BookOpen, Calculator, Star, Quote } from "lucide-react"
+import { GraduationCap, BookOpen, Calculator, Star, Quote, Baby, Users, Home, Award, ChevronRight } from "lucide-react"
 import Header from "@/components/layout/Header"
 import Footer from "@/components/layout/Footer"
 import { MotionWrapper } from "@/components/ui/motion-wrapper"
@@ -467,6 +468,42 @@ export default function TeamPage() {
                   <p className="text-gray-600 leading-relaxed text-sm">{feature.description}</p>
                 </div>
               </MotionWrapper>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Explore Our Services */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Programs Led by Our Team</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Our VIT-registered educators deliver expert tutoring across a range of programs designed for every stage of learning
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { title: 'School Readiness', href: '/school-readiness', icon: Baby, desc: 'Ages 3-6' },
+              { title: 'English Tutoring', href: '/english-tutoring', icon: BookOpen, desc: 'Foundation-Year 12' },
+              { title: 'Maths Tutoring', href: '/maths-tutoring', icon: Calculator, desc: 'Foundation-Year 12' },
+              { title: 'One-on-One', href: '/one-on-one', icon: Users, desc: 'Personalised sessions' },
+              { title: 'Workshops', href: '/workshops', icon: GraduationCap, desc: 'Study skills & more' },
+              { title: 'Homeschooling', href: '/homeschooling-support', icon: Home, desc: 'Curriculum support' },
+              { title: 'NDIS Support', href: '/ndis', icon: Award, desc: 'Capacity building' },
+              { title: 'Why Choose Us', href: '/comparison', icon: ChevronRight, desc: 'See the difference' },
+            ].map((service) => (
+              <Link
+                key={service.href}
+                href={service.href}
+                className="group flex items-center gap-3 p-4 rounded-lg bg-gray-50 hover:bg-primary/5 transition-colors"
+              >
+                <service.icon className="w-5 h-5 text-primary flex-shrink-0" />
+                <div>
+                  <span className="font-medium text-gray-900 group-hover:text-primary transition-colors text-sm">{service.title}</span>
+                  <p className="text-xs text-gray-500">{service.desc}</p>
+                </div>
+              </Link>
             ))}
           </div>
         </div>

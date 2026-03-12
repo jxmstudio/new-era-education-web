@@ -5,6 +5,7 @@ import Footer from '@/components/layout/Footer';
 export const metadata: Metadata = {
   title: 'Privacy Policy',
   description: 'Privacy Policy for New Era Education. Learn how we collect, use, and protect your personal information.',
+  robots: { index: false, follow: true },
   alternates: { canonical: 'https://neweralearning.com.au/privacy' },
 };
 

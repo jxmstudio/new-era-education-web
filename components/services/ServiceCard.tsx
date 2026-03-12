@@ -118,7 +118,7 @@ export default function ServiceCard({
           <div
             className="w-full bg-gradient-to-r from-primary to-primary-dark text-white font-semibold py-3 text-lg shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105 text-center rounded-md"
           >
-            Book Now
+            Learn More
           </div>
         </CardContent>
       </Card>

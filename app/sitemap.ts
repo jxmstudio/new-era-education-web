@@ -16,7 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const mainPages: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
-      lastModified: new Date(),
+      lastModified: new Date('2026-03-11'),
       changeFrequency: 'weekly',
       priority: 1.0,
     },
@@ -32,20 +32,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/ndis',
   ].map((path) => ({
     url: `${baseUrl}${path}`,
-    lastModified: new Date(),
+    lastModified: new Date('2026-03-11'),
     changeFrequency: 'monthly' as const,
     priority: 0.9,
   }))
 
-  const funnelPages: MetadataRoute.Sitemap = [
-    { path: '/get-started', priority: 0.9 },
-    { path: '/get-started/school-readiness', priority: 0.9 },
-  ].map(({ path, priority }) => ({
-    url: `${baseUrl}${path}`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly' as const,
-    priority,
-  }))
+  // Note: /get-started and /get-started/school-readiness are excluded from
+  // the sitemap because they have noindex set. Including noindex pages in
+  // the sitemap sends conflicting signals to Google.
 
   const infoPages: MetadataRoute.Sitemap = [
     { path: '/book', priority: 0.9 },
@@ -54,11 +48,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/faq', priority: 0.7 },
     { path: '/team', priority: 0.7 },
     { path: '/careers', priority: 0.6 },
-    { path: '/privacy', priority: 0.3 },
-    { path: '/terms', priority: 0.3 },
+    // Note: /privacy and /terms are excluded — low-value pages that waste
+    // index budget. They have noindex set and are linked from the footer.
   ].map(({ path, priority }) => ({
     url: `${baseUrl}${path}`,
-    lastModified: new Date(),
+    lastModified: new Date('2026-03-11'),
     changeFrequency: 'monthly' as const,
     priority,
   }))
@@ -66,7 +60,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const locationHubPage: MetadataRoute.Sitemap = [
     {
       url: `${baseUrl}/tutoring`,
-      lastModified: new Date(),
+      lastModified: new Date('2026-03-11'),
       changeFrequency: 'monthly' as const,
       priority: 0.8,
     },
@@ -74,10 +68,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const locationPages: MetadataRoute.Sitemap = suburbs.map((suburb) => ({
     url: `${baseUrl}/tutoring/${suburb}`,
-    lastModified: new Date(),
+    lastModified: new Date('2026-03-11'),
     changeFrequency: 'monthly' as const,
     priority: 0.8,
   }))
 
-  return [...mainPages, ...servicePages, ...funnelPages, ...infoPages, ...locationHubPage, ...locationPages]
+  return [...mainPages, ...servicePages, ...infoPages, ...locationHubPage, ...locationPages]
 }

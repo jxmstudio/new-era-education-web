@@ -102,7 +102,7 @@ export default function EnglishTutoringContent() {
       <Header />
 
       <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${getServiceBySlug('english-tutoring')?.image ?? ''})` }} />
+        <div className="absolute inset-0 bg-cover bg-no-repeat" style={{ backgroundImage: `url(${getServiceBySlug('english-tutoring')?.image ?? ''})`, backgroundPosition: 'center 60%' }} />
         <div className="absolute inset-0 bg-black/40" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[500px]">

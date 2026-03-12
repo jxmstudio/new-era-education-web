@@ -5,6 +5,7 @@ import Footer from '@/components/layout/Footer';
 export const metadata: Metadata = {
   title: 'Terms of Service',
   description: 'Terms of Service for New Era Education tutoring services in Mickleham, Melbourne.',
+  robots: { index: false, follow: true },
   alternates: { canonical: 'https://neweralearning.com.au/terms' },
 };
 

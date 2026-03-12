@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     images: ['/hero-bg.jpg'],
   },
   alternates: {
-    canonical: 'https://neweralearning.com.au/',
+    canonical: 'https://neweralearning.com.au',
   },
   other: {
     'geo.region': 'AU-VIC',

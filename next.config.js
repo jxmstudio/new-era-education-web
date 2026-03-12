@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  trailingSlash: false,
   images: {
     domains: ['www.neweralearning.com.au', 'neweralearning.com.au'],
   },

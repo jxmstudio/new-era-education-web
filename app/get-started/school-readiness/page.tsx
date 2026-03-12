@@ -11,7 +11,6 @@ import {
   Pencil,
   Heart,
   Target,
-  Play,
   Check,
 } from 'lucide-react';
 import ContactForm from '@/components/forms/ContactForm';
@@ -283,7 +282,18 @@ export default function SchoolReadinessLandingPage() {
       {/* ============================================================ */}
       {/*  2. HERO SECTION                                             */}
       {/* ============================================================ */}
-      <section className="relative min-h-screen flex items-center bg-gradient-to-br from-blue-900 via-indigo-800 to-purple-900 overflow-hidden">
+      <section className="relative min-h-screen flex items-center overflow-hidden">
+        {/* Background image */}
+        <Image
+          src="/neweraphotos/IMG_3916.JPG"
+          alt="New Era Education tutoring session"
+          fill
+          className="object-cover"
+          style={{ objectPosition: 'center 40%' }}
+          priority
+        />
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/85 via-indigo-800/80 to-purple-900/85" />
         {/* Dot pattern overlay */}
         <div
           className="absolute inset-0 opacity-10"
@@ -472,35 +482,18 @@ export default function SchoolReadinessLandingPage() {
             </p>
           </div>
 
-          {/* Video placeholder */}
-          <div className="relative aspect-video bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl overflow-hidden shadow-xl group cursor-pointer">
-            {/* Replace this div with a YouTube/Vimeo iframe when the video is ready */}
-            {/* Example:
-              <iframe
-                src="https://www.youtube.com/embed/VIDEO_ID"
-                title="Meet Adelaine - New Era Education"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="absolute inset-0 w-full h-full"
-              />
-            */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-white/80">
-              <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-amber-500/90 flex items-center justify-center shadow-lg group-hover:bg-amber-500 group-hover:scale-105 transition-all">
-                <Play className="w-8 h-8 sm:w-10 sm:h-10 text-white ml-1" />
-              </div>
-              <p className="mt-4 text-sm sm:text-base font-medium text-white/60">
-                Video coming soon
-              </p>
-            </div>
-            {/* Subtle grid overlay */}
-            <div
-              className="absolute inset-0 opacity-5"
-              style={{
-                backgroundImage:
-                  'linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px)',
-                backgroundSize: '40px 40px',
-              }}
-            />
+          {/* Video — 9:16 portrait */}
+          <div className="relative max-w-sm mx-auto aspect-[9/16] bg-slate-900 rounded-2xl overflow-hidden shadow-xl">
+            <video
+              controls
+              playsInline
+              preload="auto"
+              className="w-full h-full object-cover"
+            >
+              <source src="https://pub-ffc9a413470f4e69a929b4e0ce1199a7.r2.dev/founder.mov#t=1" type="video/quicktime" />
+              <source src="https://pub-ffc9a413470f4e69a929b4e0ce1199a7.r2.dev/founder.mov#t=1" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
         </div>
       </section>
@@ -661,6 +654,36 @@ export default function SchoolReadinessLandingPage() {
               <Phone className="w-5 h-5" />
               Call (03) 8467 0773
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================ */}
+      {/*  8.5 FIND US - GOOGLE MAP                                    */}
+      {/* ============================================================ */}
+      <section className="py-16 sm:py-24 bg-slate-50">
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="text-center mb-10">
+            <h2 className="font-display text-3xl sm:text-4xl font-bold text-slate-900 mb-3">
+              Visit Our Learning Centre
+            </h2>
+            <div className="flex items-center justify-center gap-2 text-slate-600">
+              <MapPin className="w-5 h-5 text-blue-600 flex-shrink-0" />
+              <p className="text-lg">Suite 4 Level 3, 21 Cityside Dr, Mickleham VIC 3064</p>
+            </div>
+          </div>
+          <div className="w-full h-[450px] rounded-2xl overflow-hidden shadow-lg">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1581.8959786895587!2d144.92061142520066!3d-37.536401157337394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad653f7c3e4b2f7%3A0x4895e70aa591a0d6!2sNew%20Era%20Education!5e0!3m2!1sen!2sau!4v1754631303077!5m2!1sen!2sau"
+              width="100%"
+              height="450"
+              style={{ border: 0, width: '100%', height: '100%', borderRadius: '16px' }}
+              allowFullScreen
+              loading="eager"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="New Era Education Location"
+              aria-label="Google Maps showing New Era Education location in Mickleham"
+            />
           </div>
         </div>
       </section>
