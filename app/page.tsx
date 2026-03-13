@@ -331,6 +331,61 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Meet Our Founder Section */}
+      <section className="py-12 sm:py-16 md:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
+            {/* Video */}
+            <MotionWrapper
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <div className="relative max-w-sm mx-auto md:mx-0 aspect-[9/16] bg-gray-900 rounded-2xl overflow-hidden shadow-xl">
+                <video
+                  controls
+                  playsInline
+                  preload="metadata"
+                  className="w-full h-full object-cover"
+                >
+                  <source src="https://pub-ffc9a413470f4e69a929b4e0ce1199a7.r2.dev/founder.mov#t=1" type="video/mp4" />
+                  <source src="https://pub-ffc9a413470f4e69a929b4e0ce1199a7.r2.dev/founder.mov#t=1" type="video/quicktime" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </MotionWrapper>
+
+            {/* Text */}
+            <MotionWrapper
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <span className="inline-block px-3 py-1 text-xs font-semibold tracking-wider text-blue-600 uppercase bg-blue-50 rounded-full mb-4">
+                Our Story
+              </span>
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                Meet Our Founder
+              </h2>
+              <p className="text-lg text-gray-600 leading-relaxed mb-4">
+                Founded by Adelaine Matthews, New Era Education was born from a passion for giving every child the best start in their learning journey.
+              </p>
+              <p className="text-gray-600 leading-relaxed mb-6">
+                With over a decade of experience in education and a deep commitment to nurturing every student&apos;s potential, Adelaine created a supportive learning space where children are truly seen, understood, and empowered to thrive.
+              </p>
+              <Link
+                href="/get-started"
+                className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-xl font-medium hover:bg-blue-700 transition-colors"
+              >
+                Start Your Journey
+              </Link>
+            </MotionWrapper>
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
       <section id="services" className="py-12 sm:py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
