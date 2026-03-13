@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Phone, MapPin, Mail, BookOpen, Calculator, Baby, Users, Home, Award, ChevronRight } from 'lucide-react';
 import ContactForm from '@/components/forms/ContactForm';
+import GalleryPreview from '@/components/ui/gallery-preview';
 
 export const metadata: Metadata = {
   title: 'Get Started | Free Consultation | New Era Education',
@@ -310,6 +311,9 @@ export default function GetStartedPage() {
           </div>
         </div>
       </section>
+
+      {/* ===== GALLERY PREVIEW ===== */}
+      <GalleryPreview />
 
       {/* ===== ENQUIRY FORM ===== */}
       <section id="enquire" className="py-16 sm:py-20 lg:py-24 bg-white">

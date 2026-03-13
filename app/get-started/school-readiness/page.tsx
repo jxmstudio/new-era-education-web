@@ -14,6 +14,7 @@ import {
   Check,
 } from 'lucide-react';
 import ContactForm from '@/components/forms/ContactForm';
+import GalleryPreview from '@/components/ui/gallery-preview';
 
 export const metadata: Metadata = {
   title: 'School Readiness Program | Ages 3-6 | New Era Education',
@@ -549,6 +550,11 @@ export default function SchoolReadinessLandingPage() {
           </div>
         </div>
       </section>
+
+      {/* ============================================================ */}
+      {/*  GALLERY PREVIEW                                             */}
+      {/* ============================================================ */}
+      <GalleryPreview />
 
       {/* ============================================================ */}
       {/*  7. WHAT TO EXPECT - TIMELINE                                */}
