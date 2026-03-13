@@ -47,6 +47,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/comparison', priority: 0.8 },
     { path: '/faq', priority: 0.7 },
     { path: '/team', priority: 0.7 },
+    { path: '/gallery', priority: 0.7 },
     { path: '/careers', priority: 0.6 },
     // Note: /privacy and /terms are excluded — low-value pages that waste
     // index budget. They have noindex set and are linked from the footer.
