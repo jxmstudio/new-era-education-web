@@ -198,6 +198,12 @@ export default function Header() {
             </motion.div>
 
             <motion.div whileHover={{ y: -2 }} transition={{ duration: 0.2 }}>
+              <Link href="/gallery" className="whitespace-nowrap hover:text-gray-200 transition font-medium leading-none">
+                Gallery
+              </Link>
+            </motion.div>
+
+            <motion.div whileHover={{ y: -2 }} transition={{ duration: 0.2 }}>
               <Link href="/#contact" className="whitespace-nowrap hover:text-gray-200 transition font-medium leading-none">
                 Contact
               </Link>
@@ -259,6 +265,7 @@ export default function Header() {
                 { href: "/comparison", label: "Why Choose Us" },
                 { href: "/ndis", label: "NDIS" },
                 { href: "/faq", label: "FAQ" },
+                { href: "/gallery", label: "Gallery" },
                 { href: "/#contact", label: "Contact" }
               ].map((item, index) => (
                 <motion.div
