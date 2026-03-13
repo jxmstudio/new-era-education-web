@@ -37,13 +37,12 @@ export default function GalleryPreview() {
               viewport={{ once: true }}
             >
               <div className="group overflow-hidden rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300">
-                <div className="relative overflow-hidden">
+                <div className="relative overflow-hidden aspect-[4/3]">
                   <Image
                     src={item.src}
                     alt={item.alt}
-                    width={400}
-                    height={300}
-                    className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
                     sizes="(max-width: 640px) 100vw, 33vw"
                   />
                 </div>

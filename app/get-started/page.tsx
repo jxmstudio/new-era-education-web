@@ -1,9 +1,11 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Phone, MapPin, Mail, BookOpen, Calculator, Baby, Users, Home, Award, ChevronRight } from 'lucide-react';
+import { Phone, MapPin, Mail, BookOpen, Calculator, Baby, Users, Home, Award, ChevronRight, Palette, Star } from 'lucide-react';
 import ContactForm from '@/components/forms/ContactForm';
 import GalleryPreview from '@/components/ui/gallery-preview';
+import ServiceCard from '@/components/services/ServiceCard';
+import { SERVICES } from '@/lib/services';
 
 export const metadata: Metadata = {
   title: 'Get Started | Free Consultation | New Era Education',
@@ -19,44 +21,20 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://neweralearning.com.au/get-started' },
 };
 
-const services = [
-  {
-    icon: Baby,
-    title: 'School Readiness',
-    description: 'Ages 3-6 — Build confidence before big school',
-    href: '/school-readiness',
-  },
-  {
-    icon: BookOpen,
-    title: 'English Tutoring',
-    description: 'Foundation-Year 12 — Reading, writing & VCE prep',
-    href: '/english-tutoring',
-  },
-  {
-    icon: Calculator,
-    title: 'Maths Tutoring',
-    description: 'Foundation-Year 12 — Numeracy & problem-solving',
-    href: '/maths-tutoring',
-  },
-  {
-    icon: Users,
-    title: 'One-on-One',
-    description: 'All subjects — Personalised learning plans',
-    href: '/one-on-one',
-  },
-  {
-    icon: Home,
-    title: 'Homeschooling Support',
-    description: 'All ages — Curriculum guidance & assessment',
-    href: '/homeschooling-support',
-  },
-  {
-    icon: Award,
-    title: 'NDIS Support',
-    description: 'Capacity building — Functional literacy & numeracy',
-    href: '/ndis',
-  },
-];
+const slugToIcon: Record<string, React.ReactNode> = {
+  'school-readiness': <Baby className="w-6 h-6" />,
+  'english-tutoring': <BookOpen className="w-6 h-6" />,
+  'maths-tutoring': <Calculator className="w-6 h-6" />,
+  'one-on-one': <Users className="w-6 h-6" />,
+  'workshops': <Palette className="w-6 h-6" />,
+  'homeschooling-support': <Home className="w-6 h-6" />,
+};
+
+const services = SERVICES.map((s) => ({
+  ...s,
+  href: `/${s.slug}`,
+  icon: slugToIcon[s.slug] ?? <Star className="w-6 h-6" />,
+}));
 
 export default function GetStartedPage() {
   return (
@@ -312,9 +290,6 @@ export default function GetStartedPage() {
         </div>
       </section>
 
-      {/* ===== GALLERY PREVIEW ===== */}
-      <GalleryPreview />
-
       {/* ===== ENQUIRY FORM ===== */}
       <section id="enquire" className="py-16 sm:py-20 lg:py-24 bg-white">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -345,35 +320,28 @@ export default function GetStartedPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-            {services.map((service) => {
-              const Icon = service.icon;
-              return (
-                <Link
-                  key={service.title}
-                  href={service.href}
-                  className="group flex items-start gap-4 p-5 sm:p-6 rounded-2xl border border-slate-100 bg-white hover:border-blue-200 hover:shadow-lg hover:shadow-blue-500/5 transition-all duration-300"
-                >
-                  <div className="w-12 h-12 rounded-xl bg-blue-50 group-hover:bg-blue-100 flex items-center justify-center flex-shrink-0 transition-colors duration-300">
-                    <Icon className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center justify-between gap-2">
-                      <h3 className="font-semibold text-slate-900 group-hover:text-blue-600 transition-colors">
-                        {service.title}
-                      </h3>
-                      <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-blue-500 group-hover:translate-x-0.5 transition-all flex-shrink-0" />
-                    </div>
-                    <p className="text-sm text-slate-500 mt-1 leading-relaxed">
-                      {service.description}
-                    </p>
-                  </div>
-                </Link>
-              );
-            })}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            {services.map((service, index) => (
+              <ServiceCard
+                key={service.slug}
+                title={service.title}
+                age={service.age}
+                description={service.description}
+                icon={service.icon}
+                features={service.features}
+                href={service.href}
+                index={index}
+                image={service.image}
+                imageAlt={service.imageAlt}
+                imagePosition={'imagePosition' in service ? (service as any).imagePosition : undefined}
+              />
+            ))}
           </div>
         </div>
       </section>
+
+      {/* ===== GALLERY PREVIEW ===== */}
+      <GalleryPreview />
 
       {/* ===== FINAL CTA ===== */}
       <section className="relative py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-blue-600 to-blue-800 overflow-hidden">
