@@ -61,7 +61,7 @@ export const SERVICES = [
     ],
   },
   {
-    title: "Workshops in Public Schools",
+    title: "Workshops",
     slug: "workshops",
     description: "Creative expression through art, fostering imagination and fine motor skills development.",
     image: "/newphotos/workspace-service.webp",
@@ -76,7 +76,7 @@ export const SERVICES = [
     ],
   },
   {
-    title: "Full-Time Learning Support",
+    title: "Expert Learning Support",
     slug: "homeschooling-support",
     description: "Specialised support for homeschooling families in literacy and numeracy development.",
     image: "/neweraphotos/IMG_3902.JPG",
