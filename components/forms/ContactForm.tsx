@@ -17,6 +17,7 @@ interface ContactFormData {
   "child-age": string
   service: string
   message: string
+  formType: string
 }
 
 export default function ContactForm() {
@@ -26,7 +27,8 @@ export default function ContactForm() {
     phone: "",
     "child-age": "",
     service: "",
-    message: ""
+    message: "",
+    formType: "contact"
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [showPopup, setShowPopup] = useState(false)
@@ -66,7 +68,8 @@ export default function ContactForm() {
         phone: "",
         "child-age": "",
         service: "",
-        message: ""
+        message: "",
+        formType: "contact"
       })
 
       // Show success popup
