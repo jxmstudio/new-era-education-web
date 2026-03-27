@@ -30,11 +30,11 @@ function doPost(e) {
     // Get the form data
     const formData = e.parameter;
     
-    // Determine form type based on field names
-    // Booking form has: name, email, phone, child-age, service, preferred-day, preferred-time, message
-    const isBookingForm = formData.name && formData.email && (formData.service || formData['preferred-day'] || formData['preferred-time']);
-    // Contact form has: name, email, phone, child-age, service, message (no preferred-day/time)
-    const isContactForm = formData.name && formData.message && formData['child-age'] && !formData['preferred-day'] && !formData['preferred-time'] && formData.formType !== 'careers';
+    // Determine form type based on field presence
+    // BookingForm always sends 'preferred-day' key (even empty); ContactForm never does
+    const hasPreferredDay = Object.prototype.hasOwnProperty.call(e.parameter, 'preferred-day');
+    const isBookingForm = formData.name && formData.email && hasPreferredDay;
+    const isContactForm = formData.name && formData.email && formData.message && !hasPreferredDay && formData.formType !== 'careers';
     const isCareersForm = formData.formType === 'careers' && formData.name && formData.email && formData.phone;
     
     if (isBookingForm) {
