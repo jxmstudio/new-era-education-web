@@ -69,7 +69,33 @@ function doPost(e) {
       ];
       
       sheet.appendRow(rowData);
-      
+
+      // Send email notification for booking form
+      const bookingEmailSubject = "New Era Education - New Booking Request";
+      const bookingEmailBody = `
+New booking form submission from your website:
+
+Full Name: ${formData.name || 'Not provided'}
+Email: ${formData.email || 'Not provided'}
+Phone: ${formData.phone || 'Not provided'}
+Child's Age/Year Level: ${formData['child-age'] || 'Not provided'}
+Service of Interest: ${formData.service || 'Not provided'}
+Preferred Day: ${formData['preferred-day'] || 'Not provided'}
+Preferred Time: ${formData['preferred-time'] || 'Not provided'}
+
+Additional Notes:
+${formData.message || 'None'}
+
+---
+Submitted on: ${new Date().toLocaleString()}
+      `.trim();
+
+      MailApp.sendEmail({
+        to: "neweraeducationptyltd@gmail.com",
+        subject: bookingEmailSubject,
+        body: bookingEmailBody
+      });
+
     } else if (isContactForm) {
       // Handle contact form - add to Google Sheets (same as booking form)
       // Sheet headers: Full Name, Email, Phone Number, Child's Year Lev, Preferred Date/T Additional Notes
