@@ -10,7 +10,14 @@
     "lint": "next lint",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["education", "tutoring", "melbourne", "mickleham", "vce", "school-readiness"],
+  "keywords": [
+    "education",
+    "tutoring",
+    "melbourne",
+    "mickleham",
+    "vce",
+    "school-readiness"
+  ],
   "author": "New Era Education",
   "license": "ISC",
   "dependencies": {
@@ -28,7 +35,7 @@
     "clsx": "^2.0.0",
     "framer-motion": "^11.0.28",
     "lucide-react": "^0.294.0",
-    "next": "^14.0.0",
+    "next": "14.2.35",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "tailwind-merge": "^2.0.0",
