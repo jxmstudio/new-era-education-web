@@ -472,6 +472,100 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* School Holiday Workshops */}
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <span className="inline-block bg-amber-100 text-amber-700 text-sm font-semibold px-4 py-1.5 rounded-full mb-4">
+              April School Holidays
+            </span>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+              School Holiday Workshops
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Give your child a head start with our hands-on literacy and numeracy workshops
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 mb-8">
+            <div className="bg-white rounded-2xl shadow-lg p-6 border-t-4 border-blue-500">
+              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                <BookOpen className="w-6 h-6 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Literacy Workshop</h3>
+              <div className="space-y-2 text-gray-600 mb-4">
+                <p className="flex items-center gap-2">
+                  <Calendar className="w-4 h-4 text-gray-400" />
+                  Tuesday 8 April 2026
+                </p>
+                <p className="flex items-center gap-2">
+                  <Clock className="w-4 h-4 text-gray-400" />
+                  10:30am &ndash; 12:00pm
+                </p>
+              </div>
+              <p className="text-2xl font-bold text-gray-900">$85</p>
+            </div>
+
+            <div className="bg-white rounded-2xl shadow-lg p-6 border-t-4 border-green-500">
+              <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                <Calculator className="w-6 h-6 text-green-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Numeracy Workshop</h3>
+              <div className="space-y-2 text-gray-600 mb-4">
+                <p className="flex items-center gap-2">
+                  <Calendar className="w-4 h-4 text-gray-400" />
+                  Tuesday 14 April 2026
+                </p>
+                <p className="flex items-center gap-2">
+                  <Clock className="w-4 h-4 text-gray-400" />
+                  10:30am &ndash; 12:00pm
+                </p>
+              </div>
+              <p className="text-2xl font-bold text-gray-900">$85</p>
+            </div>
+
+            <div className="bg-white rounded-2xl shadow-lg p-6 border-t-4 border-amber-400 ring-2 ring-amber-400 relative">
+              <span className="absolute -top-3 right-4 bg-amber-400 text-white text-xs font-bold px-3 py-1 rounded-full">
+                Best Value
+              </span>
+              <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mb-4">
+                <Star className="w-6 h-6 text-amber-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Bundle &ndash; Both Workshops</h3>
+              <div className="space-y-2 text-gray-600 mb-4">
+                <p className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-green-500" />
+                  Literacy + Numeracy
+                </p>
+                <p className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-green-500" />
+                  Save $20
+                </p>
+              </div>
+              <p className="text-2xl font-bold text-gray-900">$150</p>
+            </div>
+          </div>
+
+          <div className="text-center space-y-4">
+            <p className="flex items-center justify-center gap-2 text-gray-600">
+              <MapPin className="w-5 h-5 text-amber-500" />
+              Level 3/21 Cityside Dr, Mickleham VIC 3064
+            </p>
+            <a
+              href="https://www.eventbrite.com.au/e/literacy-numeracy-workshops-new-era-education-tickets-1986501084218?aff=oddtdtcreator"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+            >
+              Secure Your Spot
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* About Section */}
       <section id="about" className="py-12 sm:py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
